@@ -43,7 +43,7 @@ public class JdbcUtils {
             properties.load(inputSteam);
             //创建数据库连接池
             dataSource = (DruidDataSource) DruidDataSourceFactory.createDataSource(properties);
-            log.info("创建数据库连接池");
+            log.info("creat dataSource Done");
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -76,7 +76,7 @@ public class JdbcUtils {
             }
 
         }
-        log.info("获得连接");
+        log.info("already get connection");
         return conn;
     }
 
@@ -93,7 +93,7 @@ public class JdbcUtils {
             try {
                 //1.提交事务
                 conn.commit();
-                log.info("提交事务");
+                log.info("commit");
 
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -102,7 +102,7 @@ public class JdbcUtils {
                 try {
                     //2.关闭连接
                     conn.close();
-                    log.info("关闭连接");
+                    log.info("colse connection");
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }
@@ -127,7 +127,7 @@ public class JdbcUtils {
             try {
                 //1.回滚事务
                 conn.rollback();
-                log.info("回滚");
+                log.info("rollback");
 
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -136,7 +136,7 @@ public class JdbcUtils {
                 try {
                     //2.关闭连接
                     conn.close();
-                    log.info("关闭连接");
+                    log.info("close connection");
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }

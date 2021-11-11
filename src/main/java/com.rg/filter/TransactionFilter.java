@@ -19,7 +19,7 @@ public class TransactionFilter implements Filter {
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
-        log.info("TransactionFilter 初期化完成");
+        log.info("TransactionFilter init");
     }
 
     @Override
@@ -29,9 +29,11 @@ public class TransactionFilter implements Filter {
             filterChain.doFilter(servletRequest, servletResponse);
             //提交事务并关闭连接
             JdbcUtils.commitAndClose();
+            log.info("commit and close");
         }catch (Exception e){
             //回滚事务并关闭连接
             JdbcUtils.rollbackAndClose();
+            log.info("roll and close");
             //打印异常
             e.printStackTrace();
             //把异常抛给tomacat服务器(然后服务器进行捕捉后，匹配对应的web.xml错误画面)

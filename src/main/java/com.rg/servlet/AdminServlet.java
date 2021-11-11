@@ -91,7 +91,7 @@ public class AdminServlet extends BaseServlet {
         // 传入参数 可能出现不一致现象 需再次查询
         if (Integer.parseInt(currPage) > totalPage) {
             currPage = Integer.toString(totalPage);
-            totalPage = (Integer.parseInt(currPage) - 1) * Constants.PAGE_SIZE;
+            start = (Integer.parseInt(currPage) - 1) * Constants.PAGE_SIZE;
             adminList = adminService.queryAdminByName(admin, start);
         }
 
@@ -144,6 +144,21 @@ public class AdminServlet extends BaseServlet {
         }
     }
 
+    protected void addAdmin(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        String name = req.getParameter("name");
+        String password = req.getParameter("password");
+        Admin admin = new Admin();
+        admin.setName(name);
+        admin.setPassword(password);
+
+        if (adminService.addAdmin(admin)){
+            req.setAttribute("addMsg", "添加成功");
+//            resp.sendRedirect("adminServlet?action=adminList");
+        } else {
+            req.setAttribute("addMsg", "添加失败");
+        }
+    }
+
     /**
      * 删除Admin
      * @param req
@@ -151,6 +166,13 @@ public class AdminServlet extends BaseServlet {
      * @return void
      */
     protected void delAdmin(HttpServletRequest req, HttpServletResponse resp){
-
+        String id = req.getParameter("id");
+        Admin admin = new Admin();
+        admin.setId(Integer.parseInt(id));
+        if (adminService.delAdmin(admin)){
+            req.setAttribute("delMsg", "删除成功");
+        } else {
+            req.setAttribute("delMsg", "删除失败");
+        }
     }
 }

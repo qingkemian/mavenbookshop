@@ -65,4 +65,22 @@ public class AdminServiceImpl implements AdminService {
         }
         return false;
     }
+
+    @Override
+    public boolean addAdmin(Admin admin) {
+        int flag = adminDao.addAdmin(admin.getName(), admin.getPassword());
+        if (flag > 0) {
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public boolean delAdmin(Admin admin) {
+        int flag = adminDao.delAdmin(admin.getId());
+        if (flag > 0) {
+            return true;
+        }
+        return false;
+    }
 }

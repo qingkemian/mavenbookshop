@@ -49,4 +49,19 @@ public interface AdminDao {
      * @return int
      */
     int updateAdmin(Integer id, String password);
+
+    /**
+     * 添加管理员用户
+     * @param name
+     * @param password
+     * @return int
+     */
+    int addAdmin(String name, String password);
+
+    /**
+     * 删除指定id的Admin
+     * @param id
+     * @return int
+     */
+    int delAdmin(Integer id);
 }

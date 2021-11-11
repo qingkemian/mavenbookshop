@@ -80,5 +80,17 @@ public class AdminDaoImpl extends BaseDao implements AdminDao {
         return update(sql,password,id);
     }
 
+    @Override
+    public int addAdmin(String name, String password) {
+        String sql = "INSERT INTO admin (name,password) VALUES (?,?)";
+        return update(sql,name,password);
+    }
+
+    @Override
+    public int delAdmin(Integer id) {
+        String sql = "DELETE FROM admin WHERE id = ?";
+        return update(sql,id);
+    }
+
 
 }

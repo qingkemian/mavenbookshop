@@ -39,5 +39,24 @@ public interface AdminService {
      */
     Admin queryAdminById(Admin admin);
 
+    /**
+     * 更新Admin信息 成功则返回true 否则返回false
+     * @param admin
+     * @return boolean
+     */
     boolean updateAdmin(Admin admin);
+
+    /**
+     * 添加新管理员 成功返回true 否则返回false
+     * @param admin
+     * @return boolean
+     */
+    boolean addAdmin(Admin admin);
+
+    /**
+     * 删除管理员
+     * @param admin
+     * @return boolean
+     */
+    boolean delAdmin(Admin admin);
 }
