@@ -7,13 +7,56 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a4e3c31-a55d-4004-bcfa-ba5f0ad3f4e8" name="默认" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.rg/constants/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.rg/constants/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.rg/servlet/AdminServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.rg/servlet/AdminServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/admin-list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/admin-list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/welcome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/welcome.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com.rg/dao/impl/AdminDaoImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com.rg/dao/impl/AdminDaoImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-bookshop/admin/admin-list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-bookshop/admin/admin-list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my2.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/VivoProject/css/DengLu.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/VivoProject/css/base.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/VivoProject/css/demo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/VivoProject/css/footer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/VivoProject/css/iconfont.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/VivoProject/css/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/VivoProject/css/personal.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/VivoProject/css/reset.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/VivoProject/css/take.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/VivoProject/css/top.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/VivoProject/css/zc.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/VivoProject/css/zcity.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/VivoProject/font/font/iconfont.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/VivoProject/font/font/iconfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/VivoProject/font/font/iconfont.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/VivoProject/font/font/iconfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/VivoProject/font/font/iconfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/VivoProject/font/font/iconfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/VivoProject/font/font/iconfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/VivoProject/font/iconfont.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/VivoProject/font/iconfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/VivoProject/font/iconfont.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/VivoProject/font/iconfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/VivoProject/font/iconfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/VivoProject/font/iconfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/VivoProject/font/iconfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/VivoProject/images/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/VivoProject/images/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/VivoProject/images/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/VivoProject/images/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/VivoProject/img/ico-triangle-down.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/VivoProject/js/pick-pcc.min.1.0.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/VivoProject/js/productDetalis-conteiner.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/VivoProject/js/totalShoppingcart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/bookshop/Shopping.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/bookshop/bookshop-foot.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/bookshop/bookshop-top.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/bookshop/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/m1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/m2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/m3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/m4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/m5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/m6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/m7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/m8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/m9.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -39,25 +82,31 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="1" />
+          <entry key="css" value="6" />
           <entry key="java" value="111" />
-          <entry key="jsp" value="34" />
+          <entry key="js" value="3" />
+          <entry key="jsp" value="73" />
           <entry key="properties" value="1" />
+          <entry key="sql" value="1" />
           <entry key="xml" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
+          <entry key="CSS" value="6" />
           <entry key="JAVA" value="111" />
-          <entry key="JSP" value="34" />
+          <entry key="JSP" value="73" />
+          <entry key="JavaScript" value="3" />
           <entry key="Properties" value="1" />
+          <entry key="SQL" value="1" />
           <entry key="XML" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="java" value="5962" />
-          <entry key="jsp" value="1196" />
+          <entry key="jsp" value="2222" />
           <entry key="properties" value="2" />
           <entry key="txt" value="19" />
           <entry key="xml" value="12" />
@@ -66,7 +115,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="5962" />
-          <entry key="JSP" value="1196" />
+          <entry key="JSP" value="2222" />
           <entry key="PLAIN_TEXT" value="19" />
           <entry key="Properties" value="2" />
           <entry key="XML" value="12" />
@@ -78,108 +127,98 @@
     <favorites_list name="mavenbookshop" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/servlet/AdminServlet.java">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/VivoProject/Shopping.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="537">
-              <caret line="196" column="16" selection-start-line="196" selection-start-column="16" selection-end-line="196" selection-end-column="16" />
+            <state relative-caret-position="84">
+              <caret line="928" column="125" selection-start-line="928" selection-start-column="92" selection-end-line="928" selection-end-column="125" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="n#head#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#3;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#4;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/admin-list.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1510">
-              <caret line="184" column="35" lean-forward="true" selection-start-line="184" selection-start-column="35" selection-end-line="184" selection-end-column="35" />
-              <folding>
-                <element signature="n#style#0;n#a#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1513">
-              <caret line="49" column="203" selection-start-line="49" selection-start-column="203" selection-end-line="49" selection-end-column="203" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/welcome.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="33" column="69" selection-start-line="33" selection-start-column="69" selection-end-line="33" selection-end-column="69" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/constants/Constants.java">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/bookshop/Shopping.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/login.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="48" column="49" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com.rg/utils/JdbcUtilsTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com.rg/dao/impl/AdminDaoImplTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="58" column="24" lean-forward="true" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
+            <state relative-caret-position="362">
+              <caret line="966" column="37" selection-start-line="966" selection-start-column="37" selection-end-line="966" selection-end-column="37" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#3;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#4;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#li#1;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#div#0;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#li#2;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#div#0;n#div#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#li#3;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#li#3;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#li#3;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#li#3;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#li#3;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#div#0;n#div#0;n#li#3;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#li#4;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#li#4;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#li#4;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#li#4;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#li#4;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#div#0;n#div#0;n#li#4;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#li#5;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#li#5;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#li#5;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#li#5;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#li#5;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#div#0;n#div#0;n#li#5;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#li#6;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#li#6;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#li#6;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#li#6;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#li#6;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#div#0;n#div#0;n#li#6;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#li#0;n#ul#0;n#li#0;n#ul#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#li#1;n#ul#0;n#li#0;n#ul#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#li#2;n#ul#0;n#li#0;n#ul#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#li#3;n#ul#0;n#li#0;n#ul#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#li#0;n#ul#0;n#li#2;n#ul#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#li#1;n#ul#0;n#li#2;n#ul#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#b#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/service/AdminService.java">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/bookshop/bookshop-foot.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="58" column="22" selection-start-line="58" selection-start-column="22" selection-end-line="58" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/dao/AdminDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="736">
-              <caret line="64" column="7" selection-start-line="64" selection-start-column="7" selection-end-line="64" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state>
+              <caret column="4" lean-forward="true" selection-start-column="4" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -202,7 +241,14 @@
       <find>total</find>
       <find>刷新</find>
       <find>切换</find>
+      <find>add.png</find>
+      <find>/</find>
+      <find>${pageContext.request.contextPath}/VivoProject</find>
+      <find>${cxt}/VivoProject</find>
     </findStrings>
+    <replaceStrings>
+      <replace>..</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -239,6 +285,12 @@
         <option value="$PROJECT_DIR$/src/main/webapp/admin/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/admin/welcome.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com.rg/constants/Constants.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/VivoProject/vivo-top.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/bookshop/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/bookshop/bookshop-top.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/VivoProject/Shopping.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/bookshop/bookshop-foot.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/bookshop/Shopping.jsp" />
       </list>
     </option>
   </component>
@@ -274,7 +326,7 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="960" />
     <option name="width" value="960" />
     <option name="height" value="1080" />
@@ -323,24 +375,31 @@
               <item name="mavenbookshop" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mavenbookshop" type="b2602c69:ProjectViewProjectNode" />
               <item name="mavenbookshop" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com.rg" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="bookshop" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mavenbookshop" type="b2602c69:ProjectViewProjectNode" />
               <item name="mavenbookshop" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com.rg" type="462c0819:PsiDirectoryNode" />
-              <item name="constants" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mavenbookshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mavenbookshop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="VivoProject" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -353,7 +412,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1636616225071" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1636630849923" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -363,20 +422,24 @@
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\sourcefile\java_learn\mavenbookshop\src\main\webapp" />
-      <recent name="D:\sourcefile\java_learn\mavenbookshop\src\main\webapp\admin" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.rg.service" />
       <recent name="com.rg.dao" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\sourcefile\java_learn\mavenbookshop\src\main\webapp\images" />
+      <recent name="D:\sourcefile\java_learn\mavenbookshop" />
+      <recent name="D:\sourcefile\java_learn\mavenbookshop\src\main\webapp" />
+      <recent name="D:\sourcefile\java_learn\mavenbookshop\src\main\webapp\VivoProject" />
+      <recent name="D:\sourcefile\java_learn\mavenbookshop\src\main\webapp\admin" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.rg.utils" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\sourcefile\java_learn\mavenbookshop\src\main\webapp\VivoProject" />
+      <recent name="D:\sourcefile\java_learn\mavenbookshop\src\main\webapp" />
       <recent name="D:\sourcefile\java_learn\mavenbookshop\src\main\webapp\admin" />
-      <recent name="D:\sourcefile\java_learn\mavenbookshop\src\main\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -640,7 +703,7 @@
       <workItem from="1636547024973" duration="8928000" />
       <workItem from="1636591143519" duration="6383000" />
       <workItem from="1636597819337" duration="4797000" />
-      <workItem from="1636608593760" duration="7574000" />
+      <workItem from="1636608593760" duration="21888000" />
     </task>
     <servers />
   </component>
@@ -677,10 +740,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41899000" />
+    <option name="totallyTimeSpent" value="56213000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="UI Designer" order="0" />
@@ -689,19 +752,19 @@
       <window_info id="设计器" order="3" />
       <window_info id="Web" order="4" side_tool="true" />
       <window_info id="Image Layers" order="5" />
-      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.49841774" visible="true" weight="0.15511727" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.49841774" visible="true" weight="0.15511727" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Messages" order="0" sideWeight="0.49888888" weight="0.32800853" />
-      <window_info anchor="bottom" id="Terminal" order="1" weight="0.28434506" />
+      <window_info anchor="bottom" id="Terminal" order="1" weight="0.2892741" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5011111" side_tool="true" weight="0.32900432" />
       <window_info anchor="bottom" id="Java Enterprise" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="4" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="5" show_stripe_button="false" />
       <window_info anchor="bottom" id="调试" order="6" />
-      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32800853" />
+      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32719395" />
       <window_info anchor="bottom" id="Message" order="8" />
       <window_info anchor="bottom" id="Find" order="9" />
-      <window_info active="true" anchor="bottom" id="Run" order="10" visible="true" weight="0.32055378" />
+      <window_info anchor="bottom" id="Run" order="10" visible="true" weight="0.314164" />
       <window_info anchor="bottom" id="Debug" order="11" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
@@ -836,6 +899,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="31" column="41" lean-forward="true" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -850,6 +916,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="473">
           <caret line="138" column="46" selection-start-line="138" selection-start-column="46" selection-end-line="138" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -857,6 +926,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-255">
           <caret line="39" column="32" lean-forward="true" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -884,26 +956,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/dao/AdminDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="736">
-          <caret line="64" column="7" selection-start-line="64" selection-start-column="7" selection-end-line="64" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/service/AdminService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="58" column="22" selection-start-line="58" selection-start-column="22" selection-end-line="58" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/admin-edit.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -918,23 +970,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com.rg/dao/impl/AdminDaoImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="58" column="24" lean-forward="true" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com.rg/utils/JdbcUtilsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/servlet/AdminServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="537">
@@ -945,41 +980,246 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/admin-list.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/constants/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1510">
-          <caret line="184" column="35" lean-forward="true" selection-start-line="184" selection-start-column="35" selection-end-line="184" selection-end-column="35" />
+        <state relative-caret-position="204">
+          <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com.rg/utils/JdbcUtilsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com.rg/dao/impl/AdminDaoImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="58" column="24" lean-forward="true" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
           <folding>
-            <element signature="n#style#0;n#a#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/login.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/service/AdminService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="48" column="49" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="49" />
+        <state relative-caret-position="452">
+          <caret line="58" column="22" selection-start-line="58" selection-start-column="22" selection-end-line="58" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/dao/AdminDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="736">
+          <caret line="64" column="7" selection-start-line="64" selection-start-column="7" selection-end-line="64" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/VivoProject/js/demo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/zc.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my2.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-255" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/welcome.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="69" selection-start-line="33" selection-start-column="69" selection-end-line="33" selection-end-column="69" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1513">
-          <caret line="49" column="203" selection-start-line="49" selection-start-column="203" selection-end-line="49" selection-end-column="203" />
+        <state relative-caret-position="-323">
+          <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/welcome.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="33" column="69" selection-start-line="33" selection-start-column="69" selection-end-line="33" selection-end-column="69" />
+        <state relative-caret-position="238">
+          <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/constants/Constants.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/admin-list.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+        <state relative-caret-position="3083">
+          <caret line="184" column="35" lean-forward="true" selection-start-line="184" selection-start-column="35" selection-end-line="184" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/slideshow.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/VivoProject/js/slideshow.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/VivoProject/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="25" column="48" lean-forward="true" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/VivoProject/font/iconfont.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/VivoProject/css/iconfont.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/font/iconfont.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="1" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/VivoProject/vivo-top.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2499">
+          <caret line="147" column="47" selection-start-line="147" selection-start-column="47" selection-end-line="147" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/bookshop/bookshop-top.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="53" />
+          <folding>
+            <element signature="n#!!doc;n#jsp:root#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/VivoProject/vivo-footer.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="232" column="85" lean-forward="true" selection-start-line="177" selection-end-line="232" selection-end-column="85" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/bookshop/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="416" column="14" lean-forward="true" selection-start-line="416" selection-start-column="14" selection-end-line="416" selection-end-column="14" />
+          <folding>
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/VivoProject/Shopping.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="928" column="125" selection-start-line="928" selection-start-column="92" selection-end-line="928" selection-end-column="125" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#3;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#4;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/bookshop/bookshop-foot.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="4" lean-forward="true" selection-start-column="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/bookshop/Shopping.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="966" column="37" selection-start-line="966" selection-start-column="37" selection-end-line="966" selection-end-column="37" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#3;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#4;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#li#1;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#div#0;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#li#2;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#div#0;n#div#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#li#3;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#li#3;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#li#3;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#li#3;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#li#3;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#div#0;n#div#0;n#li#3;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#li#4;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#li#4;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#li#4;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#li#4;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#li#4;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#div#0;n#div#0;n#li#4;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#li#5;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#li#5;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#li#5;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#li#5;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#li#5;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#div#0;n#div#0;n#li#5;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#li#6;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#li#6;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#li#6;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#li#6;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#li#6;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#div#0;n#div#0;n#li#6;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#li#0;n#ul#0;n#li#0;n#ul#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#li#1;n#ul#0;n#li#0;n#ul#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#li#2;n#ul#0;n#li#0;n#ul#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#li#3;n#ul#0;n#li#0;n#ul#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#li#0;n#ul#0;n#li#2;n#ul#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#li#1;n#ul#0;n#li#2;n#ul#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#b#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

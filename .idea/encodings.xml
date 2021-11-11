@@ -2,6 +2,42 @@
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/VivoProject/Done.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/VivoProject/Shopping.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/VivoProject/VIVOCheckout.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/VivoProject/VivoProject" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/VivoProject/cartAddSuccess.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/VivoProject/closed.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/VivoProject/css" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/VivoProject/download.zip" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/VivoProject/font" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/VivoProject/images" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/VivoProject/img" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/VivoProject/index.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/VivoProject/js" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/VivoProject/log-n.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/VivoProject/obligations.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/VivoProject/personal.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/VivoProject/personalCenter.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/VivoProject/personalMyinformation.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/VivoProject/productDetails.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/VivoProject/register.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/VivoProject/retrievePassword.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/VivoProject/settlement.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/VivoProject/shoppingcart.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/VivoProject/stayGoods.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/VivoProject/take.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/VivoProject/upload" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/VivoProject/vivo-footer.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/VivoProject/vivo-top.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/css" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/font" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/arrow_right.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/backTopGray_mob_03ab634 (1).png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/backTopGray_mob_03ab634.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/backTopHover_mob_854f80f.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/backTopWeb_mob_b64dbcd.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/js" charset="GBK" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
