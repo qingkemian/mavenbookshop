@@ -12,8 +12,8 @@
     <base href="${pageContext.request.contextPath}/">
     <meta charset="UTF-8">
     <title>BOOKSHOP官方网站</title>
-    <meta name="keywords" content='vivo智能手机官方商城'/>
-    <meta name="description" content='vivo智能手机官方商城'/>
+    <meta name="keywords" content='BOOKSHOP官方网站'/>
+    <meta name="description" content='BOOKSHOP官方网站'/>
     <link rel="icon" href="images/favicon_7c51b3b.ico">
     <link rel="stylesheet" href="../css/shangcheng.css" type="text/css">
     <link rel="stylesheet" href="../css/iconfont.css" type="text/css">

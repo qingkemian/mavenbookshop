@@ -5,7 +5,6 @@
     <file url="file://$PROJECT_DIR$/src/main/webapp/VivoProject/Done.jsp" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/VivoProject/Shopping.jsp" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/VivoProject/VIVOCheckout.jsp" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/webapp/VivoProject/VivoProject" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/VivoProject/cartAddSuccess.jsp" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/VivoProject/closed.jsp" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/VivoProject/css" charset="GBK" />
@@ -32,11 +31,24 @@
     <file url="file://$PROJECT_DIR$/src/main/webapp/VivoProject/vivo-top.jsp" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/css" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/font" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/111347us9sszkewzz5xso2.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/1567504601389.jpg" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/images/arrow_right.png" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/images/backTopGray_mob_03ab634 (1).png" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/images/backTopGray_mob_03ab634.png" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/images/backTopHover_mob_854f80f.png" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/images/backTopWeb_mob_b64dbcd.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/favicon_7c51b3b.ico" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/gou_93eee52.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/icon-add-32x32_16a3e66.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/icon-checkbox@2x_2044d74.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/icon-fq.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/icon_sprite.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/info.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/loading.f35cb1f.gif" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/login_ico.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/no-result.50507a32.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/uncheck.png" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/js" charset="GBK" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
