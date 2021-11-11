@@ -3,6 +3,8 @@ package com.rg.dao.impl;
 import com.rg.entity.Admin;
 import org.junit.Test;
 
+import java.util.List;
+
 /**
  * @Describe：
  * @Author:ZelongChen
@@ -24,6 +26,25 @@ public class AdminDaoImplTest {
         } else {
             System.out.println("it is null");
         }
+    }
+
+    @Test
+    public void test2(){
+        AdminDaoImpl adminDao = new AdminDaoImpl();
+        List<Admin> adminList = null;
+        adminList = adminDao.queryAdminListByName("oo", 0);
+        for (Admin admin:adminList) {
+            System.out.println(admin.getName());
+            System.out.println(admin.getPassword());
+        }
+    }
+
+    @Test
+    public void test3(){
+        AdminDaoImpl adminDao = new AdminDaoImpl();
+        int num;
+        num = adminDao.queryAdminTotalNum("oo");
+        System.out.println("num="+num);
     }
 
 }

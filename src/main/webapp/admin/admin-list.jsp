@@ -37,9 +37,10 @@
 <div class="page-container">
     <div class="text-c">
         <input type="hidden" name="totalPage" id="totalPage" value="${totalPage}">
-        <form action="userListServlet" method="post" id="schUser">
+        <form action="adminServlet" method="post" id="queryAdmin">
+            <input type="hidden" name="action" value="adminList"> <!-- 注意！！！ -->
             <input type="hidden" name="currPage" id="currPage" value="${currPage}">
-            <input type="text" class="input-text" style="width:250px" placeholder="输入账号" id="" value="${sch_uname}" name="sch_uname">
+            <input type="text" class="input-text" style="width:250px" placeholder="输入账号" id="" value="${query_name}" name="query_name">
             <button type="submit" class="btn btn-success"><i class="Hui-iconfont">&#xe665;</i> 查询</button>
         </form>
     </div>
@@ -52,29 +53,21 @@
         <tr class="text-c">
             <th width="25"><input type="checkbox" name="" value=""></th>
             <th width="40">序号</th>
-            <th width="150">账号</th>
-            <th width="90">密码</th>
-            <th width="150">身份证</th>
-            <th width="40">年龄</th>
-            <th width="40">生日</th>
-            <th width="100">证件类型</th>
-            <th width="100">操作</th>
+            <th width="300">账号</th>
+            <th width="300">密码</th>
+            <th width="50">操作</th>
         </tr>
         </thead>
         <tbody>
-        <c:forEach items="${userlist}" var = "user" varStatus="vs">
+        <c:forEach items="${adminlist}" var = "admin" varStatus="vs">
         <tr class="text-c">
             <td><input type="checkbox" value="1" name=""></td>
             <td>${vs.count + pageSize * (currPage - 1)}</td>
-            <td>${user.uname}</td>
-            <td>${user.upwd}</td>
-            <td>${user.idcard}</td>
-            <td>${user.age}</td>
-            <td>${user.birth}</td>
-            <td>${user.idcardtype}</td>
+            <td>${admin.name}</td>
+            <td>${admin.password}</td>
             <td class="td-manage"><a style="text-decoration:none" onClick="admin_stop(this,'10001')" href="javascript:;" title="停用">
-                <i class="Hui-iconfont">&#xe631;</i></a> <a title="编辑" href="editUserInit?uid=${user.uid}" class="ml-5" style="text-decoration:none">
-                <i class="Hui-iconfont">&#xe6df;</i></a> <a title="删除" href="javascript:;" onclick="admin_del(${user.uid})" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a>
+                <i class="Hui-iconfont">&#xe631;</i></a> <a title="编辑" href="adminServlet?action=editAdminInit&id=${admin.id}" class="ml-5" style="text-decoration:none">
+                <i class="Hui-iconfont">&#xe6df;</i></a> <a title="删除" href="javascript:;" onclick="admin_del(${admin.id})" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a>
                 <input type="hidden" name="delMsg" id="delMsg" value="${delMsg}">
             </td>
         </tr>
@@ -110,7 +103,7 @@
         console.log("totalPage"+totalPage);
         if (old < totalPage) {
             $("#currPage").val(parseInt(old)+1);
-            $("#schUser").submit();
+            $("#queryAdmin").submit();
         } else {
             layer.msg('当前页已经是最后一页!',{icon:1,time:1000});
         }
@@ -123,7 +116,7 @@
         var old = $("#currPage").val();
         if (old > 1) {
             $("#currPage").val(parseInt(old)-1);
-            $("#schUser").submit();
+            $("#queryAdmin").submit();
         } else {
             layer.msg('当前页已经是第一页!',{icon:1,time:1000});
         }
@@ -153,7 +146,7 @@
                 success: function(data){
                     layer.msg($("#delMsg").val(),{icon:1,time:1000},function () {
                         // window.location.href只传链接 属性会置null 传入参数可解决
-                        window.location.href = "userListServlet?currPage="+$("#currPage").val();
+                        window.location.href = "adminServlet?action=delAdmin&currPage="+$("#currPage").val();
                     });
                 },
                 error:function(data) {

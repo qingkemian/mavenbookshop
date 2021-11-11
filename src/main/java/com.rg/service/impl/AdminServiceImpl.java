@@ -1,8 +1,11 @@
 package com.rg.service.impl;
 
+import com.rg.dao.AdminDao;
 import com.rg.dao.impl.AdminDaoImpl;
 import com.rg.entity.Admin;
 import com.rg.service.AdminService;
+
+import java.util.List;
 
 /**
  * @Describe：AdminService接口的实现类
@@ -13,7 +16,7 @@ public class AdminServiceImpl implements AdminService {
     /*
     * admin实例
     * */
-    AdminDaoImpl adminDao = new AdminDaoImpl();
+    AdminDao adminDao = new AdminDaoImpl();
 
     /**
      * 调用adminDao中的方法，将获得的admin对象的name和password作为参数传入
@@ -22,6 +25,27 @@ public class AdminServiceImpl implements AdminService {
      */
     public Admin login(Admin admin) {
         return adminDao.queryAdminByNameAndPassword(admin.getName(), admin.getPassword());
+    }
+
+    /**
+     * 通过name查询Admin
+     * @param admin
+     * @param start
+     * @return List<Admin>
+     */
+    @Override
+    public List<Admin> queryAdminByName(Admin admin, Integer start) {
+        return adminDao.queryAdminListByName(admin.getName() , start);
+    }
+
+    /**
+     * 查询符合的Admin总数
+     * @param admin
+     * @return int
+     */
+    @Override
+    public int queryAdminTotalNum(Admin admin) {
+        return adminDao.queryAdminTotalNum(admin.getName());
     }
 
 }

@@ -2,6 +2,8 @@ package com.rg.service;
 
 import com.rg.entity.Admin;
 
+import java.util.List;
+
 /**
  * @Describe：AdminService接口类
  * @Author:ZelongChen
@@ -15,4 +17,18 @@ public interface AdminService {
      */
     Admin login(Admin admin);
 
+    /**
+     * 通过用户名和start进行分页查询
+     * @param admin
+     * @param start
+     * @return List<Admin>
+     */
+    List<Admin> queryAdminByName(Admin admin , Integer start);
+
+    /**
+     * 符合条件的分页数量
+     * @param admin
+     * @return int
+     */
+    int queryAdminTotalNum(Admin admin);
 }
