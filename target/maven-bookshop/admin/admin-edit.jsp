@@ -33,42 +33,19 @@
 </head>
 <body>
 <article class="page-container">
-    <form class="form form-horizontal" id="form-admin-add" action="editUser" method="post">
+    <form class="form form-horizontal" id="form-admin-add" action="adminServlet" method="post">
+        <input type="hidden" name="action" value="editAdmin">
         <div class="row cl">
             <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>账户：</label>
             <div class="formControls col-xs-8 col-sm-9">
-                <input type="hidden" name="uid" id="uid" value="${user.uid}">
-                <input type="text" class="input-text" readonly="readonly" value="${user.uname}" placeholder="" id="uname" name="uname">
+                <input type="hidden" name="id" id="id" value="${admin.id}">
+                <input type="text" class="input-text" readonly="readonly" value="${admin.name}" placeholder="" id="name" name="name">
             </div>
         </div>
         <div class="row cl">
             <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>密码：</label>
             <div class="formControls col-xs-8 col-sm-9">
-                <input type="text" class="input-text" autocomplete="off" value="${user.upwd}" placeholder="密码" id="upwd" name="upwd">
-            </div>
-        </div>
-        <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>卡号：</label>
-            <div class="formControls col-xs-8 col-sm-9">
-                <input type="text" class="input-text" value="${user.idcard}" placeholder="" id="idcard" name="idcard">
-            </div>
-        </div>
-        <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>年龄：</label>
-            <div class="formControls col-xs-8 col-sm-9">
-                <input type="text" class="input-text" value="${user.age}" placeholder="@" name="age" id="age">
-            </div>
-        </div>
-        <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>出生日期：</label>
-            <div class="formControls col-xs-8 col-sm-9">
-                <input type="text" class="input-text" value="${user.birth}" placeholder="@" name="birth" id="birth">
-            </div>
-        </div>
-        <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>卡类型：</label>
-            <div class="formControls col-xs-8 col-sm-9">
-                <input type="text" class="input-text" value="${user.idcardtype}" placeholder="@" name="idcardtype" id="idcardtype">
+                <input type="text" class="input-text" autocomplete="off" value="${admin.password}" placeholder="密码" id="password" name="password">
             </div>
         </div>
         <div class="row cl">

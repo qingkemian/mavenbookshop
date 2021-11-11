@@ -113,8 +113,35 @@ public class AdminServlet extends BaseServlet {
      * @param resp
      * @return void
      */
-    protected void editAdminInit(HttpServletRequest req, HttpServletResponse resp){
+    protected void editAdminInit(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String id = req.getParameter("id");
+        Admin admin = new Admin();
+        admin.setId(Integer.parseInt(id));
+        Admin queryAdmin = adminService.queryAdminById(admin);
+        req.setAttribute("admin", queryAdmin);
+        req.getRequestDispatcher("admin/admin-edit.jsp").forward(req,resp);
+    }
 
+    /**
+     * 编辑管理员类
+     * @param
+     * @return
+     */
+    protected void editAdmin(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        String id = req.getParameter("id");
+        String name = req.getParameter("name");
+        String password = req.getParameter("password");
+
+        Admin admin = new Admin();
+        admin.setId(Integer.parseInt(id));
+        admin.setName(name);
+        admin.setPassword(password);
+
+        if (adminService.updateAdmin(admin)){
+            resp.sendRedirect("adminServlet?action=adminList");
+        } else {
+
+        }
     }
 
     /**

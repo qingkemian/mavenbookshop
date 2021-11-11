@@ -34,4 +34,19 @@ public interface AdminDao {
      */
     int queryAdminTotalNum(String name);
 
+    /**
+     * 通过id查询Admin
+     * @param id
+     * @return Admin
+     */
+    Admin queryAdminById(Integer id);
+
+
+    /**
+     * 修改对应id的Admin的密码
+     * @param id
+     * @param password
+     * @return int
+     */
+    int updateAdmin(Integer id, String password);
 }

@@ -66,7 +66,7 @@
             <td>${admin.name}</td>
             <td>${admin.password}</td>
             <td class="td-manage"><a style="text-decoration:none" onClick="admin_stop(this,'10001')" href="javascript:;" title="停用">
-                <i class="Hui-iconfont">&#xe631;</i></a> <a title="编辑" href="editUserInit?id=${admin.id}" class="ml-5" style="text-decoration:none">
+                <i class="Hui-iconfont">&#xe631;</i></a> <a title="编辑" href="adminServlet?action=editAdminInit&id=${admin.id}" class="ml-5" style="text-decoration:none">
                 <i class="Hui-iconfont">&#xe6df;</i></a> <a title="删除" href="javascript:;" onclick="admin_del(${admin.id})" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a>
                 <input type="hidden" name="delMsg" id="delMsg" value="${delMsg}">
             </td>

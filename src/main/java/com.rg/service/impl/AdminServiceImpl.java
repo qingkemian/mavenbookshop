@@ -48,4 +48,21 @@ public class AdminServiceImpl implements AdminService {
         return adminDao.queryAdminTotalNum(admin.getName());
     }
 
+    /**
+     * 通过id查询
+     * @param admin
+     * @return Admin
+     */
+    @Override
+    public Admin queryAdminById(Admin admin) {
+        return adminDao.queryAdminById(admin.getId());
+    }
+
+    public boolean updateAdmin(Admin admin) {
+        int flag = adminDao.updateAdmin(admin.getId(), admin.getPassword());
+        if (flag > 0) {
+            return true;
+        }
+        return false;
+    }
 }

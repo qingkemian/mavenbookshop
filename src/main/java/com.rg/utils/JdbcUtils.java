@@ -7,6 +7,7 @@ import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Properties;
+import java.util.logging.Logger;
 
 /**
  * @Describe：数据库工具类，使用druid连接池
@@ -15,6 +16,9 @@ import java.util.Properties;
  */
 
 public class JdbcUtils {
+
+    private static String name = JdbcUtils.class.getName();
+    private static Logger log = Logger.getLogger(name);
 
     /**
      * 数据库连接池
@@ -39,6 +43,7 @@ public class JdbcUtils {
             properties.load(inputSteam);
             //创建数据库连接池
             dataSource = (DruidDataSource) DruidDataSourceFactory.createDataSource(properties);
+            log.info("创建数据库连接池");
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -71,6 +76,7 @@ public class JdbcUtils {
             }
 
         }
+        log.info("获得连接");
         return conn;
     }
 
@@ -87,6 +93,7 @@ public class JdbcUtils {
             try {
                 //1.提交事务
                 conn.commit();
+                log.info("提交事务");
 
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -95,6 +102,7 @@ public class JdbcUtils {
                 try {
                     //2.关闭连接
                     conn.close();
+                    log.info("关闭连接");
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }
@@ -119,6 +127,7 @@ public class JdbcUtils {
             try {
                 //1.回滚事务
                 conn.rollback();
+                log.info("回滚");
 
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -127,6 +136,7 @@ public class JdbcUtils {
                 try {
                     //2.关闭连接
                     conn.close();
+                    log.info("关闭连接");
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }

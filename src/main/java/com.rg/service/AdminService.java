@@ -31,4 +31,13 @@ public interface AdminService {
      * @return int
      */
     int queryAdminTotalNum(Admin admin);
+
+    /**
+     * 传入Admin，通过id查询
+     * @param admin
+     * @return Admin
+     */
+    Admin queryAdminById(Admin admin);
+
+    boolean updateAdmin(Admin admin);
 }

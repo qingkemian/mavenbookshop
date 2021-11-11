@@ -1,5 +1,6 @@
 package com.rg.dao.impl;
 
+import com.rg.dao.AdminDao;
 import com.rg.entity.Admin;
 import org.junit.Test;
 
@@ -14,7 +15,7 @@ public class AdminDaoImplTest {
 
     @Test
     public void test1(){
-        AdminDaoImpl adminDao = new AdminDaoImpl();
+        AdminDao adminDao = new AdminDaoImpl();
         Admin admin = null;
         admin = adminDao.queryAdminByNameAndPassword("admin", "1234567");
 
@@ -30,7 +31,7 @@ public class AdminDaoImplTest {
 
     @Test
     public void test2(){
-        AdminDaoImpl adminDao = new AdminDaoImpl();
+        AdminDao adminDao = new AdminDaoImpl();
         List<Admin> adminList = null;
         adminList = adminDao.queryAdminListByName("oo", 0);
         for (Admin admin:adminList) {
@@ -41,10 +42,24 @@ public class AdminDaoImplTest {
 
     @Test
     public void test3(){
-        AdminDaoImpl adminDao = new AdminDaoImpl();
+        AdminDao adminDao = new AdminDaoImpl();
         int num;
         num = adminDao.queryAdminTotalNum("oo");
         System.out.println("num="+num);
+    }
+    
+    @Test
+    public void test4(){
+        AdminDao adminDao = new AdminDaoImpl();
+        Admin admin = adminDao.queryAdminById(1);
+        System.out.println("id:"+admin.getId()+",name:"+admin.getName()+",password:"+admin.getPassword());
+    }
+
+    @Test
+    public void test5(){
+        AdminDao adminDao = new AdminDaoImpl();
+        int i = adminDao.updateAdmin(2, "1111111");
+        System.out.println(i);
     }
 
 }
