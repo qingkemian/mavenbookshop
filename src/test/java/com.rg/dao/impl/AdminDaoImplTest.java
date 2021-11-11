@@ -57,9 +57,13 @@ public class AdminDaoImplTest {
 
     @Test
     public void test5(){
-        AdminDao adminDao = new AdminDaoImpl();
-        int i = adminDao.updateAdmin(2, "1111111");
-        System.out.println(i);
+        String[] st = new String[2];
+        st[0] = "123456";
+        st[1] = "456789";
+        System.out.println(st);
+        for (String s : st) {
+            System.out.println(s);
+        }
     }
 
 }

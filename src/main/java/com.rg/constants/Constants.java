@@ -10,6 +10,6 @@ public class Constants {
     /*
      * 分页大小
      * */
-    public final static Integer PAGE_SIZE = 3;
+    public final static Integer PAGE_SIZE = 5;
 
 }

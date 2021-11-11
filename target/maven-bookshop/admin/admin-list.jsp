@@ -38,7 +38,6 @@
     <span class="c-gray en">&gt;</span> 管理员管理
     <span class="c-gray en">&gt;</span> 管理员列表
     <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" id="btn-refresh" href="javascript:;" onclick="admin_refresh()" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a>
-    <a href="javascript:;" onclick="console.log('aaatest')" class="test"></a>
 </nav>
 <div class="page-container">
     <div class="text-c">
@@ -73,7 +72,7 @@
         <tbody>
         <c:forEach items="${adminlist}" var = "admin" varStatus="vs">
         <tr class="text-c">
-            <td><input type="checkbox" value="1" name=""></td>
+            <td><input type="checkbox" value="${admin.id}" name="check"></td>
             <td>${vs.count + pageSize * (currPage - 1)}</td>
             <td>${admin.name}</td>
             <td>${admin.password}</td>
@@ -105,9 +104,7 @@
 <script type="text/javascript" src="lib/datatables/1.10.15/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="lib/laypage/1.2/laypage.js"></script>
 <script type="text/javascript">
-    /*
-    * 下一页
-    * */
+    /*下一页*/
     function nextPage() {
         var totalPage = $("#totalPage").val();
         var old = $("#currPage").val();
@@ -121,9 +118,7 @@
         }
     }
 
-    /*
-    * 上一页
-    * */
+    /*上一页*/
     function prePage() {
         var old = $("#currPage").val();
         if (old > 1) {
@@ -134,6 +129,7 @@
         }
 
     }
+
     /*
         参数解释：
         title	标题
@@ -146,6 +142,7 @@
     function admin_add(title,url,w,h){
         layer_show(title,url,w,h);
     }
+
     /*管理员-删除*/
     function admin_del(id){
         layer.confirm('确认要删除吗？',function(index){
@@ -165,6 +162,38 @@
                     console.log(data.msg);
                 },
             });
+        });
+    }
+
+    /*批量删除*/
+    function datadel() {
+        layer.confirm('确认要删除吗？',function () {
+           var checkId = [];
+           if($("input[name=check]:checked").length > 0){
+               $("input[name=check]:checked").each(function (i) {
+                   checkId[i] = $(this).val();
+               });
+
+               console.log(checkId);
+               $.ajax({
+                   type: 'POST',
+                   url: 'adminServlet?action=delBatch',
+                   data:{
+                       checkId: checkId
+                   },
+                   traditional:true, //阻止jquery对数组序列化
+                   dataType:"text",
+                   success: function(data){
+                       layer.msg($("#delMsg").val(),{icon:1,time:1000},function () {
+                           // window.location.href只传链接 属性会置null 传入参数可解决
+                           window.location.href = "adminServlet?action=adminList&currPage="+$("#currPage").val();
+                       });
+                   },
+                   error:function(data) {
+                       console.log(data.msg);
+                   },
+               });
+           }
         });
     }
 

@@ -175,4 +175,29 @@ public class AdminServlet extends BaseServlet {
             req.setAttribute("delMsg", "删除失败");
         }
     }
+
+    /**
+     * 批量删除Admin
+     * @param req
+     * @param resp
+     * @return void
+     */
+    protected void delBatch(HttpServletRequest req, HttpServletResponse resp){
+        String[] checkId = req.getParameterValues("checkId") ;
+        Admin admin = new Admin();
+        boolean flag = true;
+        for (String s : checkId) {
+            admin.setId(Integer.parseInt(s));
+            if (adminService.delAdmin(admin)){
+
+            } else {
+                flag = false;
+            }
+        }
+        if (flag){
+            req.setAttribute("delMsg", "删除成功");
+        } else {
+            req.setAttribute("delMsg", "删除失败");
+        }
+    }
 }
