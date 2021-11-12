@@ -4,7 +4,7 @@ import com.rg.entity.Gender;
 import com.rg.entity.User;
 import sun.nio.cs.ext.MacThai;
 
-import java.util.Date;
+import java.sql.Date;
 import java.util.List;
 
 /**
@@ -68,7 +68,7 @@ public interface UserDao {
      * @param sex
      * @return int
      */
-    int addUser(String uname, String upwd, String phone, String email, String sex , String registDate);
+    int addUser(String uname, String upwd, String phone, String email, String sex , Date registDate);
 
     /**
      * 通过uid删除用户

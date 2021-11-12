@@ -951,17 +951,6 @@
                 </div>
 
                 <ul class="box-list">
-                    <c:forEach items="${getBoutiquePhone4}" var="good" varStatus="">
-                        <%-- 如果状态为5  则为上架   4为下架 --%>
-                        <c:if test="${good.v_status eq 5}">
-                            <li class="box">
-                                <a target="_blank" href="ShoppingServlet?action=productDetails&gid=${good.v_gid}">
-                                    <img src="../${good.v_image}"
-                                         style="display: inline;">
-                                </a>
-                            </li>
-                        </c:if>
-                    </c:forEach>
                     <c:forEach items="${getBoutiquePhone}" var="good" varStatus="">
                         <li class="box">
                             <a target="_blank" class="box-b"

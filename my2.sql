@@ -54,17 +54,18 @@ CREATE TABLE `address`  (
 INSERT INTO `address` VALUES (1,1,'CZL','江苏省','苏州市','虎丘区','苏州科技大学',18112559352,1);
 
 -- 4.创建商品state表
-DROP TABLE IF EXISTS `orederstate`;
-CREATE TABLE `orderstate`  (
+DROP TABLE IF EXISTS `orederstatus`;
+CREATE TABLE `orderstatus`  (
   `stateId` int(11) NOT NULL AUTO_INCREMENT,
   `state` varchar(255) NOT NULL,
   PRIMARY KEY (`stateId`)
-) ENGINE = InnoDB AUTO_INCREMENT = 5 ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 6 ROW_FORMAT = Dynamic;
 
-INSERT INTO `orderstate` VALUES (1, '待支付');
-INSERT INTO `orderstate` VALUES (2, '运输中');
-INSERT INTO `orderstate` VALUES (3, '待收货');
-INSERT INTO `orderstate` VALUES (4, '待评价');
+INSERT INTO `orderstatus` VALUES (1, '待支付');
+INSERT INTO `orderstatus` VALUES (2, '待发货');
+INSERT INTO `orderstatus` VALUES (3, '运输中');
+INSERT INTO `orderstatus` VALUES (4, '待收货');
+INSERT INTO `orderstatus` VALUES (5, '待评价');
 
 -- 5.创建theorder表
 DROP TABLE IF EXISTS `theorder`;
@@ -76,7 +77,7 @@ CREATE TABLE `theorder`  (
 	`price` DECIMAL(6,3) NOT NULL,
   `uid` int(11) NOT NULL,
   PRIMARY KEY (`orderNo`),
-	FOREIGN KEY (`stateId`) REFERENCES `orderstate`(`stateId`),
+	FOREIGN KEY (`stateId`) REFERENCES `orderstatus`(`stateId`),
 	FOREIGN KEY (`addressId`) REFERENCES `address`(`addressId`),
 	FOREIGN KEY (`uid`) REFERENCES `user`(`uid`)
 ) ENGINE = InnoDB CHARACTER SET = utf8 ROW_FORMAT = Dynamic;
@@ -85,16 +86,16 @@ CREATE TABLE `theorder`  (
 INSERT INTO `theorder` VALUES (1,CURRENT_TIMESTAMP,1,1,20.6,1);
 
 -- 6.创建商品state表
-DROP TABLE IF EXISTS `goodstate`;
-CREATE TABLE `goodstate`  (
+DROP TABLE IF EXISTS `goodstatus`;
+CREATE TABLE `goodstatus`  (
   `stateId` int(11) NOT NULL AUTO_INCREMENT,
   `state` varchar(255) NOT NULL,
   PRIMARY KEY (`stateId`)
 ) ENGINE = InnoDB AUTO_INCREMENT = 4 ROW_FORMAT = Dynamic;
 
-INSERT INTO `goodstate` VALUES (1, '有货');
-INSERT INTO `goodstate` VALUES (2, '无货');
-INSERT INTO `goodstate` VALUES (3, '下架');
+INSERT INTO `goodstatus` VALUES (1, '有货');
+INSERT INTO `goodstatus` VALUES (2, '无货');
+INSERT INTO `goodstatus` VALUES (3, '下架');
 
 -- 7.创建goodclassify表
 DROP TABLE IF EXISTS `goodclassify`;
@@ -131,7 +132,7 @@ CREATE TABLE `goods`  (
 	`discount` DECIMAL(4,3) DEFAULT 1.000,
 	`classifyId` int(20) NOT NULL,
   PRIMARY KEY (`goodNo`),
-	FOREIGN KEY (`stateId`) REFERENCES `goodstate`(`stateId`),
+	FOREIGN KEY (`stateId`) REFERENCES `goodstatus`(`stateId`),
 	FOREIGN KEY (`classifyId`) REFERENCES `goodclassify`(`classifyId`)
 ) ENGINE = InnoDB ROW_FORMAT = Dynamic;
 

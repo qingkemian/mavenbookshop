@@ -6,6 +6,7 @@ import com.rg.entity.Admin;
 import com.rg.entity.Gender;
 import com.rg.entity.User;
 
+import java.sql.Date;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -71,7 +72,7 @@ public class UserDaoImpl extends BaseDao implements UserDao {
     }
 
     @Override
-    public int addUser(String uname, String upwd, String phone, String email, String sex, String registDate) {
+    public int addUser(String uname, String upwd, String phone, String email, String sex, Date registDate) {
         String sql = "INSERT INTO user (uname,upwd,phone,email,sex,registDate) VALUES (?,?,?,?,?,?)";
         return update(sql,uname,upwd,phone,email,sex,registDate);
     }

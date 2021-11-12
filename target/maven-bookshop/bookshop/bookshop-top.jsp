@@ -144,14 +144,14 @@
                     <a href="GoodSeriesServlet?action=GoodSeriesAll" style="color: white;font-size: 24px" > BOOKSHOP </a>
                 </p>
                 <ul class="header-middle clearfix nav1"> <!-- clearfix 清除浮动 -->
-                    <li class="header-middle-li-p"><a href="ShoppingServlet?action=getHostGoods">商城</a></li>
+                    <li class="header-middle-li-p"><a href="bookshop/Shopping.jsp">商城</a></li>
                     <li class="header-middle-li-p"><a href="#">服务</a></li>
                     <!-- 背景遮罩层 -->
                     <div class="vp-head-products-mask" style=""></div>
                 </ul>
                 <!-- 媒体查询页面大于等于1199px -->
                 <ul class="header-middle clearfix nav2"> <!-- clearfix 清除浮动 -->
-                    <li class="header-middle-li-p"><a href="ShoppingServlet?action=getHostGoods">商城</a></li>
+                    <li class="header-middle-li-p"><a href="bookshop/Shopping.jsp">商城</a></li>
                     <li class="header-middle-li-p"><a href="#">服务</a></li>
                     <!-- 背景遮罩层 -->
                     <div class="vp-head-products-mask" style=""></div>

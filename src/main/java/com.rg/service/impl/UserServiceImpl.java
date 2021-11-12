@@ -6,8 +6,8 @@ import com.rg.entity.Gender;
 import com.rg.entity.User;
 import com.rg.service.UserService;
 
+import java.sql.Date;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -64,8 +64,9 @@ public class UserServiceImpl implements UserService {
             case FEMALE:sex = "female";break;
         }
 
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
-        String registDate = simpleDateFormat.format(user.getRegistDate());
+//        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+//        String registDate = simpleDateFormat.format(user.getRegistDate());
+        Date registDate = new Date(user.getRegistDate().getTime());
 
         int flag = userDao.addUser(user.getUname(), user.getUpwd(), user.getPhone(), user.getEmail(), sex, registDate);
         if (flag > 0){
