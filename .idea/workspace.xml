@@ -246,7 +246,7 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="width" value="960" />
     <option name="height" value="1080" />
   </component>
@@ -374,7 +374,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1636707749450" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1636708160726" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -667,7 +667,7 @@
       <workItem from="1636608593760" duration="23028000" />
       <workItem from="1636636102149" duration="4953000" />
       <workItem from="1636677265911" duration="10987000" />
-      <workItem from="1636695053852" duration="12614000" />
+      <workItem from="1636695053852" duration="12915000" />
     </task>
     <servers />
   </component>
@@ -704,11 +704,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85907000" />
+    <option name="totallyTimeSpent" value="86208000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="UI Designer" order="0" />
       <window_info id="Favorites" order="1" sideWeight="0.50158226" side_tool="true" weight="0.15085287" />
@@ -716,10 +715,10 @@
       <window_info id="设计器" order="3" />
       <window_info id="Web" order="4" side_tool="true" />
       <window_info id="Image Layers" order="5" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.49841774" visible="true" weight="0.16044776" />
+      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.49841774" visible="true" weight="0.16044776" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Messages" order="0" sideWeight="0.49888888" weight="0.32694355" />
-      <window_info anchor="bottom" id="Terminal" order="1" weight="0.28328007" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.28328007" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5011111" side_tool="true" weight="0.32900432" />
       <window_info anchor="bottom" id="Java Enterprise" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="4" show_stripe_button="false" />
@@ -728,7 +727,7 @@
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Find" order="8" />
       <window_info anchor="bottom" id="Application Servers" order="9" weight="0.32481363" />
-      <window_info anchor="bottom" id="Run" order="10" visible="true" weight="0.33013844" />
+      <window_info anchor="bottom" id="Run" order="10" weight="0.33013844" />
       <window_info anchor="bottom" id="Debug" order="11" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />

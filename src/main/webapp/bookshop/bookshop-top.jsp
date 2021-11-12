@@ -127,7 +127,7 @@
                                         <a href="bookshop/personalCenter.jsp">帐号中心</a>
                                     </li>
                                     <li>
-                                        <a href="registerServlet?action=registerClose" id="registerClose">退出登录</a>
+                                        <a href="userServlet?action=logout" id="registerClose">退出登录</a>
                                     </li>
                                 </ul>
                             </div>
