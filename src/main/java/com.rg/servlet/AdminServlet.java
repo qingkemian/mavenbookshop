@@ -23,14 +23,16 @@ import java.util.logging.Logger;
 @WebServlet("/adminServlet")
 public class AdminServlet extends BaseServlet {
 
-    private static String name = AdminServlet.class.getName();
-    private static Logger log = Logger.getLogger(name);
+    private static String classname = AdminServlet.class.getName();
+    private static Logger log = Logger.getLogger(classname);
 
     AdminService adminService = new AdminServiceImpl();
 
     /**
      * 用户登录（判断并返回消息、重定向）
-     * @return void
+     * @param req
+     * @param resp
+     * @throws IOException
      */
     protected void login(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
@@ -63,7 +65,8 @@ public class AdminServlet extends BaseServlet {
      * 列出admin列表
      * @param req
      * @param resp
-     * @return void
+     * @throws ServletException
+     * @throws IOException
      */
     protected void adminList(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
@@ -111,7 +114,8 @@ public class AdminServlet extends BaseServlet {
      * 编辑管理员的初始类
      * @param req
      * @param resp
-     * @return void
+     * @throws ServletException
+     * @throws IOException
      */
     protected void editAdminInit(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String id = req.getParameter("id");
@@ -124,8 +128,9 @@ public class AdminServlet extends BaseServlet {
 
     /**
      * 编辑管理员类
-     * @param
-     * @return
+     * @param req
+     * @param resp
+     * @throws IOException
      */
     protected void editAdmin(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         String id = req.getParameter("id");
@@ -144,6 +149,12 @@ public class AdminServlet extends BaseServlet {
         }
     }
 
+    /**
+     * 添加管理员
+     * @param req
+     * @param resp
+     * @throws IOException
+     */
     protected void addAdmin(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         String name = req.getParameter("name");
         String password = req.getParameter("password");
@@ -163,7 +174,6 @@ public class AdminServlet extends BaseServlet {
      * 删除Admin
      * @param req
      * @param resp
-     * @return void
      */
     protected void delAdmin(HttpServletRequest req, HttpServletResponse resp){
         String id = req.getParameter("id");
@@ -180,7 +190,6 @@ public class AdminServlet extends BaseServlet {
      * 批量删除Admin
      * @param req
      * @param resp
-     * @return void
      */
     protected void delBatch(HttpServletRequest req, HttpServletResponse resp){
         String[] checkId = req.getParameterValues("checkId") ;

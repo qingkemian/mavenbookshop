@@ -28,32 +28,42 @@
         </div>
         <div class="outer-box">
             <div class="inner-box">
-                <form action="registerServlet?action=register" method="post"
+                <form action="userServlet?action=regist" method="post"
                       id="form_register">
                     <label class="labelbox">
-                        <input type="text" placeholder="请输入手机号" name="v_phone" id="phone" />
-                    </label>
-                    <div class="hint phone">
-                        电话号码不能为空
-                    </div>
-                    <label class="labelbox">
-                        <input type="text" placeholder="请输入用户名" name="v_user" id="username"/>
+                        <input type="text" placeholder="请输入用户名" name="uname" id="username"/>
                     </label>
                     <div class="hint username">
-                        电话号码不能为空
+                        用户名不能为空
                     </div>
+
                     <label class="labelbox">
-                        <input type="password" placeholder="请输入密码" name="v_password" id="userpwd"/>
+                        <input type="password" placeholder="请输入密码" name="upwd" id="userpwd"/>
                     </label>
                     <div class="hint userpwd">
-                        电话号码不能为空
+                        密码不能为空
                     </div>
+
+                    <div style="font-size: 14px;margin-top: 10px;margin-bottom: 10px">
+                        <span> 性别： </span>
+                        <input type="radio" name="sex" value="male" checked="checked">Male
+                        <input type="radio" name="sex" value="female">Female
+                    </div>
+
                     <label class="labelbox">
-                        <input type="email" placeholder="请输入QQ邮箱必填" name="v_Email" id="email"/>
+                        <input type="text" placeholder="请输入手机号" name="phone" id="phone" />
+                    </label>
+                    <div class="hint phone">
+                        手机号不能为空
+                    </div>
+
+                    <label class="labelbox">
+                        <input type="email" placeholder="请输入邮箱" name="email" id="email"/>
                     </label>
                     <div class="hint email">
-                        QQ邮箱不能为空
+                        邮箱不能为空
                     </div>
+
                     <label class="labelbox" style="width: 150px;float: left;">
                         <input type="text" placeholder="请输入验证码" name="code" id="code"/>
                     </label>
@@ -91,13 +101,6 @@
                     <div class="link-btn">
                         <input class="link link-able" type="submit" id="register" value="注册">
                     </div>
-                    <!--  <div class="mask" style="display: none">
-                          <div class="mask_menu">
-                              <div class="link-btn register">
-                                  <button class="link link-able "><a href="javascript:;" style="color: #fff;">注册</a></button>
-                              </div>
-                          </div>
-                      </div>-->
                 </form>
             </div>
         </div>
@@ -135,25 +138,6 @@
 
 </script>
 <script>
-    var oInput = document.querySelector("#phone");
-
-    oInput.oninput = debounce(function (even) {
-
-        $.ajax({
-            type:"post",
-            url: "${pageContext.request.contextPath}/registerServlet?action=registerPhone",
-            data: "v_phone="+$("#phone").val(),
-            success:function (msg) {
-                $(".phone").text(msg);
-                $(".phone").show();
-            },error:function (xhr) {
-                console.log(xhr.status);
-            }
-        });
-
-    },500);
-</script>
-<script>
     $(function () {
         $(".hint").hide();
 
@@ -185,7 +169,7 @@
                 $(".userpwd").hide();
             }
 
-            reg = /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+            reg = /^[A-Za-z0-9_-\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
             if (!reg.test($("#email").val()) || $("#email").val() === " ") {
                 $(".email").text("邮箱格式错误!!!");
                 $(".email").show();
@@ -213,38 +197,44 @@
         var timer = null;
         var date = 30;
         $(".getCode").click(function () {
-
-            $(".code").css({
-                display: "block",
-                width: "344px",
-                float: "left",
-                color: "silver"
-            });
-            $(".code").text("QQ邮箱信息可能会有延时，请耐心等待，如果长时间未收到信息，请60秒后重新获取");
-            $(".code").show();
-            timer = setInterval(function () {
-                $(".getCode").text("重新获取验证码("+date+")");
-                if (date <= 0) {
-                    clearInterval(timer);
-                    $(".getCode").text("重新获取验证码");
-                    date = 10;
+            if($("#email").val()){
+                if($(".getCode").text()==="重新获取验证码"||$(".getCode").text()==="获取验证码"){
+                    $.ajax({
+                        type:"POST",
+                        // url :"userServlet?action=getCode&random"+Math.random(),
+                        url :"userServlet?action=getCodeForTest", // 用于测试！！！
+                        data:{
+                            email:$("#email").val(),
+                        },
+                        success:function(data){
+                            alert("验证码发送成功，请注意查收。");
+                        },
+                    })
                 }
-                date--;
-            }, 1000);
-            if($(".getCode").text()==="重新获取验证码"||$(".getCode").text()==="获取验证码"){
-                $.ajax({
-                    type: "post",
-                    url: "${pageContext.request.contextPath}/registerServlet?action=getCode",
-                    data: "email=" + $("#email").val(),
-                    success: function (msg) {
-                        console.log("验证码:"+ msg);
-                    },
-                    error: function (xhr) {
-
-                    }
+                $(".code").css({
+                    display: "block",
+                    width: "344px",
+                    float: "left",
+                    color: "silver"
                 });
+                $(".code").text("邮箱信息可能会有延时，请耐心等待，如果长时间未收到信息，请60秒后重新获取");
+                $(".code").show();
+                timer = setInterval(function () {
+                    $(".getCode").text("重新获取验证码("+date+")");
+                    if (date <= 0) {
+                        clearInterval(timer);
+                        $(".getCode").text("重新获取验证码");
+                        date = 10;
+                    }
+                    date--;
+                }, 1000);
+            } else {
+                alert("邮箱发送失败");
+                $("#notice").html("请填写邮箱");
+                setTimeout(function(){
+                    $("#notice").hide();
+                },1000);
             }
-
         });
 
     });

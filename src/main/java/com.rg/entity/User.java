@@ -12,21 +12,12 @@ public class User {
     private Integer uid;
     private String uname;
     private String upwd;
-    private String idcard;
-    private Integer age;
-    private Date birth;
-
-    public Integer getStart() {
-        return start;
-    }
-
-    public void setStart(Integer start) {
-        this.start = start;
-    }
-
-    private Integer idcardtype;
-
-    private Integer start;
+    private String phone;
+    private String email;
+    private String headimg;
+    private Gender sex;
+    private Date registDate;
+    private Integer address;
 
     public Integer getUid() {
         return uid;
@@ -52,35 +43,51 @@ public class User {
         this.upwd = upwd;
     }
 
-    public String getIdcard() {
-        return idcard;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setIdcard(String idcard) {
-        this.idcard = idcard;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
-    public Integer getAge() {
-        return age;
+    public String getEmail() {
+        return email;
     }
 
-    public void setAge(Integer age) {
-        this.age = age;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public Date getBirth() {
-        return birth;
+    public String getHeadimg() {
+        return headimg;
     }
 
-    public void setBirth(Date birth) {
-        this.birth = birth;
+    public void setHeadimg(String headimg) {
+        this.headimg = headimg;
     }
 
-    public Integer getIdcardtype() {
-        return idcardtype;
+    public Gender getSex() {
+        return sex;
     }
 
-    public void setIdcardtype(Integer idcardtype) {
-        this.idcardtype = idcardtype;
+    public void setSex(Gender sex) {
+        this.sex = sex;
+    }
+
+    public Date getRegistDate() {
+        return registDate;
+    }
+
+    public void setRegistDate(Date registDate) {
+        this.registDate = registDate;
+    }
+
+    public Integer getAddress() {
+        return address;
+    }
+
+    public void setAddress(Integer address) {
+        this.address = address;
     }
 }

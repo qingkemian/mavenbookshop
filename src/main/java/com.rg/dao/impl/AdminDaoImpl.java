@@ -17,8 +17,8 @@ public class AdminDaoImpl extends BaseDao implements AdminDao {
     /*
     * log
     * */
-    private static String name = AdminDaoImpl.class.getName();
-    private static Logger log = Logger.getLogger(name);
+    private static String classname = AdminDaoImpl.class.getName();
+    private static Logger log = Logger.getLogger(classname);
 
     /**
      * 通过BaseDao的方法查询是否有符合要求的用户

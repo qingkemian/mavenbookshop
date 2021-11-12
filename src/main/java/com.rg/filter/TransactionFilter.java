@@ -14,8 +14,8 @@ import java.util.logging.Logger;
  */
 @WebFilter("/*")
 public class TransactionFilter implements Filter {
-    private static String name = TransactionFilter.class.getName();
-    private static Logger log = Logger.getLogger(name);
+    private static String classname = TransactionFilter.class.getName();
+    private static Logger log = Logger.getLogger(classname);
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {

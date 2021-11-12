@@ -17,6 +17,28 @@
     <!--</filter-mapping>-->
 
 
+    <!-- 默认首页配置 -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.htm</welcome-file>
+    </welcome-file-list>
+
+    <!--&lt;!&ndash;配置错误信息页面&ndash;&gt;-->
+    <!--&lt;!&ndash; 500 &ndash;&gt;-->
+    <!--<error-page>-->
+        <!--<error-code>500</error-code>-->
+        <!--&lt;!&ndash; 要跳转到的页面路径 &ndash;&gt;-->
+        <!--<location>/pages/error/error_500.jsp</location>-->
+    <!--</error-page>-->
+
+    <!--&lt;!&ndash; 404 &ndash;&gt;-->
+    <!--<error-page>-->
+        <!--<error-code>404</error-code>-->
+        <!--&lt;!&ndash; 要跳转到的页面路径 &ndash;&gt;-->
+        <!--<location>/pages/error/error_404.jsp</location>-->
+    <!--</error-page>-->
+
 
 </web-app>
 <!--<!DOCTYPE web-app PUBLIC-->
