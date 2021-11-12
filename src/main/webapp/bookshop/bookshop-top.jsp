@@ -101,21 +101,24 @@
                 </ul>
                 <div class="vp-head-top-user">
                     <%-- 根据跳转至购物车页面 --%>
-                    <a href="shoppingCartServlet?action=getUserShoppingCar&uid=${user.uid}" class="vp-user-shopcart">购物车</a>
+                    <a href="shoppingCartServlet?action=getUserShoppingCar&uname=${user.uname}" class="vp-user-shopcart">购物车</a>
                     <c:if test="${ empty user}">
                         <div class="vp-user-login-box">
-                            <a href="bookshop/log-n.jsp" class="vp-user-login">登录</a>
+                            <a href="bookshop/login.jsp" class="vp-user-login">登录</a>
                             <i>|</i>
                             <a href="bookshop/register.jsp" class="vp-user-register">注册</a>
                         </div>
                     </c:if>
-                    <c:if test="${!empty user}" var="user">
+                    <c:if test="${!empty user}">
                         <div class="vp-user-login-box">
                             <div class="personage">
                                 <span>个人中心</span>
                                 <ul class="personal">
                                     <li>
-                                        <a href="personalServlet?action=myOrder&v_uid=${user.uid}">我的订单</a>
+                                        <a href="javascript:void(0);">尊敬的${user.uname}</a>
+                                    </li>
+                                    <li>
+                                        <a href="shoppingCartServlet?action=getUserShoppingCar&uname=${user.uname}" >我的订单</a>
                                     </li>
                                     <li>
                                         <a href="#">我的商城</a>

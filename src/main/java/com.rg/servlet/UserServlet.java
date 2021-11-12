@@ -76,13 +76,14 @@ public class UserServlet extends BaseServlet {
         User user = (User) WebUtils.copygetParameterMapToBean(req.getParameterMap(), new User());
 
         User dbUser = userService.login(user);
+        log.info("username:"+dbUser.getUname());
 
         if (dbUser != null){
             //user信息
             //登录成功的信息存放到session
             req.getSession().setAttribute("user",dbUser);
 
-            req.getRequestDispatcher("bookshop/Shopping.jsp").forward(req, resp);
+            resp.sendRedirect("bookshop/Shopping.jsp");
         } else {
             //回传信息
             req.setAttribute("msg","用户名或者密码错误！");
@@ -233,8 +234,8 @@ public class UserServlet extends BaseServlet {
         }
 
         if (flag){
-            //  验证成功，跳转成功页面
-            req.getRequestDispatcher("bookshop/login.jsp").forward(req, resp);
+            //  验证成功，跳转登录页面
+            resp.sendRedirect("bookshop/login.jsp");
         } else {
             //错误信息
             req.setAttribute("msg","验证码错误！");

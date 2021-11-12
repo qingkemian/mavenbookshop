@@ -165,9 +165,9 @@
         </style>
         <ul class="nav-login">
             <li>
-                <a href="#">登录</a>
+                <a href="bookshop/login.jsp">登录</a>
                 或
-                <a href="#">注册</a>
+                <a href="bookshop/register.jsp">注册</a>
             </li>
         </ul>
 

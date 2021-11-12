@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <head>
     <base href="${pageContext.request.contextPath}/">
@@ -20,24 +21,21 @@
     <div class="Head_area">
         <div class="Middle_head">
             <img src="../images/loginbig.jpg"/>
-            <div class="The_LoGo_area">
-                <a href="log-n.jsp" class="a_LoGo"></a>
-            </div>
             <div class="Form_area_box">
                 <h4 class="Form_h4">
                     帐号登录
-                    <div style="color: red;font-size: 14px;">${registerLoginErr}</div>
+                    <%--<div style="color: red;font-size: 14px;">${registerLoginErr}</div>--%>
                 </h4>
                 <div class="outer-box">
-                    <form method="post" action="registerServlet?action=registerLogin" id="form_login">
+                    <form method="post" action="userServlet?action=login" id="form_login">
                         <label class="labelbox">
-                            <input type="text" id="text_urse" name="v_phone" placeholder="手机号/邮箱/用户名" />
+                            <input type="text" id="text_urse" name="uname" placeholder="用户名" />
                         </label>
                         <div class="hint text_urse">
-                            电话号码不能为空
+                            用户名不能为空
                         </div>
                         <label class="labelbox">
-                            <input type="password" placeholder="密码" name="v_password"  id="password"/>
+                            <input type="password" placeholder="密码" name="upwd"  id="password"/>
                         </label>
                         <div class="hint password">
                             密码不能为空
@@ -50,7 +48,7 @@
                                 <label class="checkLabel">两周内自动登录</label>
                             </div>
                             <div class="link">
-                                <a href="retrievePassword.jsp">
+                                <a href="/bookshop/retrievePassword.jsp">
                                     忘记密码？
                                 </a>
                             </div>
@@ -60,7 +58,7 @@
                         </div>
                     </form>
                     <div class="link-btn">
-                        <a href="../register.jsp" target="_blank" class="lin">
+                        <a href="/bookshop/register.jsp" target="_blank" class="lin">
                             注册BOOKSHOP帐号
                         </a>
                     </div>
