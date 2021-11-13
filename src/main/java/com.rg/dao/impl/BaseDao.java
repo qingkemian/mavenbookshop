@@ -9,6 +9,7 @@ import org.apache.commons.dbutils.handlers.ScalarHandler;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.logging.Logger;
 
 /**
  * @Describe：
@@ -16,6 +17,9 @@ import java.util.List;
  * @Date:2021/11/10 16:22
  */
 public abstract class BaseDao {
+
+    private static String classname = BaseDao.class.getName();
+    private static Logger log = Logger.getLogger(classname);
 
     /**
      * 使用apache的DbUtils操作数据库
@@ -33,6 +37,7 @@ public abstract class BaseDao {
 
         //获取连接
         Connection conn = JdbcUtils.getConnection();
+        log.info("get conn");
 
         //执行sql
         try {
@@ -55,6 +60,7 @@ public abstract class BaseDao {
     public <T> T queryForOne(Class<T> type,String sql,Object ... args){
         //获取连接
         Connection conn = JdbcUtils.getConnection();
+        log.info("get conn");
 
         //执行sql
         try {
@@ -77,6 +83,7 @@ public abstract class BaseDao {
     public <T> List<T> queryForList(Class<T> type, String sql, Object ... args){
         //获取连接
         Connection conn = JdbcUtils.getConnection();
+        log.info("get conn");
 
         //执行sql
         try {
@@ -97,6 +104,7 @@ public abstract class BaseDao {
     public Object queryForSingleValue(String sql,Object ... args){
         //获取连接
         Connection conn = JdbcUtils.getConnection();
+        log.info("get conn");
 
         //执行sql
         try {

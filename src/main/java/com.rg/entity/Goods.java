@@ -18,6 +18,13 @@ public class Goods {
     private BigDecimal discount;
     private Integer classifyId;
 
+    // 将id对应的属性也添加进来
+    private String describe;
+    private String imgSrc;
+
+    // 页面 -- 分页
+    private Integer start;
+
     public Integer getGoodNo() {
         return goodNo;
     }
@@ -80,5 +87,21 @@ public class Goods {
 
     public void setClassifyId(Integer classifyId) {
         this.classifyId = classifyId;
+    }
+
+    public String getDescribe() {
+        return describe;
+    }
+
+    public void setDescribe(String describe) {
+        this.describe = describe;
+    }
+
+    public String getImgSrc() {
+        return imgSrc;
+    }
+
+    public void setImgSrc(String imgSrc) {
+        this.imgSrc = imgSrc;
     }
 }
