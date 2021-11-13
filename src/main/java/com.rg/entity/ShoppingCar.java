@@ -1,5 +1,7 @@
 package com.rg.entity;
 
+import java.math.BigDecimal;
+
 /**
  * @Describe：
  * @Author:ZelongChen
@@ -11,6 +13,13 @@ public class ShoppingCar {
     private Integer goodNo;
     private Integer goodNum;
     private Integer uid;
+
+    // 将其它属性也加入到该实体类中
+    private String goodName;
+    private String producer;
+    private String imgSrc;
+    private BigDecimal price;
+
 
     public Integer getCardId() {
         return cardId;

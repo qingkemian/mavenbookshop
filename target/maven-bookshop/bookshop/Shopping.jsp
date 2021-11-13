@@ -958,7 +958,7 @@
                                href="goodsServlet?action=productDetails&goodNo=${good.goodNo}">
                                 <img class="img-item8 selected"
                                      src="../${good.imgSrc}"
-                                     style="opacity: 0;" height="20" width="15">
+                                     style="opacity: 0;">
                             </a>
                             <div class="prodinfo">
                                 <p class="name">${good.goodName}</p>

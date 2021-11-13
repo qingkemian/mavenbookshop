@@ -141,18 +141,18 @@
         <div class="vp-head-mainbar-pc">
             <div class="vp-head-site">
                 <p class="login">
-                    <a href="goodsServlet?action=updateGood" style="color: white;font-size: 24px" > BOOKSHOP </a>
+                    <a href="#" style="color: white;font-size: 24px" > BOOKSHOP </a>
                 </p>
                 <ul class="header-middle clearfix nav1"> <!-- clearfix 清除浮动 -->
                     <li class="header-middle-li-p"><a href="goodsServlet?action=goodsList">商城</a></li>
-                    <li class="header-middle-li-p"><a href="goodsServlet?action=updateGood">服务</a></li>
+                    <li class="header-middle-li-p"><a href="#">服务</a></li>
                     <!-- 背景遮罩层 -->
                     <div class="vp-head-products-mask" style=""></div>
                 </ul>
                 <!-- 媒体查询页面大于等于1199px -->
                 <ul class="header-middle clearfix nav2"> <!-- clearfix 清除浮动 -->
                     <li class="header-middle-li-p"><a href="goodsServlet?action=goodsList">商城</a></li>
-                    <li class="header-middle-li-p"><a href="goodsServlet?action=updateGood">服务</a></li>
+                    <li class="header-middle-li-p"><a href="#">服务</a></li>
                     <!-- 背景遮罩层 -->
                     <div class="vp-head-products-mask" style=""></div>
                 </ul>

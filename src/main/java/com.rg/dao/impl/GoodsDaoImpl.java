@@ -25,10 +25,10 @@ public class GoodsDaoImpl extends BaseDao implements GoodsDao {
 
     @Override
     public List<Goods> queryGoodsListByName(String goodName, Integer start) {
-        String sql = "SELECT g.*,i.imgSrc  FROM goods g LEFT JOIN img i ON g.goodNo = i.goodNo WHERE 1=1 ";
+        String sql = "SELECT g.*,i.imgSrc,d.describe  FROM (goods g LEFT JOIN img i ON g.goodNo = i.goodNo) LEFT JOIN gooddetail d ON g.detailId = d.detailId WHERE 1=1 ";
         // 动态sql
         if (goodName != null && !"".equals(goodName)){
-            sql = sql + "AND goodName LIKE '%" + goodName + "%'";
+            sql = sql + "AND g.goodName LIKE '%" + goodName + "%'";
         }
         sql += "LIMIT " + start + "," + Constants.PAGE_SIZE;
         log.info(sql);
@@ -38,10 +38,10 @@ public class GoodsDaoImpl extends BaseDao implements GoodsDao {
 
     @Override
     public int queryGoodsTotalNum(String goodName) {
-        String sql = "SELECT count(1) FROM goods g LEFT JOIN img i ON g.goodNo = i.goodNo WHERE 1=1 ";
+        String sql = "SELECT count(1) FROM (goods g LEFT JOIN img i ON g.goodNo = i.goodNo) LEFT JOIN gooddetail d ON g.detailId = d.detailId WHERE 1=1 ";
         // 动态sql
         if (goodName != null && !"".equals(goodName)) {
-            sql = sql + "AND goodName LIKE '%" + goodName + "%'";
+            sql = sql + "AND g.goodName LIKE '%" + goodName + "%'";
         }
         log.info(sql);
 
@@ -50,7 +50,7 @@ public class GoodsDaoImpl extends BaseDao implements GoodsDao {
 
     @Override
     public Goods queryGoodById(Integer goodNo) {
-        String sql = "SELECT g.*,i.imgSrc  FROM goods g LEFT JOIN img i ON g.goodNo = i.goodNo WHERE `goodNO` = ?";
+        String sql = "SELECT g.*,i.imgSrc,d.describe  FROM (goods g LEFT JOIN img i ON g.goodNo = i.goodNo) LEFT JOIN gooddetail d ON g.detailId = d.detailId WHERE g.goodNO = ?";
         return queryForOne(Goods.class,sql,goodNo);
     }
 

@@ -25,7 +25,7 @@
 <head>
     <base href="${pageContext.request.contextPath}/">
     <meta charset="UTF-8">
-    <title>${byIdGoods.v_name} ${byIdGoods.v_user}</title>
+    <title>${byIdGoods.goodName}详情页</title>
     <script src="../js/jquery-1.10.1.min.js"></script>
     <script src="../js/ceiling.js"></script>
     <script src="../js/pc-menu-nav.js"></script>
@@ -57,7 +57,7 @@
             <span class="crumbs-s1 iconfont icon-fanhuidingbu"></span>
             <a href="javascript:;">智能手机</a>
             <span class="crumbs-s1 iconfont icon-fanhuidingbu"></span>
-            <a href="javascript:;">${byIdGoods.v_name}</a>
+            <a href="javascript:;">${byIdGoods.goodName}</a>
         </div>
         <div class="base-info">
             <div class="base-info_container">
@@ -67,15 +67,15 @@
                             <ul class="img-list--big">
                                 <img src="../images/1808245374667161_250x250.png" class="corner">
                                 <li class="big-item" style="opacity: 1;"><img
-                                        src="../${byIdGoods.v_image}" alt="${byIdGoods.v_name}"></li>
+                                        src="../${byIdGoods.imgSrc}" alt="${byIdGoods.goodName}"></li>
                                 <li class="big-item"><img
-                                        src="../images/10000467_1551441794651_750x750.png" alt=""></li>
+                                        src="../${byIdGoods.imgSrc}" alt=""></li>
                                 <li class="big-item"><img
-                                        src="../images/10000467_1551441801057_750x750.png" alt=""></li>
+                                        src="../${byIdGoods.imgSrc}" alt=""></li>
                                 <li class="big-item"><img
-                                        src="../images/10000467_1554791931698_750x750.png" alt=""></li>
+                                        src="../${byIdGoods.imgSrc}" alt=""></li>
                                 <li class="big-item"><img
-                                        src="../images/10000467_1554791937623_750x750.png" alt=""></li>
+                                        src="../${byIdGoods.imgSrc}" alt=""></li>
                             </ul>
                             <div class="img--small">
                             <span class="operation operation--previous">
@@ -87,23 +87,23 @@
                                 <div class="list_wrapper">
                                     <ul class="img-list--small">
                                         <li class="small-item"><img
-                                                src="../images/10000467_1551441790246_750x750.png"
+                                                src="../${byIdGoods.imgSrc}"
                                                 alt="">
                                         </li>
                                         <li class="small-item"><img
-                                                src="../images/10000467_1551441794651_750x750.png"
+                                                src="../${byIdGoods.imgSrc}"
                                                 alt="">
                                         </li>
                                         <li class="small-item"><img
-                                                src="../images/10000467_1551441801057_750x750.png"
+                                                src="../${byIdGoods.imgSrc}"
                                                 alt="">
                                         </li>
                                         <li class="small-item"><img
-                                                src="../images/10000467_1554791931698_750x750.png"
+                                                src="../${byIdGoods.imgSrc}"
                                                 alt="">
                                         </li>
                                         <li class="small-item"><img
-                                                src="../images/10000467_1554791937623_750x750.png"
+                                                src="../${byIdGoods.imgSrc}"
                                                 alt="">
                                         </li>
                                     </ul>
@@ -127,19 +127,19 @@
                 </div>
                 <div class="sku-info">
                     <div class="primary">
-                        <h1 class="name">${byIdGoods.v_user} ${edition.get(0).v_name}</h1>
+                        <h1 class="name">${byIdGoods.goodName}</h1>
                         <p class="intro">
-                            <span class="promotion">【限时下单立减200，享3期免息】</span>
-                            ${byIdGoods.v_gparticulars}
+                            <span class="promotion">【限时下单立减100，享3期免息】</span>
+                            <%--${byIdGoods.v_gparticulars}--%>
                         </p>
                         <div class="summary">
                             <div class="summary_price">
                                 <div class="common">
                                     <p class="sale-price">
-                                        <span>￥</span><span class="v_price">${byIdGoods.v_price}</span>
+                                        <span>￥</span><span class="v_price">${byIdGoods.price*byIdGoods.discount}</span>
                                     </p>
                                     <p class="market-price">
-                                        <span>￥</span>3999
+                                        <span>￥</span>${byIdGoods.price}
                                     </p>
                                 </div>
                             </div>
@@ -147,22 +147,22 @@
                                 <ul data-v-19bf72ce="" class="list">
                                     <li class="list_item"><span class="label">满减</span>
                                         <div class="content">
-                                            满2900元减200元
-                                        </div>
-                                    </li>
-                                    <li class="list_item"><span class="label">定制</span>
-                                        <div class="content">
-                                            免费的镭射镌刻服务
+                                            满300元减100元
                                         </div>
                                     </li>
                                     <li class="list_item"><span class="label">积分</span>
                                         <div class="content">
-                                            购买即送2998积分
+                                            购买即送300积分
                                         </div>
                                     </li>
-                                    <li class="list_item"><span class="label">下单赠券</span>
+                                    <li class="list_item"><span class="label">定制书签</span>
                                         <div class="content">
-                                            购机订单完成后即赠配件券
+                                            购书即送定制书签
+                                        </div>
+                                    </li>
+                                    <li class="list_item"><span class="label">社群交流</span>
+                                        <div class="content">
+                                            购书订单完成后可加入社群
                                         </div>
                                     </li>
                                 </ul>
@@ -172,7 +172,7 @@
                             <span class="label">商品支持:</span>
                             <ul class="support_list">
                                 <li class="support_item">
-                                <span class="support_tag">
+                                    <span class="support_tag">
                                     <svg viewBox="0 0 14 14" class="v-icon check-circle" id="icon-check-circle">
                             <title>check-circle</title>
                             <desc>check-circle</desc>
@@ -188,10 +188,10 @@
                             </g>
                         </svg>
                                     花呗分期
-                            </span>
+                                </span>
                                 </li>
                                 <li class="support_item">
-                                <span class="support_tag">
+                                    <span class="support_tag">
                                     <svg viewBox="0 0 14 14" class="v-icon check-circle" id="icon-check-circle">
                             <title>check-circle</title>
                             <desc>check-circle</desc>
@@ -206,66 +206,38 @@
                                 </g>
                             </g>
                         </svg>
-                                    以旧换新
+                                    货到付款
                             </span>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <dl class="sku-module specs">
-                        <dt class="sku-module_title spec_title">版本</dt>
-                        <dd class="sku-module_content">
-                            <%-- 循环版本 --%>
-                            <ul class="item_list edition">
-                                <c:forEach items="${edition}" var="e" varStatus="">
-                                    <li class="sku-module_item spec_item" name="v_editionNo"
-                                        value="${e.v_eid}">${e.v_name}</li>
-                                </c:forEach>
-                            </ul>
-                        </dd>
-                        <dt class="sku-module_title spec_title">颜色</dt>
-                        <dd class="sku-module_content">
-                            <%-- 循环颜色 --%>
-                            <ul class="item_list goodColor">
-                                <c:forEach items="${goodColor}" var="g" varStatus="">
-                                    <li class="sku-module_item spec_item " name="v_colorNo" value="${g.v_cid}">
-                                            ${g.v_name}
-                                    </li>
-                                </c:forEach>
-                                <%--<li class="sku-module_item spec_item"
-                                > <span data-v-0059cc40="" class="spec_item_color"
-                                        style="border: none; background-color: rgb(230, 240, 245); background-image: linear-gradient(to right bottom, rgb(230, 240, 245), rgb(207, 209, 217));"></span>
-                                    羽光白
-                                </li>--%>
-                            </ul>
-                        </dd>
-                    </dl>
                     <dl class="sku-module suites">
-                        <dt class="sku-module_title">选择套餐</dt>
+                        <dt class="sku-module_title">选择套餐（暂时只有普通版）</dt>
                         <dd class="sku-module_content">
                             <ul class="item_list">
                                 <li class="sku-module_item suite_item sku-module_item--checked">
-                                    <h2 class="suite_title">标准版</h2>
+                                    <h2 class="suite_title">普通版</h2>
                                 </li>
                                 <li class="sku-module_item suite_item">
                                     <h2 class="suite_title">典藏版</h2>
                                     <p class="suite_price">
-                                        <span class="suite_price--sale"><dfn>￥</dfn>3096</span>
-                                        <span class="suite_price--save">省<dfn>￥</dfn>80</span>
+                                        <span class="suite_price--sale"><dfn>￥</dfn>${byIdGoods.price*2}</span>
+                                        <%--<span class="suite_price--save">省<dfn>￥</dfn>80</span>--%>
                                     </p>
                                 </li>
                                 <li class="sku-module_item suite_item">
                                     <h2 class="suite_title">英文版</h2>
                                     <p class="suite_price">
-                                        <span class="suite_price--sale"><dfn>￥</dfn>3022</span>
-                                        <span class="suite_price--save">省<dfn>￥</dfn>15</span>
+                                        <span class="suite_price--sale"><dfn>￥</dfn>${byIdGoods.price*3}</span>
+                                        <%--<span class="suite_price--save">省<dfn>￥</dfn>15</span>--%>
                                     </p>
                                 </li>
                                 <li class="sku-module_item suite_item">
                                     <h2 class="suite_title">英文典藏</h2>
                                     <p class="suite_price">
-                                        <span class="suite_price--sale"><dfn>￥</dfn>3147</span>
-                                        <span class="suite_price--save">省<dfn>￥</dfn>50</span>
+                                        <span class="suite_price--sale"><dfn>￥</dfn>${byIdGoods.price*4}</span>
+                                        <%--<span class="suite_price--save">省<dfn>￥</dfn>50</span>--%>
                                     </p>
                                 </li>
                             </ul>
@@ -287,6 +259,7 @@
                                         <font style="vertical-align: inherit;">- </font>
                                     </font>
                                 </label>
+                                <%--数量！！！--%>
                                 <input type="number" class="count" name="v_quanity" readonly="readonly" value="1">
                                 <label class="plus">
                                     <font style="vertical-align: inherit;">
@@ -306,9 +279,9 @@
                     </dl>
                     <div class="settle">
                         <div class="settle_total">
-                            <p class="price"><dfn>￥</dfn><span>${byIdGoods.v_price}</span></p>
+                            <p class="price"><dfn>￥</dfn><span>${byIdGoods.price*byIdGoods.discount}</span></p>
                             <p class="info">
-                                已选： 全网通版 8GB+256GB 电光蓝 官方标配 1件
+                                已选： ${byIdGoods.goodName} 普通版 <span class="numOfGood">1</span>件
                             </p>
                         </div>
                         <div class="settle_operation">
@@ -327,12 +300,10 @@
         </div>
         <div class="recommend"></div>
         <div class="detail-info"></div>
-        <input type="hidden" name="v_gid" value="${byIdGoods.v_gid}"/>
-        <input type="hidden" name="v_image" value="${byIdGoods.v_image}"/>
-        <input type="hidden" name="v_uid" value="${sessionScope.vivo_user.v_uid}"/>
-        <%--<input type="hidden" name="v_cprice" value="${byIdGoods.v_price}" />--%>
-        <input type="hidden" name="v_gparticulars" value="${byIdGoods.v_gparticulars}"/>
-        <input type="hidden" name="v_user" value="${byIdGoods.v_user}"/>
+        <%--注意命名！！！--%>
+        <input type="hidden" name="goodNo" value="${byIdGoods.goodNo}"/>
+        <input type="hidden" name="imgSrc" value="${byIdGoods.imgSrc}"/>
+        <input type="hidden" name="uid" value="${sessionScope.user.uid}"/>
     </form>
 </div>
 <!-- 详情页面结束 -->
@@ -374,6 +345,7 @@
             var total = 0;
             console.log(total = count * (price));
             $(".price>span").text(total);
+            $(".numOfGood").text(count);
 
         });
         $(".plus ").click(function () {
@@ -381,6 +353,7 @@
             var total = 0;
             console.log(total = count * (price));
             $(".price>span").text(total);
+            $(".numOfGood").text(count);
         });
 
         /* $(".specs").click(function () {
@@ -391,7 +364,7 @@
          });*/
     });
 </script>
-<c:if test="${!empty vivo_user}" var="user">
+<c:if test="${!empty user}">
     <script>
         $(function () {
 
@@ -401,7 +374,7 @@
                 var edition = $(".edition>.sku-module_item--checked").val();
                 var goodColor = $(".goodColor>.sku-module_item--checked").val();
                 console.log(edition, goodColor);
-                $("#from_Deta").attr("action", "${pageContext.request.contextPath}/shoppingCartServlet?action=addUserShoppingCar&v_editionNo=" + edition + "&v_colorNo=" + goodColor + "&v_cprice=" + $(".price>span").text());
+                $("#from_Deta").attr("action", "${pageContext.request.contextPath}/shoppingCartServlet?action=addUserShoppingCar&goodNo=${byIdGoods.goodNo}" + "&price=" + $(".price>span").text());
                 $("#from_Deta").submit();
 
             });
@@ -410,18 +383,18 @@
                 var edition = $(".edition>.sku-module_item--checked").val();
                 var goodColor = $(".goodColor>.sku-module_item--checked").val();
                 console.log(edition, goodColor);
-                $("#from_Deta").attr("action", "${pageContext.request.contextPath}/shoppingCartServlet?action=addUserShoppingCar&v_editionNo=" + edition + "&v_colorNo=" + goodColor + "&v_cprice=" + $(".price>span").text());
+                $("#from_Deta").attr("action", "${pageContext.request.contextPath}/shoppingCartServlet?action=addUserShoppingCar&goodNo=${byIdGoods.goodNo}" + "&price=" + $(".price>span").text());
             });
         });
     </script>
 </c:if>
-<c:if test="${empty vivo_user}" var="user">
+<c:if test="${empty user}">
     <script>
         $(function () {
 
             $("#btn-add").click(function () {
                 alert("您还没有进行登录，请先进行登录,在尝试");
-                window.location.href = "${pageContext.request.contextPath}/registerServlet?action=registerLogin";
+                window.location.href = "bookshop/login.jsp";
             });
 
         });

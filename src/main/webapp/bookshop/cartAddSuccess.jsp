@@ -45,28 +45,27 @@
                 <span>商品已经成功添加到购物车！</span>
             </div>
             <div class="add-success-content clearfix">
-                <c:forEach items="${userShoppingCar}" var="usc">
+                <c:forEach items="${userShoppingCart}" var="usc">
                     <div class="product-info">
                         <div class="product-img">
-                            <img src="VivoProject/${usc.v_image}" alt="">
+                            <img src="../${usc.imgSrc}" alt="">
                         </div>
                         <div class="product-des">
-                            <div class="product-name">${usc.v_user}  ${usc.v_colorName}</div>
-                            <div class="product-tag">颜色：${usc.v_colorName}</div>
-                            <div class="product-tag">版本：${usc.v_edName}</div>
-                            <div class="product-tag">数量：${usc.v_quanity}</div>
+                            <div class="product-name">${usc.goodName}</div>
+                            <div class="product-tag">作者：${usc.producer}</div>
+                            <div class="product-tag">数量：${usc.goodNum}</div>
                         </div>
                     </div>
                     <div class="product-action">
                         <a target="_blank" href="" id="view-detail">
                             <button type="button" class="btn--lg btn-next first">
-                                <a href="ShoppingServlet?action=productDetails&gid=${usc.v_gid}" target="_self">
+                                <a href="goodsServlet?action=productDetails&goodNo=${usc.goodNo}" target="_self">
                                     <i class="btn-inner" >查看商品详情</i></a>
                             </button>
                         </a>
                         <a target="_blank" href="" id="to-cart">
                             <button class="btn--lg btn-confirm now-buy" type="button" title="去购物车结算">
-                                <a href="shoppingCartServlet?action=getUserShoppingCar&v_uid=${vivo_user.v_uid}"><i class="btn-inner">去购物车结算</i></a>
+                                <a href="shoppingServlet?action=getUserShoppingCar&uid=${user.uid}"><i class="btn-inner">去购物车结算</i></a>
                             </button>
                         </a>
                     </div>

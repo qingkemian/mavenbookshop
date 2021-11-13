@@ -71,6 +71,13 @@ public class UserServlet extends BaseServlet {
         resp.getWriter().write(json);
     }
 
+    /**
+     * 登录服务
+     * @param req
+     * @param resp
+     * @throws ServletException
+     * @throws IOException
+     */
     protected void login(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         User user = (User) WebUtils.copygetParameterMapToBean(req.getParameterMap(), new User());
@@ -83,7 +90,7 @@ public class UserServlet extends BaseServlet {
             //登录成功的信息存放到session
             req.getSession().setAttribute("user",dbUser);
 
-            resp.sendRedirect("bookshop/Shopping.jsp");
+            resp.sendRedirect("goodsServlet?action=goodsList");
         } else {
             //回传信息
             req.setAttribute("msg","用户名或者密码错误！");
