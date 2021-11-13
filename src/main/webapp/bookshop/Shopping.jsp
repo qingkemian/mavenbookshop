@@ -951,18 +951,19 @@
                 </div>
 
                 <ul class="box-list">
-                    <c:forEach items="${getBoutiquePhone}" var="good" varStatus="">
+                    <c:forEach items="${goodsList}" var="good" varStatus="">
                         <li class="box">
+                            <%--商品详情路径！！！--%>
                             <a target="_blank" class="box-b"
-                               href="ShoppingServlet?action=productDetails&gid=${good.v_gid}">
+                               href="goodsServlet?action=productDetails&goodNo=${good.goodNo}">
                                 <img class="img-item8 selected"
-                                     src="../${good.v_image}"
-                                     style="opacity: 0;">
+                                     src="../${good.imgSrc}"
+                                     style="opacity: 0;" height="20" width="15">
                             </a>
                             <div class="prodinfo">
-                                <p class="name">${good.v_user}</p>
-                                <p class="feature">${good.v_gparticulars}</p>
-                                <p class="price rmb-symbol">${good.v_price}</p>
+                                <p class="name">${good.goodName}</p>
+                                <p class="feature">${good.producer}</p>
+                                <p class="price rmb-symbol">${good.price}</p>
                             </div>
                         </li>
                     </c:forEach>

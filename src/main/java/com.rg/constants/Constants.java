@@ -12,4 +12,9 @@ public class Constants {
      * */
     public final static Integer PAGE_SIZE = 5;
 
+    /*
+    * 商品分页
+    * */
+    public final static Integer GOODS_PAGE_SIZE = 100;
+
 }

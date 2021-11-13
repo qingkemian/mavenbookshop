@@ -77,6 +77,10 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean delUser(User user) {
+        int flag = userDao.delUser(user.getUid());
+        if (flag > 0) {
+            return true;
+        }
         return false;
     }
 }
