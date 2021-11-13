@@ -21,7 +21,6 @@
 <% String path = request.getContextPath();
     pageContext.setAttribute("cxt", path);%>
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <base href="${pageContext.request.contextPath}/">
     <meta charset="UTF-8">
@@ -129,7 +128,7 @@
                     <div class="primary">
                         <h1 class="name">${byIdGoods.goodName}</h1>
                         <p class="intro">
-                            <span class="promotion">【限时下单立减100，享3期免息】</span>
+                            <span class="promotion">${byIdGoods.producer} 著</span>
                             <%--${byIdGoods.v_gparticulars}--%>
                         </p>
                         <div class="summary">
@@ -301,7 +300,10 @@
         <div class="recommend"></div>
         <div class="detail-info"></div>
         <%--注意命名！！！--%>
+        <input type="hidden" name="goodName" value="${byIdGoods.goodName}"/>
+        <input type="hidden" name="producer" value="${byIdGoods.producer}"/>
         <input type="hidden" name="goodNo" value="${byIdGoods.goodNo}"/>
+        <input type="hidden" class="goodNum" name="goodNum" value="1">
         <input type="hidden" name="imgSrc" value="${byIdGoods.imgSrc}"/>
         <input type="hidden" name="uid" value="${sessionScope.user.uid}"/>
     </form>
@@ -346,6 +348,7 @@
             console.log(total = count * (price));
             $(".price>span").text(total);
             $(".numOfGood").text(count);
+            $(".goodNum").val(count);
 
         });
         $(".plus ").click(function () {
@@ -354,6 +357,7 @@
             console.log(total = count * (price));
             $(".price>span").text(total);
             $(".numOfGood").text(count);
+            $(".goodNum").val(count);
         });
 
         /* $(".specs").click(function () {
@@ -374,7 +378,7 @@
                 var edition = $(".edition>.sku-module_item--checked").val();
                 var goodColor = $(".goodColor>.sku-module_item--checked").val();
                 console.log(edition, goodColor);
-                $("#from_Deta").attr("action", "${pageContext.request.contextPath}/shoppingCartServlet?action=addUserShoppingCar&goodNo=${byIdGoods.goodNo}" + "&price=" + $(".price>span").text());
+                $("#from_Deta").attr("action", "shoppingServlet?action=cartAddSuccess");
                 $("#from_Deta").submit();
 
             });
@@ -383,7 +387,7 @@
                 var edition = $(".edition>.sku-module_item--checked").val();
                 var goodColor = $(".goodColor>.sku-module_item--checked").val();
                 console.log(edition, goodColor);
-                $("#from_Deta").attr("action", "${pageContext.request.contextPath}/shoppingCartServlet?action=addUserShoppingCar&goodNo=${byIdGoods.goodNo}" + "&price=" + $(".price>span").text());
+                $("#from_Deta").attr("action", "shoppingServlet?action=cartAddSuccess");
             });
         });
     </script>

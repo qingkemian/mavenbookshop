@@ -2,7 +2,6 @@ package com.rg.dao.impl;
 
 import com.rg.constants.Constants;
 import com.rg.dao.ShoppingCarDao;
-import com.rg.entity.Goods;
 import com.rg.entity.ShoppingCar;
 
 import java.util.List;
@@ -13,12 +12,12 @@ import java.util.logging.Logger;
  * @Author:ZelongChen
  * @Date:2021/11/13 15:18
  */
-public class ShoppingCartImpl extends BaseDao implements ShoppingCarDao {
+public class ShoppingCartDaoImpl extends BaseDao implements ShoppingCarDao {
 
     /*
      * log
      * */
-    private static String classname = ShoppingCartImpl.class.getName();
+    private static String classname = ShoppingCartDaoImpl.class.getName();
     private static Logger log = Logger.getLogger(classname);
 
     @Override
@@ -42,8 +41,19 @@ public class ShoppingCartImpl extends BaseDao implements ShoppingCarDao {
 
     @Override
     public int updateShoppingCart(Integer cardId, Integer goodNum) {
-        String sql = "UPDATE shoppingcar SET `goodNum` = ? WHERTE `carId` = ?";
+        String sql = "UPDATE shoppingcar SET `goodNum` = ? WHERE `carId` = ?";
         return update(sql,goodNum,cardId);
+    }
+
+    @Override
+    public int addShoppingCart(Integer goodNo, Integer goodNum, Integer uid) {
+        ShoppingCar shoppingCar = queryShoppingCartByUserIdAndGoodNo(uid, goodNo);
+        if (shoppingCar == null) {
+            String sql = "INSERT INTO shoppingcar (goodNo,goodNum,uid) VALUES (?,?,?)";
+            return update(sql,goodNo,goodNum,uid);
+        } else {
+            return updateShoppingCart(shoppingCar.getCarId(), goodNum);
+        }
     }
 
     @Override

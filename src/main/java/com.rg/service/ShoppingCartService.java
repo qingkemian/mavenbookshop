@@ -33,6 +33,13 @@ public interface ShoppingCartService {
     boolean updateShoppingCart(ShoppingCar shoppingCar);
 
     /**
+     * 添加购物车记录
+     * @param shoppingCar
+     * @return
+     */
+    boolean addShoppingCart(ShoppingCar shoppingCar);
+
+    /**
      * 删除购物车中的一条记录
      * @param shoppingCar
      * @return

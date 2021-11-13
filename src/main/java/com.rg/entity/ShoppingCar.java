@@ -9,7 +9,7 @@ import java.math.BigDecimal;
  */
 public class ShoppingCar {
 
-    private Integer cardId;
+    private Integer carId;
     private Integer goodNo;
     private Integer goodNum;
     private Integer uid;
@@ -24,12 +24,12 @@ public class ShoppingCar {
     // 页面 -- 分页
     private Integer start;
 
-    public Integer getCardId() {
-        return cardId;
+    public Integer getCarId() {
+        return carId;
     }
 
-    public void setCardId(Integer cardId) {
-        this.cardId = cardId;
+    public void setCarId(Integer carId) {
+        this.carId = carId;
     }
 
     public Integer getGoodNo() {

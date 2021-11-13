@@ -35,6 +35,15 @@ public interface ShoppingCarDao {
     int updateShoppingCart(Integer cardId, Integer goodNum);
 
     /**
+     * 添加购物车记录
+     * @param goodNo
+     * @param goodNum
+     * @param uid
+     * @return
+     */
+    int addShoppingCart(Integer goodNo, Integer goodNum, Integer uid);
+
+    /**
      * 删除购物车的一条商品
      * @param cardId
      * @return

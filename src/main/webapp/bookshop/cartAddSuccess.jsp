@@ -9,7 +9,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%-- 获取全局路径 --%>
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <base href="">
     <meta charset="UTF-8">
@@ -45,31 +44,29 @@
                 <span>商品已经成功添加到购物车！</span>
             </div>
             <div class="add-success-content clearfix">
-                <c:forEach items="${userShoppingCart}" var="usc">
-                    <div class="product-info">
-                        <div class="product-img">
-                            <img src="../${usc.imgSrc}" alt="">
-                        </div>
-                        <div class="product-des">
-                            <div class="product-name">${usc.goodName}</div>
-                            <div class="product-tag">作者：${usc.producer}</div>
-                            <div class="product-tag">数量：${usc.goodNum}</div>
-                        </div>
+                <div class="product-info">
+                    <div class="product-img">
+                        <img src="../${usc.imgSrc}" alt="">
                     </div>
-                    <div class="product-action">
-                        <a target="_blank" href="" id="view-detail">
-                            <button type="button" class="btn--lg btn-next first">
-                                <a href="goodsServlet?action=productDetails&goodNo=${usc.goodNo}" target="_self">
-                                    <i class="btn-inner" >查看商品详情</i></a>
-                            </button>
-                        </a>
-                        <a target="_blank" href="" id="to-cart">
-                            <button class="btn--lg btn-confirm now-buy" type="button" title="去购物车结算">
-                                <a href="shoppingServlet?action=getUserShoppingCar&uid=${user.uid}"><i class="btn-inner">去购物车结算</i></a>
-                            </button>
-                        </a>
+                    <div class="product-des">
+                        <div class="product-name">${usc.goodName}</div>
+                        <div class="product-tag">作者：${usc.producer}</div>
+                        <div class="product-tag">数量：${usc.goodNum}</div>
                     </div>
-                </c:forEach>
+                </div>
+                <div class="product-action">
+                    <a target="_blank" href="" id="view-detail">
+                        <button type="button" class="btn--lg btn-next first">
+                            <a href="goodsServlet?action=productDetails&goodNo=${usc.goodNo}" target="_self">
+                                <i class="btn-inner" >查看商品详情</i></a>
+                        </button>
+                    </a>
+                    <a target="_blank" href="" id="to-cart">
+                        <button class="btn--lg btn-confirm now-buy" type="button" title="去购物车结算">
+                            <a href="shoppingServlet?action=getUserShoppingCar&uid=${user.uid}"><i class="btn-inner">去购物车结算</i></a>
+                        </button>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
