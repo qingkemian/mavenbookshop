@@ -83,17 +83,18 @@ public class UserServlet extends BaseServlet {
         User user = (User) WebUtils.copygetParameterMapToBean(req.getParameterMap(), new User());
 
         User dbUser = userService.login(user);
-        log.info("username:"+dbUser.getUname());
-        log.info("userId:"+dbUser.getUid());
-        System.out.println("username:"+dbUser.getUname());
-        System.out.println("userId:"+dbUser.getUid());
-
-        User sessionUser = new User();
-        sessionUser.setUid(dbUser.getUid());
-        sessionUser.setUname(dbUser.getUname());
-
 
         if (dbUser != null){
+
+            log.info("username:"+dbUser.getUname());
+            log.info("userId:"+dbUser.getUid());
+            System.out.println("username:"+dbUser.getUname());
+            System.out.println("userId:"+dbUser.getUid());
+
+            User sessionUser = new User();
+            sessionUser.setUid(dbUser.getUid());
+            sessionUser.setUname(dbUser.getUname());
+
             //user信息
             //登录成功的信息存放到session
             req.getSession().setAttribute("user",sessionUser);

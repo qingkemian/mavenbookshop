@@ -101,7 +101,7 @@
                 </ul>
                 <div class="vp-head-top-user">
                     <%-- 根据跳转至购物车页面 --%>
-                    <a href="shoppingCartServlet?action=getUserShoppingCar&uname=${user.uname}" class="vp-user-shopcart">购物车</a>
+                    <a href="shoppingServlet?action=shoppingCart" class="vp-user-shopcart">购物车</a>
                     <c:if test="${ empty user}">
                         <div class="vp-user-login-box">
                             <a href="bookshop/login.jsp" class="vp-user-login">登录</a>

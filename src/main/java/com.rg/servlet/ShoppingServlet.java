@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 import java.util.logging.Logger;
 
 /**
@@ -48,6 +49,48 @@ public class ShoppingServlet extends BaseServlet {
             resp.sendRedirect("goodsServlet?action=productDetails&goodNo="+shoppingCar.getGoodNo());
         }
 
+    }
+
+    /**
+     * 跳转购物车 初始化购物车
+     * @param req
+     * @param resp
+     * @throws ServletException
+     * @throws IOException
+     */
+    protected void shoppingCart(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        User user = (User) req.getSession().getAttribute("user");
+
+        if (user!=null){
+            System.out.println(user.getUname());
+            System.out.println(user.getUid());
+
+            ShoppingCar shoppingCar = new ShoppingCar();
+            shoppingCar.setUid(user.getUid());
+            shoppingCar.setStart(new Integer(0));
+
+            List<ShoppingCar> shoppingCarList = shoppingCartService.queryShoppingCartByUserId(shoppingCar);
+            req.setAttribute("userShoppingCar", shoppingCarList);
+
+            req.getRequestDispatcher("bookshop/shoppingcart.jsp").forward(req, resp);
+        } else {
+            resp.sendRedirect("bookshop/login.jsp");
+        }
+
+    }
+
+    /**
+     * 计算
+     * @param req
+     * @param resp
+     */
+    protected void calculate(HttpServletRequest req, HttpServletResponse resp){
+        String[] checkId = req.getParameterValues("checkId") ;
+        ShoppingCar shoppingCar = new ShoppingCar();
+        for (String s : checkId) {
+            System.out.println(s);
+        }
     }
 
 }

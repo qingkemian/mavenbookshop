@@ -51,6 +51,7 @@
         </table>
     </div>
 
+    <%--购物车不为空--%>
     <c:if test="${!empty userShoppingCar}">
         <div class="wrapper" >
             <div class="cart-head">
@@ -59,16 +60,14 @@
                     <tr>
                         <th class="check-col">
                             <label class="J_viewCheckAll">
-                                <i class="checkbox "></i>
-                                <a href="javascript:void(0);">全选</a>
+                                <input type="checkbox" name="" id="AllorNot" />全选/全不选<br>
                             </label>
                         </th>
                         <th class="goods-col">商品名称</th>
                         <th class="price-col">价格（元）</th>
                         <th class="quantity-col">数量</th>
-                        <th class="benefit-col">优惠</th>
-                            <%--<th class="vcoin-col">赠送积分</th>--%>
                         <th class="sum-col">小计（元）</th>
+                        <th class="benefit-col">已优惠</th>
                         <th class="action-col">操作</th>
                     </tr>
                     </tbody>
@@ -82,42 +81,48 @@
                             <tbody id="tbody">
 
                             <c:forEach items="${userShoppingCar}" var="carGoods" varStatus="status">
-                                <tr class="prod-line" value="${carGoods.v_cid}">
-                                    <td class="check-col">
-                                        <i class="checkbox J_viewCheckBox J_operate"></i>
+                                <tr class="prod-line" value="${carGoods.carId}">
+                                    <td>
+                                        <input type="checkbox" name="items" value="${carGoods.carId}" />
                                     </td>
                                     <td class="prod-pic column">
                                         <a href="javascript:;" target="_blank">
                                             <div class="figure">
-                                                <img src="../${carGoods.v_image}">
+                                                <img src="../${carGoods.imgSrc}">
                                             </div>
                                         </a>
                                     </td>
                                     <td class="goods-col column">
                                         <a class="goods-link" href="javascript:;" target="_blank">
-                                                ${carGoods.v_user} ${carGoods.v_colorName}
+                                                ${carGoods.goodName}
                                         </a>
                                         <br>
-                                        颜色：${carGoods.v_colorName}
+                                        作者：${carGoods.producer}
                                     </td>
-                                    <td class="price-col column">${carGoods.v_price}</td>
+                                    <td class="price-col column">${carGoods.price * carGoods.discount}</td>
                                     <td class="column">
                                             <span class="number-box">
                                                 <a class="reduce-num J_reduceNum J_operate" href="javascript:;">-</a>
                                                 <input type="number" name="v_quanity"
                                                        class="count-number prod-num J_viewNum J_operate"
-                                                       value="${carGoods.v_quanity}"
+                                                       value="${carGoods.goodNum}"
                                                        title="请输入购买量" readonly="" id="totalCount">
                                                 <a class="add-num J_addNum J_operate" href="javascript:;">+</a>
                                             </span>
                                     </td>
-                                    <td class="column"><span class="J_viewDiscount">0.00</span></td>
-                                    <td class="J_viewVcoin column">${carGoods.v_cprice}</td>
-                                        <%--<td class="total-price J_viewSalePrice column">3198.00</td>--%>
+                                    <td class="column">
+                                        <span>${carGoods.price * carGoods.goodNum}</span>
+                                    </td>
+                                    <td class="column">
+                                        <span>${carGoods.price * (1 - carGoods.discount) * carGoods.goodNum}</span>
+                                    </td>
+
+                                    <%--<td class="column"><span class="J_viewDiscount">${carGoods.price * (1 - carGoods.discount)}</span></td>--%>
+                                    <%--<td class="J_viewVcoin column">${carGoods.price * carGoods.goodNum}</td>--%>
                                     <td class="column">
                                         <a href="javascript:;" class="favorite J_favorite">加入到收藏夹</a>
                                         <br>
-                                        <a href="${pageContext.request.contextPath}/shoppingCartServlet?action=delGoodCar&v_cid=${carGoods.v_cid}&v_uid=${sessionScope.vivo_user.v_uid}" class="J_delSingle">删除</a>
+                                        <a href="shoppingServlet?action=delShoppingCar&carId=${carGoods.carId}" class="J_delSingle">删除</a>
                                     </td>
                                 </tr>
                             </c:forEach>
@@ -129,42 +134,31 @@
                 <div class="cart-toolbar-wrap">
                     <div class="wrapper">
                         <div class="cart-toolbar-inner cl">
-                            <div class="option-operation">
-                                <ul>
-                                    <li>
-                                        <label class="J_viewCheckAll">
-                                            <i class="checkbox"></i> &nbsp;<a href="javascript:void(0);">全选</a>
-                                        </label>
-                                    </li>
-                                    <li><a class="J_delMultiple" href="javascript:void(0);">删除选中的商品</a></li>
-                                    <li><a class="J_favoriteMultiple" href="javascript:void(0);">移入收藏夹</a></li>
-                                </ul>
-                            </div>
                             <div class="cart-toolbar-right">
                                 <table class="cart-toolbar-table">
                                     <tbody>
                                     <tr>
                                         <td class="sum-area">
-                                            <p class="sum-area-infoI">
+                                            <p>
                                                 已选商品
-                                                <em><b id="J_totalSkuNum">1</b></em>件，合计（不含运费）：
-                                                <b class="price"><dfn>¥</dfn><span id="J_totalSalePrice">0</span></b>
+                                                <span class="getNum">0</span>
+                                                件，合计（不含运费）：
+                                                <dfn>¥</dfn>
+                                                <span class="getTotalPrice">0</span>
+                                                </b>
                                             </p>
-                                            <p class="sum-area-infoII">
+                                            <p>
                                                 ( 商品总价：
-                                                <span class="price">
-                                            <dfn>¥</dfn>
-                                            <span id="J_totalMarketPrice">0</span>
-                                        </span>
+                                                <dfn>¥</dfn>
+                                                <span class="getTotalPrice">0</span>
                                                 优惠：
-                                                <span class="price">
-                                            -<dfn>¥</dfn>
-                                            <span id="J_totalDiscount">0.00</span>
-                                        </span> )
+                                                <dfn>¥</dfn>
+                                                <span class="dPrice">0</span>
+                                                )
                                             </p>
                                         </td>
                                         <td class="btn-area">
-                                            <a href="${pageContext.request.contextPath}/settlementServlet?action=MyOrderTakeInformation&v_uid=${sessionScope.vivo_user.v_uid}">
+                                            <a href="settlementServlet?action=MyOrderTakeInformation&v_uid=${sessionScope.vivo_user.v_uid}">
                                                 <button class="btn--lg cart-btn-submit" type="button" title="去结算">
                                                     <i class="btn-inner">去结算</i>
                                                 </button>
@@ -180,6 +174,8 @@
             </form>
         </div>
     </c:if>
+
+    <%--购物车为空--%>
     <c:if test="${empty userShoppingCar}">
         <div class="wrapper">
             <div class="no-result">
@@ -266,6 +262,81 @@
                     console.log(xhr.status);
                 }
             });
+        });
+    });
+
+    $(function() {
+        // 原来jQuery自从1.6之后就有了它，attr()太混乱，为了区分，就出现了prop()，
+        // 对于checked，若是prop()获取的则是浏览器对于当前变化着的值，即随着点击变化而变化，
+        // 而attr()则是浏览器记录checked的初始值，即它的默认值，不会随着改变而改变
+        $("#AllorNot").click(function(){
+            $("input[name='items']").prop('checked',this.checked);
+
+            var checkId = [];
+            if($("input[name='items']:checked").length > 0){
+                $("input[name='items']:checked").each(function (i) {
+                    checkId[i] = $(this).val();
+                });
+
+                console.log(checkId);
+
+                $.ajax({
+                    type: 'POST',
+                    url: 'shoppingServlet?action=totalPrice',
+                    data:{
+                        checkId: checkId
+                    },
+                    traditional:true, //阻止jquery对数组序列化
+                    dataType:"text",
+                    success: function(data){
+                        $(".getNum").val(${getNum});
+                        $(".getTotalPrice").val(${totalPrice});
+                        $(".dPrice").val(${dPrice});
+                    },
+                    error:function(data) {
+                        console.log(data.msg);
+                    },
+                });
+            }
+
+        });
+
+
+        $("input[name='items']").click(function() {
+            var flag = true;
+            $("input[name='items']").each(function() {
+                if (!this.checked) {
+                    flag = false;
+                }
+            });
+            $('#AllorNot').prop('checked', flag);
+
+            var checkId = [];
+            if($("input[name='items']:checked").length > 0){
+                $("input[name='items']:checked").each(function (i) {
+                    checkId[i] = $(this).val();
+                });
+
+                console.log(checkId);
+
+                $.ajax({
+                    type: 'POST',
+                    url: 'shoppingServlet?action=calculate',
+                    data:{
+                        checkId: checkId
+                    },
+                    traditional:true, //阻止jquery对数组序列化
+                    dataType:"text",
+                    success: function(data){
+                        $(".getNum").val(${getNum});
+                        $(".getTotalPrice").val(${totalPrice});
+                        $(".dPrice").val(${dPrice});
+                    },
+                    error:function(data) {
+                        console.log(data.msg);
+                    },
+                });
+            }
         });
     });
 </script>
