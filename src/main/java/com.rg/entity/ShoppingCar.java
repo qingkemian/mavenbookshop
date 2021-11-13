@@ -19,7 +19,10 @@ public class ShoppingCar {
     private String producer;
     private String imgSrc;
     private BigDecimal price;
+    private BigDecimal discount;
 
+    // 页面 -- 分页
+    private Integer start;
 
     public Integer getCardId() {
         return cardId;
@@ -51,5 +54,53 @@ public class ShoppingCar {
 
     public void setUid(Integer uid) {
         this.uid = uid;
+    }
+
+    public String getGoodName() {
+        return goodName;
+    }
+
+    public void setGoodName(String goodName) {
+        this.goodName = goodName;
+    }
+
+    public String getProducer() {
+        return producer;
+    }
+
+    public void setProducer(String producer) {
+        this.producer = producer;
+    }
+
+    public String getImgSrc() {
+        return imgSrc;
+    }
+
+    public void setImgSrc(String imgSrc) {
+        this.imgSrc = imgSrc;
+    }
+
+    public BigDecimal getPrice() {
+        return price;
+    }
+
+    public void setPrice(BigDecimal price) {
+        this.price = price;
+    }
+
+    public Integer getStart() {
+        return start;
+    }
+
+    public void setStart(Integer start) {
+        this.start = start;
+    }
+
+    public BigDecimal getDiscount() {
+        return discount;
+    }
+
+    public void setDiscount(BigDecimal discount) {
+        this.discount = discount;
     }
 }

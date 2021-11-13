@@ -129,7 +129,7 @@
                     <div class="primary">
                         <h1 class="name">${byIdGoods.goodName}</h1>
                         <p class="intro">
-                            <span class="promotion">【限时下单立减200，享3期免息】</span>
+                            <span class="promotion">【限时下单立减100，享3期免息】</span>
                             <%--${byIdGoods.v_gparticulars}--%>
                         </p>
                         <div class="summary">

@@ -30,7 +30,7 @@ public class GoodsDaoImpl extends BaseDao implements GoodsDao {
         if (goodName != null && !"".equals(goodName)){
             sql = sql + "AND g.goodName LIKE '%" + goodName + "%'";
         }
-        sql += "LIMIT " + start + "," + Constants.PAGE_SIZE;
+        sql += "LIMIT " + start + "," + Constants.BIG_PAGE_SIZE;
         log.info(sql);
 
         return queryForList(Goods.class, sql);

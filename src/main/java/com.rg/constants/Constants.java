@@ -15,6 +15,6 @@ public class Constants {
     /*
     * 商品分页
     * */
-    public final static Integer GOODS_PAGE_SIZE = 100;
+    public final static Integer BIG_PAGE_SIZE = 100;
 
 }

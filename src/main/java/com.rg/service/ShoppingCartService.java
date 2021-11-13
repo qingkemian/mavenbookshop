@@ -1,0 +1,42 @@
+package com.rg.service;
+
+import com.rg.entity.ShoppingCar;
+
+import java.util.List;
+
+/**
+ * @Describe：
+ * @Author:ZelongChen
+ * @Date:2021/11/13 15:40
+ */
+public interface ShoppingCartService {
+
+    /**
+     * 通过uid查询其购物车
+     * @param shoppingCar
+     * @return
+     */
+    List<ShoppingCar> queryShoppingCartByUserId(ShoppingCar shoppingCar);
+
+    /**
+     * 查询用户购物车中是否已有该商品
+     * @param shoppingCar
+     * @return
+     */
+    ShoppingCar queryShoppingCartByUserIdAndGoodNo(ShoppingCar shoppingCar);
+
+    /**
+     * 更新购物车 商品数量
+     * @param shoppingCar
+     * @return
+     */
+    boolean updateShoppingCart(ShoppingCar shoppingCar);
+
+    /**
+     * 删除购物车中的一条记录
+     * @param shoppingCar
+     * @return
+     */
+    boolean delShoppingCart(ShoppingCar shoppingCar);
+
+}
