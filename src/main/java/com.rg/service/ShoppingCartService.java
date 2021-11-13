@@ -19,6 +19,13 @@ public interface ShoppingCartService {
     List<ShoppingCar> queryShoppingCartByUserId(ShoppingCar shoppingCar);
 
     /**
+     * 通过cartId查询购物车
+     * @param shoppingCar
+     * @return
+     */
+    ShoppingCar querryShoppingCartByCartId(ShoppingCar shoppingCar);
+
+    /**
      * 查询用户购物车中是否已有该商品
      * @param shoppingCar
      * @return

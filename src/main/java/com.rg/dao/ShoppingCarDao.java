@@ -19,6 +19,13 @@ public interface ShoppingCarDao {
     List<ShoppingCar> queryShoppingCartByUserId(Integer uid, Integer start);
 
     /**
+     * 通过CartId查询购物车
+     * @param cartId
+     * @return
+     */
+    ShoppingCar querryShoppingCartByCartId(Integer cartId);
+
+    /**
      * 查询一个用户之前有没有添加过该物品
      * @param uid
      * @param goodNo

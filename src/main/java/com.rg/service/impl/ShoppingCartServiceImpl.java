@@ -22,6 +22,11 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
     }
 
     @Override
+    public ShoppingCar querryShoppingCartByCartId(ShoppingCar shoppingCar) {
+        return shoppingCarDao.querryShoppingCartByCartId(shoppingCar.getCarId());
+    }
+
+    @Override
     public ShoppingCar queryShoppingCartByUserIdAndGoodNo(ShoppingCar shoppingCar) {
         return shoppingCarDao.queryShoppingCartByUserIdAndGoodNo(shoppingCar.getUid(), shoppingCar.getGoodNo());
     }

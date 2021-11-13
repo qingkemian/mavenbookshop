@@ -153,7 +153,7 @@
                   'id': id
                 },
                 success: function(data){
-                    layer.msg($("#delMsg").val(),{icon:1,time:1000},function () {
+                    layer.msg("已删除",{icon:1,time:1000},function () {
                         // window.location.href只传链接 属性会置null 传入参数可解决
                         window.location.href = "adminServlet?action=adminList&currPage="+$("#currPage").val();
                     });
@@ -184,7 +184,7 @@
                    traditional:true, //阻止jquery对数组序列化
                    dataType:"text",
                    success: function(data){
-                       layer.msg($("#delMsg").val(),{icon:1,time:1000},function () {
+                       layer.msg("已删除",{icon:1,time:1000},function () {
                            // window.location.href只传链接 属性会置null 传入参数可解决
                            window.location.href = "adminServlet?action=adminList&currPage="+$("#currPage").val();
                        });

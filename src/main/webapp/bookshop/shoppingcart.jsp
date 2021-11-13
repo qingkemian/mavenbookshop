@@ -111,7 +111,7 @@
                                             </span>
                                     </td>
                                     <td class="column">
-                                        <span>${carGoods.price * carGoods.goodNum}</span>
+                                        <span>${carGoods.price * carGoods.discount * carGoods.goodNum}</span>
                                     </td>
                                     <td class="column">
                                         <span>${carGoods.price * (1 - carGoods.discount) * carGoods.goodNum}</span>
@@ -209,6 +209,9 @@
         </style>
     </c:if>
 
+    <input type="hidden" class="hiddenprice" name="price" value="0"/>
+    <input type="hidden" name="uid" value="${sessionScope.user.uid}"/>
+
 </div>
 <!-- 内容结束 -->
 
@@ -287,16 +290,27 @@
                         checkId: checkId
                     },
                     traditional:true, //阻止jquery对数组序列化
-                    dataType:"text",
                     success: function(data){
-                        $(".getNum").val(${getNum});
-                        $(".getTotalPrice").val(${totalPrice});
-                        $(".dPrice").val(${dPrice});
+                        console.log(data);
+                        mydata = $.parseJSON(data);
+                        console.log(mydata)
+                        console.log(mydata.getNum);
+                        console.log(mydata.totalPrice);
+                        console.log(mydata.discountPrice);
+                        $(".getNum").text(mydata.getNum);
+                        $(".getTotalPrice").text(mydata.totalPrice);
+                        $(".dPrice").text(mydata.discountPrice);
+                        $(".hiddenprice").text(mydata.totalPrice);
                     },
                     error:function(data) {
                         console.log(data.msg);
                     },
                 });
+            } else {
+                $(".getNum").text(0);
+                $(".getTotalPrice").text(0);
+                $(".dPrice").text(0);
+                $(".hiddenprice").text(mydata.totalPrice);
             }
 
         });
@@ -326,16 +340,27 @@
                         checkId: checkId
                     },
                     traditional:true, //阻止jquery对数组序列化
-                    dataType:"text",
                     success: function(data){
-                        $(".getNum").val(${getNum});
-                        $(".getTotalPrice").val(${totalPrice});
-                        $(".dPrice").val(${dPrice});
+                        console.log(data);
+                        mydata = $.parseJSON(data);
+                        console.log(mydata)
+                        console.log(mydata.getNum);
+                        console.log(mydata.totalPrice);
+                        console.log(mydata.discountPrice);
+                        $(".getNum").text(mydata.getNum);
+                        $(".getTotalPrice").text(mydata.totalPrice);
+                        $(".dPrice").text(mydata.discountPrice);
+                        $(".hiddenprice").text(mydata.totalPrice);
                     },
                     error:function(data) {
                         console.log(data.msg);
                     },
                 });
+            } else {
+                $(".getNum").text(0);
+                $(".getTotalPrice").text(0);
+                $(".dPrice").text(0);
+                $(".hiddenprice").text(mydata.totalPrice);
             }
         });
     });

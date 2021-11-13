@@ -34,6 +34,14 @@ public class ShoppingCartDaoImpl extends BaseDao implements ShoppingCarDao {
     }
 
     @Override
+    public ShoppingCar querryShoppingCartByCartId(Integer cartId) {
+        String sql = "SELECT sc.*,g.goodName,g.producer,i.imgSrc,g.price,g.discount FROM (shoppingcar sc LEFT JOIN goods g ON sc.goodNo = g.goodNo) LEFT JOIN img i ON g.goodNo = i.goodNo WHERE sc.carId = ?";
+        log.info(sql);
+
+        return queryForOne(ShoppingCar.class, sql,cartId);
+    }
+
+    @Override
     public ShoppingCar queryShoppingCartByUserIdAndGoodNo(Integer uid, Integer goodNo) {
         String sql = "SELECT sc.*,g.goodName,g.producer,i.imgSrc,g.price,g.discount FROM (shoppingcar sc LEFT JOIN goods g ON sc.goodNo = g.goodNo) LEFT JOIN img i ON g.goodNo = i.goodNo WHERE sc.uid = ? AND sc.goodNo = ?";
         return queryForOne(ShoppingCar.class,sql,uid,goodNo);

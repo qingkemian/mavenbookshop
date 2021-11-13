@@ -12,6 +12,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.Writer;
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -85,11 +88,43 @@ public class ShoppingServlet extends BaseServlet {
      * @param req
      * @param resp
      */
-    protected void calculate(HttpServletRequest req, HttpServletResponse resp){
+    protected void calculate(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         String[] checkId = req.getParameterValues("checkId") ;
         ShoppingCar shoppingCar = new ShoppingCar();
+        ShoppingCar dbShoppingCar = new ShoppingCar();
+        Integer getNum = 0;
+        BigDecimal totalPrice = new BigDecimal(0);
+        BigDecimal discountPrice = new BigDecimal(0);
         for (String s : checkId) {
-            System.out.println(s);
+            shoppingCar.setCarId(Integer.parseInt(s));
+            dbShoppingCar = shoppingCartService.querryShoppingCartByCartId(shoppingCar);
+            if (dbShoppingCar != null){
+                getNum = getNum + dbShoppingCar.getGoodNum();
+                totalPrice = totalPrice.add( ( dbShoppingCar.getPrice().multiply(  new BigDecimal( dbShoppingCar.getGoodNum().toString() ) ) ).multiply(dbShoppingCar.getDiscount()) ) ;
+                discountPrice = discountPrice.add( ( dbShoppingCar.getPrice().multiply(  new BigDecimal( dbShoppingCar.getGoodNum().toString() ) ) ).multiply(new BigDecimal(1).subtract(dbShoppingCar.getDiscount())) );
+            }
+        }
+
+        System.out.println("getNum:" + getNum);
+        System.out.println("totalPrice:" + totalPrice);
+        System.out.println("discountPrice:"+ discountPrice);
+
+        // 向ajax返回数据
+        PrintWriter out =null;
+        try {
+            out = resp.getWriter();
+            resp.setContentType("text/html;charset=utf-8");
+            resp.setHeader("cache-control", "no-cache");
+            // JSON官方明确规定，JSON数据的key与value必须使用双引号""包裹，否则在转换过程中会导致错误。
+            String str = "{\"getNum\":\"" + getNum + "\",\"totalPrice\":\"" + totalPrice + "\",\"discountPrice\":\""+ discountPrice + "\"}";
+            out.print(str);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }finally{
+            if (out!=null) {
+                out.flush();
+                out.close();
+            }
         }
     }
 
