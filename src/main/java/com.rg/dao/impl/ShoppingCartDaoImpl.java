@@ -48,9 +48,9 @@ public class ShoppingCartDaoImpl extends BaseDao implements ShoppingCarDao {
     }
 
     @Override
-    public int updateShoppingCart(Integer cardId, Integer goodNum) {
+    public int updateShoppingCart(Integer cartId, Integer goodNum) {
         String sql = "UPDATE shoppingcar SET `goodNum` = ? WHERE `carId` = ?";
-        return update(sql,goodNum,cardId);
+        return update(sql,goodNum,cartId);
     }
 
     @Override
@@ -65,8 +65,8 @@ public class ShoppingCartDaoImpl extends BaseDao implements ShoppingCarDao {
     }
 
     @Override
-    public int delShoppingCart(Integer cardId) {
+    public int delShoppingCart(Integer cartId) {
         String sql = "DELETE FROM shoppingcar WHERE `carId` = ?";
-        return update(sql, cardId);
+        return update(sql, cartId);
     }
 }

@@ -138,4 +138,26 @@ public class ShoppingServlet extends BaseServlet {
         }
     }
 
+    protected void editorGoodCount(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+
+        String cartId = req.getParameter("cartId");
+        String goodNum = req.getParameter("goodNum");
+
+        ShoppingCar shoppingCar = new ShoppingCar();
+
+        if (cartId !=null && !"".equals(cartId) && goodNum != null && !"".equals(goodNum)) {
+            shoppingCar.setCarId(Integer.parseInt(cartId));
+            shoppingCar.setGoodNum(Integer.parseInt(goodNum));
+            boolean flag = shoppingCartService.updateShoppingCart(shoppingCar);
+            System.out.println("cardId:"+cartId);
+            System.out.println("goodNum:"+goodNum);
+            if (flag) {
+                calculate(req, resp);
+            }
+        }
+
+
+
+    }
+
 }

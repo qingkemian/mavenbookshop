@@ -44,7 +44,7 @@
                 <td></td>
                 <th class="main-title-txt">我的购物车</th>
                 <td><a class="continue-shopping"
-                       href="ShoppingServlet?action=getHostGoods">继续购物
+                       href="shoppingServlet?action=shoppingCart">继续购物
                     <b>&gt; </b></a></td>
             </tr>
             </tbody>
@@ -107,6 +107,7 @@
                                                        class="count-number prod-num J_viewNum J_operate"
                                                        value="${carGoods.goodNum}"
                                                        title="请输入购买量" readonly="" id="totalCount">
+                                                <input type="hidden" id="theCartId" value="${carGoods.carId}">
                                                 <a class="add-num J_addNum J_operate" href="javascript:;">+</a>
                                             </span>
                                     </td>
@@ -230,18 +231,40 @@
     $(function () {
         $(".add-num").click(function () {
             var totalCount = $(this).parents(".prod-line").find("#totalCount").val(); // 数量
-            var J_viewVcoin = $(this).parents(".prod-line").find(".J_viewVcoin").text();// 小计
-            var v_user = $(this).parents(".prod-line").attr("value"); // 当前商品
+            // var J_viewVcoin = $(this).parents(".prod-line").find(".J_viewVcoin").text();// 小计
+            var cartId = $(this).parents(".prod-line").attr("value"); // 当前商品
             console.log(totalCount);
-            console.log(v_user);
-            console.log(J_viewVcoin);
+            console.log(cartId);
+            // console.log(J_viewVcoin);
+
+            var checkId = [];
+            if($("input[name='items']:checked").length > 0) {
+                $("input[name='items']:checked").each(function (i) {
+                    checkId[i] = $(this).val();
+                });
+
+                console.log(checkId);
+            }
 
             $.ajax({
                 type: "post",
-                url: "${pageContext.request.contextPath}/shoppingCartServlet?action=editorGoodCount&totalCount=" + totalCount + "&J_viewVcoin=" + J_viewVcoin + "&v_cid=" + v_user,
-                data: "",
-                success: function (msg) {
-                    console.log(msg);
+                url: "shoppingServlet?action=editorGoodCount&goodNum=" + totalCount + "&cartId=" + cartId,
+                data:{
+                    checkId: checkId
+                },
+                traditional:true, //阻止jquery对数组序列化
+                success: function (data) {
+                    console.log(data);
+                    mydata = $.parseJSON(data);
+                    console.log(mydata)
+                    console.log(mydata.getNum);
+                    console.log(mydata.totalPrice);
+                    console.log(mydata.discountPrice);
+                    ${carGoods.goodNum} = mydata.getNum;
+                    $(".getNum").text(mydata.getNum);
+                    $(".getTotalPrice").text(mydata.totalPrice);
+                    $(".dPrice").text(mydata.discountPrice);
+                    $(".hiddenprice").text(mydata.totalPrice);
                 }, error: function (xhr) {
                     console.log(xhr.status);
                 }
@@ -249,18 +272,39 @@
         });
         $(".reduce-num").click(function () {
             var totalCount = $(this).parents(".prod-line").find("#totalCount").val(); // 数量
-            var J_viewVcoin = $(this).parents(".prod-line").find(".J_viewVcoin").text();// 小计
-            var v_user = $(this).parents(".prod-line").attr("value"); // 当前商品
+            // var J_viewVcoin = $(this).parents(".prod-line").find(".J_viewVcoin").text();// 小计
+            var cartId = $(this).parents(".prod-line").attr("value"); // 当前商品
             console.log(totalCount);
-            console.log(v_user);
-            console.log(J_viewVcoin);
+            console.log(cartId);
+            // console.log(J_viewVcoin);
+
+            var checkId = [];
+            if($("input[name='items']:checked").length > 0) {
+                $("input[name='items']:checked").each(function (i) {
+                    checkId[i] = $(this).val();
+                });
+
+                console.log(checkId);
+            }
 
             $.ajax({
                 type: "post",
-                url: "${pageContext.request.contextPath}/shoppingCartServlet?action=editorGoodCount&totalCount=" + totalCount + "&J_viewVcoin=" + J_viewVcoin + "&v_cid=" + v_user,
-                data: "",
-                success: function (msg) {
-                    console.log(msg);
+                url: "shoppingServlet?action=editorGoodCount&goodNum=" + totalCount + "&cartId=" + cartId,
+                data:{
+                    checkId: checkId
+                },
+                traditional:true, //阻止jquery对数组序列化
+                success: function (data) {
+                    console.log(data);
+                    mydata = $.parseJSON(data);
+                    console.log(mydata)
+                    console.log(mydata.getNum);
+                    console.log(mydata.totalPrice);
+                    console.log(mydata.discountPrice);
+                    $(".getNum").text(mydata.getNum);
+                    $(".getTotalPrice").text(mydata.totalPrice);
+                    $(".dPrice").text(mydata.discountPrice);
+                    $(".hiddenprice").text(mydata.totalPrice);
                 }, error: function (xhr) {
                     console.log(xhr.status);
                 }

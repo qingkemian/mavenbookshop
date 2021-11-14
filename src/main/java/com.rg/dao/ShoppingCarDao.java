@@ -39,7 +39,7 @@ public interface ShoppingCarDao {
      * @param goodNum
      * @return
      */
-    int updateShoppingCart(Integer cardId, Integer goodNum);
+    int updateShoppingCart(Integer cartId, Integer goodNum);
 
     /**
      * 添加购物车记录
@@ -52,9 +52,9 @@ public interface ShoppingCarDao {
 
     /**
      * 删除购物车的一条商品
-     * @param cardId
+     * @param cartId
      * @return
      */
-    int delShoppingCart(Integer cardId);
+    int delShoppingCart(Integer cartId);
 
 }
