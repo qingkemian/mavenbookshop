@@ -209,77 +209,6 @@
             </dd>
 
         </dl>
-        <dl class="confirm-module">
-            <dt class="module-title">电子发票</dt>
-            <dd class="invoice-info">
-                <div class="tax-box cl">
-                    <div class="tax-type on" value="1">个人发票<i></i></div>
-                    <div class="tax-type" value="2">公司发票<i></i></div>
-                </div>
-                <div class="invoice-form">
-                    <div class="item">
-                        <label class="tax-ipt cl">
-                            <div class="name">
-                                <span class="red">*</span>
-                                <span>发票抬头：</span>
-                            </div>
-                            <div class="fm-ipt cl">
-                                <input id="tax-title" type="text" name="taxTitle" maxlength="50" class="fm-ipt-txt"
-                                       placeholder="请输入发票抬头" autocomplete="off" required="" empty-msg="请输入发票抬头"
-                                       verify-msg="请输入小于50个字符">
-                            </div>
-                        </label>
-                        <p class="err-tip"></p>
-                    </div>
-                    <div class="hidden" id="invoiceCompany">
-                        <div class="item">
-                            <label class="tax-ipt cl">
-                                <div class="name">
-                                    <span class="red">*</span>
-                                    <span>纳税人识别号：</span>
-                                </div>
-                                <div class="fm-ipt cl">
-                                    <input id="tax-code" type="text" name="taxCode" maxlength="20" class="fm-ipt-txt"
-                                           placeholder="请填写购买方纳税人识别号或统一社会信用代码" autocomplete="off" required=""
-                                           empty-msg="请输入纳税人识别号或统一社会信息代码" verify="^[0-9A-Z]{15,20}$"
-                                           verify-msg="请输入15-20位数字或者大写字母">
-                                </div>
-                            </label>
-                            <p class="err-tip"></p>
-                        </div>
-                        <p class="invoice-info">根据最新增值税管理办法，如需企业抬头发票，请填写有效税号信息 <a id="showDetail" href="javascript:;">查看详情</a>
-                        </p>
-                        <p class="invoice-more"><span>点击填写开户行、账号、地址和电话信息</span></p>
-                        <ul class="hidden" id="invoiceMoreForm">
-                            <li class="item">
-                                <label class="tax-ipt cl">
-                                    <div class="name">
-                                        <span>开户行及账号：</span>
-                                    </div>
-                                    <div class="fm-ipt cl">
-                                        <input id="tax-bank" type="text" name="taxBank" maxlength="100"
-                                               class="fm-ipt-txt" autocomplete="off" placeholder="请填写开户银行及银行账号（选填）">
-                                    </div>
-                                </label>
-                                <p class="err-tip"></p>
-                            </li>
-                            <li class="item">
-                                <label class="tax-ipt cl">
-                                    <div class="name">
-                                        <span>地址、电话：</span>
-                                    </div>
-                                    <div class="fm-ipt cl">
-                                        <input id="tax-contact" type="text" name="taxContact" maxlength="100"
-                                               class="fm-ipt-txt" autocomplete="off" placeholder="请填注册地址、电话（选填）">
-                                    </div>
-                                </label>
-                                <p class="err-tip"></p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </dd>
-        </dl>
 
 
         <div class="confirm-module confirm-cart-module">
@@ -297,8 +226,6 @@
                         <th class="goods-col">商品名称</th>
                         <th class="price-col">价格（元）</th>
                         <th class="quantity-col">数量</th>
-                        <th class="benefit-col">优惠</th>
-                        <%--<th class="vcoin-col">赠送积分</th>--%>
                         <th class="sum-col">小计（元）</th>
                     </tr>
 
@@ -309,67 +236,49 @@
             <div class="prod-bundle">
                 <input type="hidden" class="order-commodity-main">
                 <div class="prod-list-wrap">
-                    <form action="${pageContext.request.contextPath}/VIVOCheckoutServlet?action=VIVOCheckout&v_uid=${sessionScope.vivo_user.v_uid}"
+                    <form action="checkoutServlet?action=checkout&v_uid=${sessionScope.vivo_user.v_uid}"
                           method="post" id="form_vivoOrder">
 
                         <table class="order-table J_viewTBody">
                             <tbody id="tbody">
 
                             <c:forEach items="${userShoppingCar}" var="carGoods" varStatus="status">
-                                <%--        <input type="hidden" value="${}" />
-                                        --%>
-                                <input type="text"  style="display:none;" value="${carGoods.v_gid}" name="v_goodId"/>
-                                <input type="text" style="display:none;" value="${carGoods.v_quanity}" name="v_count"/>
-                                <input type="text" style="display:none;" value="${carGoods.v_price}" name="v_price"/>
-                                <input type="text" style="display:none;" value="${carGoods.v_editionNo}"
-                                       name="v_editionNo"/>
-                                <input type="text" style="display:none;" value="${carGoods.v_colorNo}"
-                                       name="v_colorNo"/>
-                                <input type="text" style="display:none;" value="" name="v_totlePrice"
-                                       id="v_totlePrice"/>
-                                <input type="text" style="display:none;" value="" name="v_tid" class="v_tid"/>
-
-
-                                <tr class="prod-line" valign="${carGoods.v_gid}">
+                                <tr class="prod-line" value="${carGoods.carId}">
                                     <td class="prod-pic column">
                                         <a href="javascript:;" target="_blank">
                                             <div class="figure">
-                                                <img src="../${carGoods.v_image}">
+                                                <img src="../${carGoods.imgSrc}">
                                             </div>
                                         </a>
                                     </td>
                                     <td class="goods-col column">
-                                        <span style="display: none" class="v_editionNo_v_colorNo"
-                                              v_editionNo="${carGoods.v_editionNo}"
-                                              v_colorNo="${carGoods.v_colorNo}"></span>
                                         <a class="goods-link" href="javascript:;" target="_blank">
-                                                ${carGoods.v_user} ${carGoods.v_edName} ${carGoods.v_colorName}
+                                                ${carGoods.goodName}
                                         </a>
-
                                         <br>
-                                        <span
-                                                value="${carGoods.v_colorNo}">颜色：${carGoods.v_colorName}</span>
+                                        作者：${carGoods.producer}
                                     </td>
-                                    <td class="price-col column"
-                                        valign="${carGoods.v_price}">${carGoods.v_price}</td>
-                                    <td class="column-number" valign="${carGoods.v_quanity}">
-                                            ${carGoods.v_quanity}
+                                    <td class="price-col column">${carGoods.price * carGoods.discount}</td>
+                                    <td class="column">
+                                            <span class="number-box">
+                                                <input type="number" name="v_quanity"
+                                                       class="count-number prod-num J_viewNum J_operate"
+                                                       value="${carGoods.goodNum}"
+                                                       title="数量" readonly="readonly" id="totalCount">
+                                                <input type="hidden" id="theCartId" value="${carGoods.carId}">
+                                                <input type="hidden" id = "mynum111" value="${carGoods.price * carGoods.discount}">
+                                                <input type="hidden" id ="mynum222" value="${carGoods.price * (1 - carGoods.discount)}">
+                                            </span>
                                     </td>
-                                    <td class="column"><span class="J_viewDiscount">0.00</span></td>
-                                    <td class="J_viewVcoin column" style="color: red;">${carGoods.v_cprice}</td>
-                                        <%--<td class="total-price J_viewSalePrice column">3198.00</td>--%>
-
-                                </tr>
+                                    <td class="column">
+                                        <span class = "oneTotalPrice">${carGoods.price * carGoods.discount * carGoods.goodNum}</span>
+                                    </td>
                             </c:forEach>
 
                             </tbody>
                         </table>
                     </form>
                 </div>
-
-
-                <!--镭射雕刻-->
-
 
             </div>
 

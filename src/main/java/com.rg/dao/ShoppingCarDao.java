@@ -35,7 +35,7 @@ public interface ShoppingCarDao {
 
     /**
      * 修改物品数量
-     * @param cardId
+     * @param cartId
      * @param goodNum
      * @return
      */

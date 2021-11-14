@@ -161,11 +161,9 @@
                                             </p>
                                         </td>
                                         <td class="btn-area">
-                                            <a href="settlementServlet?action=MyOrderTakeInformation&v_uid=${sessionScope.vivo_user.v_uid}">
-                                                <button class="btn--lg cart-btn-submit" type="button" title="去结算">
-                                                    <i class="btn-inner">去结算</i>
-                                                </button>
-                                            </a>
+                                            <button class="btn--lg cart-btn-submit" id="goSettlement" type="button" title="去结算">
+                                                <i class="btn-inner">去结算</i>
+                                            </button>
                                         </td>
                                     </tr>
                                     </tbody>
@@ -434,6 +432,39 @@
                 $(".hiddenprice").text(mydata.totalPrice);
             }
         });
+    });
+
+    $(function () {
+       $("#goSettlement").click(function () {
+           var checkId = [];
+           if($("input[name='items']:checked").length > 0){
+               $("input[name='items']:checked").each(function (i) {
+                   checkId[i] = $(this).val();
+               });
+
+               console.log(checkId);
+
+               window.location.href = "settlementServlet?action=initSettlement&checkId="+checkId;
+
+               // ajax无法实现页面跳转！
+               // $.ajax({
+               //     type: 'POST',
+               //     url: 'settlementServlet?action=initSettlement',
+               //     data:{
+               //         checkId: checkId
+               //     },
+               //     traditional:true, //阻止jquery对数组序列化
+               //     success: function(data){
+               //         console.log(data.msg);
+               //     },
+               //     error:function(data) {
+               //         console.log(data.msg);
+               //     },
+               // });
+           } else {
+               alert("请选择商品");
+           }
+       }) ;
     });
 </script>
 </body>

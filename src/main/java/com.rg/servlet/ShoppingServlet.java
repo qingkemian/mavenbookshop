@@ -166,6 +166,13 @@ public class ShoppingServlet extends BaseServlet {
 
     }
 
+    /**
+     * 删除购物车内容
+     * @param req
+     * @param resp
+     * @throws ServletException
+     * @throws IOException
+     */
     protected void delShoppingCar(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String carId = req.getParameter("carId");
         ShoppingCar shoppingCar = new ShoppingCar();
