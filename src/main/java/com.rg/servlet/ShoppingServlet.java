@@ -1,5 +1,6 @@
 package com.rg.servlet;
 
+import com.google.gson.Gson;
 import com.rg.entity.ShoppingCar;
 import com.rg.entity.User;
 import com.rg.service.ShoppingCartService;
@@ -15,7 +16,9 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.Writer;
 import java.math.BigDecimal;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.logging.Logger;
 
 /**
@@ -116,7 +119,14 @@ public class ShoppingServlet extends BaseServlet {
             resp.setContentType("text/html;charset=utf-8");
             resp.setHeader("cache-control", "no-cache");
             // JSON官方明确规定，JSON数据的key与value必须使用双引号""包裹，否则在转换过程中会导致错误。
-            String str = "{\"getNum\":\"" + getNum + "\",\"totalPrice\":\"" + totalPrice + "\",\"discountPrice\":\""+ discountPrice + "\"}";
+//            String str = "{\"getNum\":\"" + getNum + "\",\"totalPrice\":\"" + totalPrice + "\",\"discountPrice\":\""+ discountPrice + "\"}";
+            Gson gson = new Gson();
+            Map<String, Object> map = new HashMap<String, Object>();
+            map.put("getNum", getNum);
+            map.put("totalPrice", totalPrice);
+            map.put("discountPrice", discountPrice);
+            String str = gson.toJson(map);
+
             out.print(str);
         } catch (Exception e) {
             e.printStackTrace();

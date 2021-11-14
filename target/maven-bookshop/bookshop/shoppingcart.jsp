@@ -209,6 +209,9 @@
         </style>
     </c:if>
 
+    <input type="hidden" class="hiddenprice" name="price" value="0"/>
+    <input type="hidden" name="uid" value="${sessionScope.user.uid}"/>
+
 </div>
 <!-- 内容结束 -->
 
@@ -297,6 +300,7 @@
                         $(".getNum").text(mydata.getNum);
                         $(".getTotalPrice").text(mydata.totalPrice);
                         $(".dPrice").text(mydata.discountPrice);
+                        $(".hiddenprice").text(mydata.totalPrice);
                     },
                     error:function(data) {
                         console.log(data.msg);
@@ -306,6 +310,7 @@
                 $(".getNum").text(0);
                 $(".getTotalPrice").text(0);
                 $(".dPrice").text(0);
+                $(".hiddenprice").text(mydata.totalPrice);
             }
 
         });
@@ -345,6 +350,7 @@
                         $(".getNum").text(mydata.getNum);
                         $(".getTotalPrice").text(mydata.totalPrice);
                         $(".dPrice").text(mydata.discountPrice);
+                        $(".hiddenprice").text(mydata.totalPrice);
                     },
                     error:function(data) {
                         console.log(data.msg);
@@ -354,6 +360,7 @@
                 $(".getNum").text(0);
                 $(".getTotalPrice").text(0);
                 $(".dPrice").text(0);
+                $(".hiddenprice").text(mydata.totalPrice);
             }
         });
     });

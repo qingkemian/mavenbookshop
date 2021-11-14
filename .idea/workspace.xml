@@ -7,18 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a4e3c31-a55d-4004-bcfa-ba5f0ad3f4e8" name="默认" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.rg/dao/ShoppingCarDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.rg/dao/ShoppingCarDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.rg/dao/impl/ShoppingCartDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.rg/dao/impl/ShoppingCartDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.rg/service/ShoppingCartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.rg/service/ShoppingCartService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.rg/service/impl/ShoppingCartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.rg/service/impl/ShoppingCartServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.rg/servlet/ShoppingServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.rg/servlet/ShoppingServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/admin-list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/admin-list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/bookshop/shoppingcart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/bookshop/shoppingcart.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/rg/dao/ShoppingCarDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/rg/dao/impl/ShoppingCartDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/rg/service/ShoppingCartService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/rg/service/impl/ShoppingCartServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/rg/servlet/ShoppingServlet.class" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com.rg/servlet/GsonTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-bookshop/bookshop/shoppingcart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-bookshop/bookshop/shoppingcart.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -32,7 +23,7 @@
     <session id="-1172013196">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="10" />
+          <entry key="project.closed" value="11" />
           <entry key="project.open.time.39" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.45" value="1" />
@@ -40,11 +31,12 @@
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.50" value="1" />
           <entry key="project.open.time.53" value="1" />
+          <entry key="project.open.time.59" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.66" value="1" />
           <entry key="project.open.time.68" value="1" />
           <entry key="project.open.time.91" value="1" />
-          <entry key="project.opened" value="11" />
+          <entry key="project.opened" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -52,10 +44,10 @@
           <entry key="class" value="2" />
           <entry key="css" value="8" />
           <entry key="ico" value="1" />
-          <entry key="java" value="381" />
+          <entry key="java" value="383" />
           <entry key="jpg" value="1" />
           <entry key="js" value="5" />
-          <entry key="jsp" value="171" />
+          <entry key="jsp" value="175" />
           <entry key="png" value="4" />
           <entry key="properties" value="1" />
           <entry key="sql" value="8" />
@@ -67,8 +59,8 @@
           <entry key="CLASS" value="2" />
           <entry key="CSS" value="8" />
           <entry key="Image" value="6" />
-          <entry key="JAVA" value="381" />
-          <entry key="JSP" value="171" />
+          <entry key="JAVA" value="383" />
+          <entry key="JSP" value="175" />
           <entry key="JavaScript" value="5" />
           <entry key="Properties" value="1" />
           <entry key="SQL" value="8" />
@@ -78,8 +70,8 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="8" />
-          <entry key="java" value="17397" />
-          <entry key="jsp" value="4408" />
+          <entry key="java" value="17526" />
+          <entry key="jsp" value="4438" />
           <entry key="properties" value="2" />
           <entry key="sql" value="46" />
           <entry key="txt" value="19" />
@@ -88,8 +80,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="17397" />
-          <entry key="JSP" value="4408" />
+          <entry key="JAVA" value="17526" />
+          <entry key="JSP" value="4438" />
           <entry key="PLAIN_TEXT" value="27" />
           <entry key="Properties" value="2" />
           <entry key="SQL" value="46" />
@@ -102,24 +94,12 @@
     <favorites_list name="mavenbookshop" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/servlet/ShoppingServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="118" column="74" selection-start-line="118" selection-start-column="74" selection-end-line="118" selection-end-column="74" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/bookshop/shoppingcart.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="471">
-              <caret line="356" column="13" selection-start-line="356" selection-start-column="13" selection-end-line="356" selection-end-column="13" />
+            <state relative-caret-position="17">
+              <caret line="178" column="41" selection-start-line="178" selection-start-column="41" selection-end-line="178" selection-end-column="41" />
               <folding>
                 <element signature="n#c:if#1;n#jsp:root#0;n#!!top" />
               </folding>
@@ -127,11 +107,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/admin-list.jsp">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com.rg/servlet/GsonTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-308">
-              <caret line="155" column="34" selection-start-line="155" selection-start-column="34" selection-end-line="155" selection-end-column="34" />
+            <state relative-caret-position="374">
+              <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#336#352#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -169,6 +153,7 @@
       <find>J_viewDiscount</find>
       <find>J_totalMarketPrice</find>
       <find>sum-area-infoI</find>
+      <find>price</find>
     </findStrings>
     <replaceStrings>
       <replace>..</replace>
@@ -180,7 +165,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com.rg/servlet/InitServlet.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/com.rg/utils/mailTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.rg/utils/RandomUtils.java" />
@@ -231,6 +215,7 @@
         <option value="$PROJECT_DIR$/src/main/webapp/admin/admin-list.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com.rg/servlet/ShoppingServlet.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/bookshop/shoppingcart.jsp" />
+        <option value="$PROJECT_DIR$/src/test/java/com.rg/servlet/GsonTest.java" />
       </list>
     </option>
   </component>
@@ -292,8 +277,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -433,6 +418,27 @@
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="bookshop" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="mavenbookshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mavenbookshop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mavenbookshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mavenbookshop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mavenbookshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mavenbookshop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com.rg" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -442,7 +448,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1636816651178" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1636854178289" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -500,22 +506,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AdminDaoImplTest.test5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="maven-bookshop" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.rg.dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.rg.dao.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.rg.dao.impl.AdminDaoImplTest" />
-      <option name="METHOD_NAME" value="test5" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="GenderTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="maven-bookshop" />
       <extension name="coverage">
@@ -542,6 +532,22 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.rg.dao.impl" />
       <option name="MAIN_CLASS_NAME" value="com.rg.dao.impl.GoodsDaoImplTest" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GsonTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="maven-bookshop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rg.servlet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.rg.servlet" />
+      <option name="MAIN_CLASS_NAME" value="com.rg.servlet.GsonTest" />
       <option name="METHOD_NAME" value="test1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -702,19 +708,19 @@
     </configuration>
     <list>
       <item itemvalue="Tomcat Server.bookshop" />
-      <item itemvalue="JUnit.AdminDaoImplTest.test5" />
       <item itemvalue="JUnit.GenderTest.test1" />
       <item itemvalue="Application.mailTest" />
       <item itemvalue="JUnit.UserDaoTest.test1" />
       <item itemvalue="JUnit.GoodsDaoImplTest.test1" />
+      <item itemvalue="JUnit.GsonTest.test1" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GsonTest.test1" />
         <item itemvalue="JUnit.GoodsDaoImplTest.test1" />
         <item itemvalue="JUnit.UserDaoTest.test1" />
         <item itemvalue="Application.mailTest" />
         <item itemvalue="JUnit.GenderTest.test1" />
-        <item itemvalue="JUnit.AdminDaoImplTest.test5" />
       </list>
     </recent_temporary>
   </component>
@@ -738,7 +744,8 @@
       <workItem from="1636695053852" duration="20794000" />
       <workItem from="1636765614437" duration="10376000" />
       <workItem from="1636781248751" duration="9270000" />
-      <workItem from="1636792337785" duration="17761000" />
+      <workItem from="1636792337785" duration="18751000" />
+      <workItem from="1636853689694" duration="241000" />
     </task>
     <servers />
   </component>
@@ -775,10 +782,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131494000" />
+    <option name="totallyTimeSpent" value="132725000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="960" y="0" width="960" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="UI Designer" order="0" />
@@ -787,7 +794,7 @@
       <window_info id="设计器" order="3" />
       <window_info id="Web" order="4" sideWeight="0.5019763" side_tool="true" weight="0.1673774" />
       <window_info id="Image Layers" order="5" />
-      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.49802372" visible="true" weight="0.1913646" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.49802372" visible="true" weight="0.40333334" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Messages" order="0" sideWeight="0.49888888" weight="0.3312034" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.27263045" />
@@ -799,7 +806,7 @@
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.32374868" />
       <window_info anchor="bottom" id="Application Servers" order="9" weight="0.32374868" />
-      <window_info active="true" anchor="bottom" id="Run" order="10" visible="true" weight="0.3546326" />
+      <window_info anchor="bottom" id="Run" order="10" weight="0.3546326" />
       <window_info anchor="bottom" id="Debug" order="11" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
@@ -856,13 +863,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/entity/Admin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/dao/AdminDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-146">
@@ -874,13 +874,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/entity/TheOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
@@ -1006,9 +999,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
           <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1016,9 +1006,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1026,11 +1013,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-305">
           <caret line="23" column="38" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#479#480#0" expanded="true" />
-            <element signature="e#569#570#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1038,9 +1020,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="31" column="10" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1048,14 +1027,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="29" column="31" lean-forward="true" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#707#708#0" expanded="true" />
-            <element signature="e#771#772#0" expanded="true" />
-            <element signature="method#updateGood#0;class#GoodsServiceImpl#0" />
-            <element signature="method#addGood#0;class#GoodsServiceImpl#0" />
-            <element signature="method#delGood#0;class#GoodsServiceImpl#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1063,9 +1034,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="223">
           <caret line="51" column="17" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1073,9 +1041,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1083,9 +1048,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="309">
           <caret line="67" column="39" lean-forward="true" selection-start-line="67" selection-start-column="39" selection-end-line="67" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1100,20 +1062,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="48" column="40" selection-start-line="48" selection-start-column="40" selection-end-line="48" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/bookshop/productDetails.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5113">
-          <caret line="22" column="15" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/bookshop/Shopping.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2786">
-          <caret line="957" column="61" selection-start-line="957" selection-start-column="61" selection-end-line="957" selection-end-column="61" />
         </state>
       </provider>
     </entry>
@@ -1140,9 +1088,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
           <caret line="103" column="64" selection-start-line="103" selection-start-column="64" selection-end-line="103" selection-end-column="64" />
-          <folding>
-            <element signature="n#!!doc;n#jsp:root#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1164,13 +1109,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2">
           <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#ajaxExistUserName#0;class#UserServlet#0" />
-            <element signature="method#getCode#0;class#UserServlet#0" />
-            <element signature="method#getCodeForTest#0;class#UserServlet#0" />
-            <element signature="method#regist#0;class#UserServlet#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1178,9 +1116,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1188,9 +1123,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="211">
           <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1198,9 +1130,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="211">
           <caret line="24" column="14" lean-forward="true" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1208,9 +1137,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
           <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1218,16 +1144,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-155">
           <caret line="37" column="199" selection-start-line="37" selection-start-column="199" selection-end-line="37" selection-end-column="199" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/admin-list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-308">
-          <caret line="155" column="34" selection-start-line="155" selection-start-column="34" selection-end-line="155" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -1235,6 +1151,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
           <caret line="118" column="74" selection-start-line="118" selection-start-column="74" selection-end-line="118" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/bookshop/Shopping.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-168">
+          <caret line="957" column="61" selection-start-line="957" selection-start-column="61" selection-end-line="957" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/admin-list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="155" column="34" selection-start-line="155" selection-start-column="34" selection-end-line="155" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/bookshop/productDetails.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="299" column="37" lean-forward="true" selection-start-line="299" selection-start-column="37" selection-end-line="299" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/entity/TheOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1243,10 +1187,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/bookshop/shoppingcart.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="356" column="13" selection-start-line="356" selection-start-column="13" selection-end-line="356" selection-end-column="13" />
+        <state relative-caret-position="17">
+          <caret line="178" column="41" selection-start-line="178" selection-start-column="41" selection-end-line="178" selection-end-column="41" />
           <folding>
             <element signature="n#c:if#1;n#jsp:root#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com.rg/servlet/GsonTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#336#352#0" expanded="true" />
           </folding>
         </state>
       </provider>
