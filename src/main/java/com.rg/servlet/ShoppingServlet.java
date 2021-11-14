@@ -98,13 +98,15 @@ public class ShoppingServlet extends BaseServlet {
         Integer getNum = 0;
         BigDecimal totalPrice = new BigDecimal(0);
         BigDecimal discountPrice = new BigDecimal(0);
-        for (String s : checkId) {
-            shoppingCar.setCarId(Integer.parseInt(s));
-            dbShoppingCar = shoppingCartService.querryShoppingCartByCartId(shoppingCar);
-            if (dbShoppingCar != null){
-                getNum = getNum + dbShoppingCar.getGoodNum();
-                totalPrice = totalPrice.add( ( dbShoppingCar.getPrice().multiply(  new BigDecimal( dbShoppingCar.getGoodNum().toString() ) ) ).multiply(dbShoppingCar.getDiscount()) ) ;
-                discountPrice = discountPrice.add( ( dbShoppingCar.getPrice().multiply(  new BigDecimal( dbShoppingCar.getGoodNum().toString() ) ) ).multiply(new BigDecimal(1).subtract(dbShoppingCar.getDiscount())) );
+        if (checkId != null) {
+            for (String s : checkId) {
+                shoppingCar.setCarId(Integer.parseInt(s));
+                dbShoppingCar = shoppingCartService.querryShoppingCartByCartId(shoppingCar);
+                if (dbShoppingCar != null){
+                    getNum = getNum + dbShoppingCar.getGoodNum();
+                    totalPrice = totalPrice.add( ( dbShoppingCar.getPrice().multiply(  new BigDecimal( dbShoppingCar.getGoodNum().toString() ) ) ).multiply(dbShoppingCar.getDiscount()) ) ;
+                    discountPrice = discountPrice.add( ( dbShoppingCar.getPrice().multiply(  new BigDecimal( dbShoppingCar.getGoodNum().toString() ) ) ).multiply(new BigDecimal(1).subtract(dbShoppingCar.getDiscount())) );
+                }
             }
         }
 
@@ -138,6 +140,12 @@ public class ShoppingServlet extends BaseServlet {
         }
     }
 
+    /**
+     * 修改购物车某个物品的数量
+     * @param req
+     * @param resp
+     * @throws IOException
+     */
     protected void editorGoodCount(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
         String cartId = req.getParameter("cartId");
@@ -156,8 +164,19 @@ public class ShoppingServlet extends BaseServlet {
             }
         }
 
+    }
 
+    protected void delShoppingCar(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String carId = req.getParameter("carId");
+        ShoppingCar shoppingCar = new ShoppingCar();
 
+        if (carId !=null && !"".equals(carId)){
+            shoppingCar.setCarId(Integer.parseInt(carId));
+            boolean flag = shoppingCartService.delShoppingCart(shoppingCar);
+            if (flag) {
+                req.getRequestDispatcher("shoppingServlet?action=shoppingCart").forward(req, resp);
+            }
+        }
     }
 
 }

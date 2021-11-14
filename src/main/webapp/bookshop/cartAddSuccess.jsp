@@ -63,7 +63,7 @@
                     </a>
                     <a target="_blank" href="" id="to-cart">
                         <button class="btn--lg btn-confirm now-buy" type="button" title="去购物车结算">
-                            <a href="shoppingServlet?action=getUserShoppingCar&uid=${user.uid}"><i class="btn-inner">去购物车结算</i></a>
+                            <a href="shoppingServlet?action=shoppingCart"><i class="btn-inner">去购物车结算</i></a>
                         </button>
                     </a>
                 </div>

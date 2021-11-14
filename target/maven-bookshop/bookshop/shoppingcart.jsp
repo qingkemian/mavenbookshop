@@ -44,7 +44,7 @@
                 <td></td>
                 <th class="main-title-txt">我的购物车</th>
                 <td><a class="continue-shopping"
-                       href="shoppingServlet?action=shoppingCart">继续购物
+                       href="goodsServlet?action=goodsList">继续购物
                     <b>&gt; </b></a></td>
             </tr>
             </tbody>
@@ -108,14 +108,16 @@
                                                        value="${carGoods.goodNum}"
                                                        title="请输入购买量" readonly="" id="totalCount">
                                                 <input type="hidden" id="theCartId" value="${carGoods.carId}">
+                                                <input type="hidden" id = "mynum111" value="${carGoods.price * carGoods.discount}">
+                                                <input type="hidden" id ="mynum222" value="${carGoods.price * (1 - carGoods.discount)}">
                                                 <a class="add-num J_addNum J_operate" href="javascript:;">+</a>
                                             </span>
                                     </td>
                                     <td class="column">
-                                        <span>${carGoods.price * carGoods.discount * carGoods.goodNum}</span>
+                                        <span class = "oneTotalPrice">${carGoods.price * carGoods.discount * carGoods.goodNum}</span>
                                     </td>
                                     <td class="column">
-                                        <span>${carGoods.price * (1 - carGoods.discount) * carGoods.goodNum}</span>
+                                        <span class="oneDiscount">${carGoods.price * (1 - carGoods.discount) * carGoods.goodNum}</span>
                                     </td>
 
                                     <%--<td class="column"><span class="J_viewDiscount">${carGoods.price * (1 - carGoods.discount)}</span></td>--%>
@@ -213,6 +215,7 @@
     <input type="hidden" class="hiddenprice" name="price" value="0"/>
     <input type="hidden" name="uid" value="${sessionScope.user.uid}"/>
 
+
 </div>
 <!-- 内容结束 -->
 
@@ -230,12 +233,22 @@
 <script>
     $(function () {
         $(".add-num").click(function () {
-            var totalCount = $(this).parents(".prod-line").find("#totalCount").val(); // 数量
+            var totalCount = $(this).parents(".prod-line").find("#totalCount").val(); // 当前商品数量
             // var J_viewVcoin = $(this).parents(".prod-line").find(".J_viewVcoin").text();// 小计
             var cartId = $(this).parents(".prod-line").attr("value"); // 当前商品
             console.log(totalCount);
             console.log(cartId);
             // console.log(J_viewVcoin);
+            // 修改单行值
+            var mynum1 = $(this).parents(".prod-line").find("#mynum111").val();
+            var mynum2 = $(this).parents(".prod-line").find("#mynum222").val();
+            console.log("mynum1:"+mynum1);
+            console.log("mynum2:"+mynum2);
+            var myprice = mynum1 * totalCount;
+            var mydisprice = mynum2 * totalCount;
+            <%--单行的价格、优惠数据--%>
+            $(".oneTotalPrice").text(myprice);
+            $(".oneDiscount").text(mydisprice);
 
             var checkId = [];
             if($("input[name='items']:checked").length > 0) {
@@ -260,11 +273,14 @@
                     console.log(mydata.getNum);
                     console.log(mydata.totalPrice);
                     console.log(mydata.discountPrice);
-                    ${carGoods.goodNum} = mydata.getNum;
+                    <%--${carGoods.goodNum} = mydata.getNum;--%>
+
+                    <%--页面下方总价那块的数据--%>
                     $(".getNum").text(mydata.getNum);
                     $(".getTotalPrice").text(mydata.totalPrice);
                     $(".dPrice").text(mydata.discountPrice);
                     $(".hiddenprice").text(mydata.totalPrice);
+
                 }, error: function (xhr) {
                     console.log(xhr.status);
                 }
@@ -277,6 +293,17 @@
             console.log(totalCount);
             console.log(cartId);
             // console.log(J_viewVcoin);
+            // 修改单行值
+            var mynum1 = $(this).parents(".prod-line").find("#mynum111").val();
+            var mynum2 = $(this).parents(".prod-line").find("#mynum222").val();
+            console.log("mynum1:"+mynum1);
+            console.log("mynum2:"+mynum2);
+            var myprice = mynum1 * totalCount;
+            var mydisprice = mynum2 * totalCount;
+            <%--单行的价格、优惠数据--%>
+            $(".oneTotalPrice").text(myprice);
+            $(".oneDiscount").text(mydisprice);
+
 
             var checkId = [];
             if($("input[name='items']:checked").length > 0) {
