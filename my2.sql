@@ -181,22 +181,22 @@ CREATE TABLE `shoppingcar`  (
 INSERT INTO `shoppingcar` VALUES (1,1,1,1);
 
 INSERT INTO `goods` VALUES (2,'《java核心技术 卷I》','凯.S.霍曼特斯',1,1,149.00,0.651,1);
-INSERT INTO `img` VALUES (2,'images/book2.jpg',1);
+INSERT INTO `img` VALUES (2,'images/book2.jpg',2);
 
 INSERT INTO `goods` VALUES (3,'《java从入门到精通》','明日科技',1,1,69.8,0.5,1);
-INSERT INTO `img` VALUES (3,'images/book3.jpg',1);
+INSERT INTO `img` VALUES (3,'images/book3.jpg',3);
 
 INSERT INTO `goods` VALUES (4,'《深入理解java虚拟机》','周志明',1,1,129.00,0.651,1);
-INSERT INTO `img` VALUES (4,'images/book4.jpg',1);
+INSERT INTO `img` VALUES (4,'images/book4.jpg',4);
 
 INSERT INTO `goods` VALUES (5,'《java并发编程实战》','Brian Goetz',1,1,69.00,0.825,1);
-INSERT INTO `img` VALUES (5,'images/book5.jpg',1);
+INSERT INTO `img` VALUES (5,'images/book5.jpg',5);
 
 INSERT INTO `goods` VALUES (6,'《java多线程与线程池技术详解》','肖海鹏 牟东旭',1,1,79.0,0.5,1);
-INSERT INTO `img` VALUES (6,'images/book6.jpg',1);
+INSERT INTO `img` VALUES (6,'images/book6.jpg',6);
 
 INSERT INTO `goods` VALUES (7,'《java语言程序设计与数据结构》','梁勇',1,1,99.00,0.75,1);
-INSERT INTO `img` VALUES (7,'images/book2.jpg',1);
+INSERT INTO `img` VALUES (7,'images/book2.jpg',7);
 
 INSERT INTO `goods` VALUES (8,'《java核心技术 卷II》','凯.S.霍曼特斯',1,1,149.00,0.75,1);
-INSERT INTO `img` VALUES (8,'images/book8.jpg',1);
+INSERT INTO `img` VALUES (8,'images/book8.jpg',8);

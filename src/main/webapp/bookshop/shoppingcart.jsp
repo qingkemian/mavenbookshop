@@ -245,8 +245,8 @@
             var myprice = mynum1 * totalCount;
             var mydisprice = mynum2 * totalCount;
             <%--单行的价格、优惠数据--%>
-            $(".oneTotalPrice").text(myprice);
-            $(".oneDiscount").text(mydisprice);
+            $(this).parents(".prod-line").find(".oneTotalPrice").text(myprice);
+            $(this).parents(".prod-line").find(".oneDiscount").text(mydisprice);
 
             var checkId = [];
             if($("input[name='items']:checked").length > 0) {
@@ -299,8 +299,8 @@
             var myprice = mynum1 * totalCount;
             var mydisprice = mynum2 * totalCount;
             <%--单行的价格、优惠数据--%>
-            $(".oneTotalPrice").text(myprice);
-            $(".oneDiscount").text(mydisprice);
+            $(this).parents(".prod-line").find(".oneTotalPrice").text(myprice);
+            $(this).parents(".prod-line").find(".oneDiscount").text(mydisprice);
 
 
             var checkId = [];

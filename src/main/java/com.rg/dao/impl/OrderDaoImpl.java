@@ -2,7 +2,6 @@ package com.rg.dao.impl;
 
 import com.rg.dao.OrderDao;
 import com.rg.dao.ShoppingCarDao;
-import com.rg.entity.MyNum;
 import com.rg.entity.OrderDetails;
 import com.rg.entity.ShoppingCar;
 import com.rg.entity.TheOrder;
@@ -54,7 +53,7 @@ public class OrderDaoImpl extends BaseDao implements OrderDao {
             int flag3 = update(sql3, orderNo, shoppingCar.getGoodNo(), shoppingCar.getGoodNum(), shoppingCar.getPrice(), totalPrice);
 
             String sql4 = "DELETE FROM `shoppingcar` WHERE `carId` = ?";
-            int flag4 = update(sql4,cartId);
+            int flag4 = update(sql4,id);
 
             flag = flag * flag3 * flag4;
         }

@@ -50,8 +50,10 @@ public class SettlementServlet extends BaseServlet {
             uid = user.getUid();
         }
 
-        String[] checkId = req.getParameterValues("checkId") ;
+        String checkId = req.getParameter("checkId") ;
         System.out.println("checkId:"+checkId);
+        String[] checkIds = checkId.split(",");
+
         ShoppingCar shoppingCar = new ShoppingCar();
         ShoppingCar dbShoppingCar = new ShoppingCar();
         List<ShoppingCar> shoppingCarList = new ArrayList<ShoppingCar>();
@@ -59,9 +61,9 @@ public class SettlementServlet extends BaseServlet {
         Integer getNum = 0;
         BigDecimal totalPrice = new BigDecimal(0);
         BigDecimal discountPrice = new BigDecimal(0);
-        if (checkId != null) {
+        if (checkIds != null) {
             System.out.println("-----");
-            for (String s : checkId) {
+            for (String s : checkIds) {
                 System.out.println(s);
                 shoppingCar.setCarId(Integer.parseInt(s));
                 dbShoppingCar = shoppingCartService.querryShoppingCartByCartId(shoppingCar);
@@ -110,8 +112,9 @@ public class SettlementServlet extends BaseServlet {
     protected void addAddress(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         User user = (User) req.getSession().getAttribute("user");
 
-        String[] checkIds= (String []) req.getSession().getAttribute("checkId");
-        System.out.println("checkIds"+checkIds);
+        String checkId= (String) req.getSession().getAttribute("checkId");
+        System.out.println("checkId:"+checkId);
+        String[] checkIds = checkId.split(",");
 
         Integer uid = 0;
         if (user!=null){
@@ -192,7 +195,9 @@ public class SettlementServlet extends BaseServlet {
             uid = user.getUid();
         }
 
-        String[]  checkIds= (String[]) req.getSession().getAttribute("checkId");
+        String checkId= (String) req.getSession().getAttribute("checkId");
+        System.out.println("checkId:"+checkId);
+        String[] checkIds = checkId.split(",");
 
         String addressId = req.getParameter("addressId");
         System.out.println(addressId);

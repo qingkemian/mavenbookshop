@@ -15,7 +15,7 @@
     <title>BOOKSHOP官方网站</title>
     <meta name="keywords" content='BOOKSHOP官方网站'/>
     <meta name="description" content='BOOKSHOP官方网站'/>
-    <link rel="icon" href="images/favicon_7c51b3b.ico">
+    <link rel="icon" href="../images/favicon_7c51b3b.ico">
     <link rel="stylesheet" href="../css/shangcheng.css" type="text/css">
     <link rel="stylesheet" href="../css/iconfont.css" type="text/css">
     <link rel="stylesheet" href="../css/list-content.css" type="text/css">
