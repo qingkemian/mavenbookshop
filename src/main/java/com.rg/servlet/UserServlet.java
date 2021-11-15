@@ -156,7 +156,7 @@ public class UserServlet extends BaseServlet {
             session.setDebug(true);
             // 3、创建一封邮件
             String code = RandomUtils.getRandom();
-            log.info("emailCode：" + code);
+            log.info("emailCode:" + code);
             String html = htmlText.html(code);
             MimeMessage message = JavaMailUtils.creatMimeMessage(session, JavaMailUtils.emailAccount,
                     JavaMailUtils.receiveMailAccount, html);

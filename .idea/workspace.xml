@@ -7,17 +7,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a4e3c31-a55d-4004-bcfa-ba5f0ad3f4e8" name="默认" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/book2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/book3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/book4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/book5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/book6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/book7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/book8.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.rg/servlet/PersonalServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.rg/servlet/PersonalServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.rg/servlet/SettlementServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.rg/servlet/SettlementServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/bookshop/personal.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/bookshop/personal.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/bookshop/settlement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/bookshop/settlement.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/bookshop/take.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/bookshop/take.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/rg/servlet/PersonalServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rg/servlet/PersonalServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-bookshop/WEB-INF/classes/com/rg/servlet/PersonalServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-bookshop/WEB-INF/classes/com/rg/servlet/PersonalServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-bookshop/bookshop/personal.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-bookshop/bookshop/personal.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-bookshop/bookshop/settlement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-bookshop/bookshop/settlement.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-bookshop/bookshop/take.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-bookshop/bookshop/take.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.rg/servlet/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.rg/servlet/UserServlet.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -55,10 +53,10 @@
           <entry key="class" value="2" />
           <entry key="css" value="8" />
           <entry key="ico" value="1" />
-          <entry key="java" value="560" />
+          <entry key="java" value="561" />
           <entry key="jpg" value="1" />
           <entry key="js" value="5" />
-          <entry key="jsp" value="239" />
+          <entry key="jsp" value="240" />
           <entry key="png" value="4" />
           <entry key="properties" value="1" />
           <entry key="sql" value="11" />
@@ -70,8 +68,8 @@
           <entry key="CLASS" value="2" />
           <entry key="CSS" value="8" />
           <entry key="Image" value="6" />
-          <entry key="JAVA" value="560" />
-          <entry key="JSP" value="239" />
+          <entry key="JAVA" value="561" />
+          <entry key="JSP" value="240" />
           <entry key="JavaScript" value="5" />
           <entry key="Properties" value="1" />
           <entry key="SQL" value="11" />
@@ -81,7 +79,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="8" />
-          <entry key="java" value="24284" />
+          <entry key="java" value="24285" />
           <entry key="jsp" value="6528" />
           <entry key="properties" value="2" />
           <entry key="sql" value="46" />
@@ -91,7 +89,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="24284" />
+          <entry key="JAVA" value="24285" />
           <entry key="JSP" value="6528" />
           <entry key="PLAIN_TEXT" value="27" />
           <entry key="Properties" value="2" />
@@ -105,71 +103,26 @@
     <favorites_list name="mavenbookshop" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.16867469">
-      <split-first>
-        <leaf>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/servlet/PersonalServlet.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-241">
-                  <caret line="33" column="17" lean-forward="true" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="method#queryPersonalOrder#0;class#PersonalServlet#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/webapp/bookshop/personal.jsp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="731">
-                  <caret line="88" column="78" selection-start-line="88" selection-start-column="78" selection-end-line="88" selection-end-column="78" />
-                  <folding>
-                    <element signature="n#c:if#1;n#jsp:root#0;n#!!top" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/webapp/bookshop/take.jsp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1626">
-                  <caret line="76" column="46" lean-forward="true" selection-start-line="76" selection-start-column="46" selection-end-line="76" selection-end-column="46" />
-                  <folding>
-                    <element signature="n#i#0;n#a#0;n#div#1;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/webapp/bookshop/settlement.jsp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="463">
-                  <caret line="467" column="36" selection-start-line="467" selection-start-column="36" selection-end-line="467" selection-end-column="36" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/webapp/bookshop/take.jsp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="329">
-                  <caret line="145" column="59" lean-forward="true" selection-start-line="145" selection-start-column="59" selection-end-line="145" selection-end-column="59" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/servlet/UserServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="337">
+              <caret line="158" column="32" selection-start-line="158" selection-start-column="32" selection-end-line="158" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/bookshop/register.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="203" column="53" selection-start-line="203" selection-start-column="53" selection-end-line="203" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -224,7 +177,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com.rg/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.rg/service/impl/GoodsServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.rg/constants/Constants.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.rg/dao/impl/ShoppingCartImpl.java" />
@@ -261,7 +213,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com.rg/service/PersonalService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.rg/service/impl/PersonalServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.rg/servlet/ShoppingServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com.rg/servlet/UserServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.rg/servlet/InitServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.rg/servlet/GoodsServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.rg/filter/TransactionFilter.java" />
@@ -275,6 +226,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com.rg/servlet/PersonalServlet.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/bookshop/personal.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/bookshop/take.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/bookshop/register.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com.rg/servlet/UserServlet.java" />
       </list>
     </option>
   </component>
@@ -310,7 +263,7 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="width" value="960" />
     <option name="height" value="1080" />
   </component>
@@ -375,15 +328,6 @@
               <item name="mavenbookshop" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com.rg" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mavenbookshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mavenbookshop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -393,6 +337,14 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="bookshop" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mavenbookshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mavenbookshop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mavenbookshop" type="b2602c69:ProjectViewProjectNode" />
@@ -416,7 +368,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1636984373992" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1636986024493" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -722,7 +674,7 @@
       <workItem from="1636935978933" duration="12514000" />
       <workItem from="1636950533838" duration="17337000" />
       <workItem from="1636970636118" duration="7135000" />
-      <workItem from="1636981579264" duration="2777000" />
+      <workItem from="1636981579264" duration="4228000" />
     </task>
     <servers />
   </component>
@@ -759,10 +711,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="189054000" />
+    <option name="totallyTimeSpent" value="190505000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="0" y="0" width="960" height="1080" extended-state="0" />
     <layout>
       <window_info id="UI Designer" order="0" />
       <window_info id="Favorites" order="1" sideWeight="0.50158226" side_tool="true" weight="0.15085287" />
@@ -770,10 +722,10 @@
       <window_info id="设计器" order="3" />
       <window_info id="Web" order="4" sideWeight="0.5019763" side_tool="true" weight="0.1673774" />
       <window_info id="Image Layers" order="5" />
-      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.49802372" visible="true" weight="0.20362474" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.49802372" visible="true" weight="0.34444445" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Messages" order="0" sideWeight="0.49888888" weight="0.3109691" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="1" sideWeight="0.49946696" visible="true" weight="0.27263045" />
+      <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.49946696" weight="0.27263045" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50053304" side_tool="true" weight="0.27263045" />
       <window_info anchor="bottom" id="Java Enterprise" order="3" weight="0.3290735" />
       <window_info anchor="bottom" id="Database Changes" order="4" show_stripe_button="false" />
@@ -782,7 +734,7 @@
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.32374868" />
       <window_info anchor="bottom" id="Application Servers" order="9" weight="0.3226837" />
-      <window_info anchor="bottom" id="Run" order="10" sideWeight="0.4989339" weight="0.35250267" />
+      <window_info anchor="bottom" id="Run" order="10" sideWeight="0.4989339" visible="true" weight="0.35861322" />
       <window_info anchor="bottom" id="Debug" order="11" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
@@ -851,13 +803,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/service/impl/ShoppingCartServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="34" column="19" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/service/GoodsService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-51">
@@ -1111,13 +1056,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/servlet/UserServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/bookshop/shoppingcart.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4165">
@@ -1200,13 +1138,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/servlet/PersonalServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/bookshop/settlement.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-241">
-          <caret line="33" column="17" lean-forward="true" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
+        <state relative-caret-position="463">
+          <caret line="467" column="36" selection-start-line="467" selection-start-column="36" selection-end-line="467" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/bookshop/take.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1626">
+          <caret line="76" column="46" lean-forward="true" selection-start-line="76" selection-start-column="46" selection-end-line="76" selection-end-column="46" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#queryPersonalOrder#0;class#PersonalServlet#0" />
+            <element signature="n#i#0;n#a#0;n#div#1;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>
@@ -1221,17 +1165,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/bookshop/settlement.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/servlet/PersonalServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="467" column="36" selection-start-line="467" selection-start-column="36" selection-end-line="467" selection-end-column="36" />
+        <state relative-caret-position="-241">
+          <caret line="33" column="17" lean-forward="true" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#queryPersonalOrder#0;class#PersonalServlet#0" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/bookshop/take.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/servlet/UserServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="145" column="59" lean-forward="true" selection-start-line="145" selection-start-column="59" selection-end-line="145" selection-end-column="59" />
+        <state relative-caret-position="337">
+          <caret line="158" column="32" selection-start-line="158" selection-start-column="32" selection-end-line="158" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/bookshop/register.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="203" column="53" selection-start-line="203" selection-start-column="53" selection-end-line="203" selection-end-column="53" />
         </state>
       </provider>
     </entry>
