@@ -46,8 +46,9 @@ public class BaseServlet extends HttpServlet {
         log.info("action:"+action);
 
         //解决响应的中文乱码
-        req.setCharacterEncoding("UTF-8");
-        resp.setContentType("text/html;charset=utf-8");
+//        req.setCharacterEncoding("UTF-8");
+//        resp.setCharacterEncoding("UTF-8");
+//        resp.setContentType("text/html;charset=utf-8");
 
         //使用反射进行业务的分离
         try {

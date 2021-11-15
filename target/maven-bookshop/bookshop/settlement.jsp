@@ -10,6 +10,7 @@
 <html>
 <head>
     <base href="${pageContext.request.contextPath}/">
+    <meta charset="utf-8">
     <title>核对订单信息</title>
     <script src="../js/jquery-1.10.1.min.js"></script>
     <link rel="stylesheet" href="../css/take.css">
@@ -32,20 +33,23 @@
                         <label class="inner">添加新地址</label>
                     </li>
 
+                    <%--所有收货地址--%>
                     <c:forEach items="${allTake}" var="a" varStatus="status">
-                        <li class="address-item J_address-item v_tids" name="address" value="${a.v_tid}">
+                        <li class="address-item J_address-item v_tids" name="address" value="${a.addressId}">
                             <label class="inner" id="J_addressDefaulted">
-                                <div class="item-top"><span class="v_consignee">${a.v_consignee}</span>
-
-                                    <span value="${a.v_phone}" class="mobilePhone">
-                                        <c:out value="${fn:substring(a.v_phone,0,3)}****"></c:out>
-                                    <c:out value="${fn:substring(a.v_phone, 7,11)}"></c:out>
+                                <div class="item-top">
+                                    <span class="v_consignee">${a.name}</span>
+                                    <span value="${a.phone}" class="mobilePhone">
+                                        <c:out value="${fn:substring(a.phone,0,3)}****"></c:out>
+                                    <c:out value="${fn:substring(a.phone, 7,11)}"></c:out>
                                     </span>
                                 </div>
                                 <div class="cl">
                                     <p>
-                                        <span value="${a.v_address}">${a.v_address}</span>
-                                        <span value="${a.v_receivingArea}">${a.v_receivingArea}</span>
+                                        <span value="${a.province}">${a.province}</span>
+                                        <span value="${a.city}">${a.city}</span>
+                                        <span value="${a.district}">${a.district}</span>
+                                        <span value="${a.detailed}">${a.detailed}</span>
                                     </p>
                                 </div>
                             </label>
@@ -71,30 +75,38 @@
 
                 <%-- 添加收货地址 --%>
                 <form id="shipping-address-new-edit" method="post"
-                      action="${pageContext.request.contextPath}/settlementServlet?action=addTakeInformation&v_uid=${sessionScope.vivo_user.v_uid}">
+                      action="settlementServlet?action=addAddress">
+                    <%--&character-set-server=utf8&useUnicode=true&characterEncoding=UTF-8--%>
                     <table class="address-info-new">
                         <tbody>
+                        <c:forEach items="${userShoppingCar}" var="carGoods" varStatus="status">
+                            <input type="hidden" name="cartId" id="" value="${carGoods.carId}">
+                        </c:forEach>
+
                         <tr>
                             <th><strong>*</strong>收货人：</th>
-                            <td><input type="text" name="v_consignee" id="receiverName"></td>
+                            <td><input type="text" name="name" id="receiverName"></td>
                         </tr>
                         <tr>
                             <th><strong>*</strong>手机号码：</th>
-                            <td class="phone"><input type="tel" name="v_phone" id="mobilePhone"></td>
+                            <td class="phone"><input type="tel" name="phone" id="mobilePhone"></td>
                         </tr>
                         <tr class="reginContriner-row">
                             <th><strong>*</strong>收货地区：</th>
                             <td id="j_ReginContriner">
                                 <div class="err-box">
-                                    <a href="javascript:void(0)" class="pick-area pick-area6" name=""></a>
-                                    <input type="hidden" name="v_address">
+                                    <a href="javascript:void(0)" class="pick-area pick-area6" name="ah"></a>
+                                    <input type="hidden" name="address" id="getAddress">
+                                    <input type="hidden" name="province" id="getProvince">
+                                    <input type="hidden" name="city" id="getCity">
+                                    <input type="hidden" name="district" id="getDistrict">
                                 </div>
                             </td>
 
                         </tr>
                         <tr class="address-row">
                             <th><strong>*</strong>详细地址：</th>
-                            <td><input type="text" name="v_receivingArea" id="detailAddress" autocomplete="off"></td>
+                            <td><input type="text" name="detailed" id="detailAddress"></td>
                         </tr>
 
                         <tr class="defaultAddr-row">
@@ -117,11 +129,11 @@
             <div class="mask"></div>
             <div class="panel dialog-container"><a class="icon-close cancelSaveAddress" href="javascript:;"><i
                     class="code-close"><i></i><i></i></i></a>
-                <div class="dialog-title">新建收货地址</div>
+                <div class="dialog-title">编辑收货地址</div>
 
                 <%-- 编辑收货地址 --%>
                 <form id="shipping-address-new-edit-panelWrapTwo" method="post"
-                      action="${pageContext.request.contextPath}/settlementServlet?action=editorTakeInformationTwo&v_uid=${sessionScope.vivo_user.v_uid}">
+                      action="settlementServlet?action=editorTakeInformationTwo">
                     <table class="address-info-new">
                         <tbody>
                         <tr style="display:none;">
@@ -196,18 +208,6 @@
                 <p>支持支付宝和微信支付</p>
             </dd>
 
-            <dd class="pay-method-help hidden" style="display: none;">
-                <input type="hidden" name="installmentTotalPay" value="">
-                <input type="hidden" name="installmentPerPay" value="">
-                <input type="hidden" name="installmentNnum" value="">
-                <input type="hidden" name="installmentPerFeePay" value="">
-                <p>花呗分期是花呗联合天猫淘宝推出的，面向互联网的赊购服务，通过支付宝轻松还款，0首付</p>
-            </dd>
-
-            <dd class="pay-method-help hidden" style="display: none;">
-                <p>货到付款发邮政EMS快递，仅支持现金交易</p>
-            </dd>
-
         </dl>
 
 
@@ -236,7 +236,7 @@
             <div class="prod-bundle">
                 <input type="hidden" class="order-commodity-main">
                 <div class="prod-list-wrap">
-                    <form action="checkoutServlet?action=checkout&v_uid=${sessionScope.vivo_user.v_uid}"
+                    <form action="checkoutServlet?action=checkout"
                           method="post" id="form_vivoOrder">
 
                         <table class="order-table J_viewTBody">
@@ -470,10 +470,24 @@
             "hoverColor": "#ff8c00",
             //"preSet":"山东省/临沂市/兰陵县",
             "getVal": function () {
-                //console.log($(".pick-area-hidden").val())
-                //console.log($(".pick-area-dom").val())
+                console.log($(".pick-area-hidden").val());
+                console.log($(".pick-area-dom").val());
+                $("#getAddress").val($(".pick-area-hidden").val());
                 var thisdom = $("." + $(".pick-area-dom").val());
                 thisdom.next().val($(".pick-area-hidden").val());
+                var splitStr = $(".pick-area-hidden").val();
+                strs=splitStr.split(" "); //字符分割
+                for (i=0;i<strs.length ;i++ )
+                {
+                    if (i==0){
+                        $("#getProvince").val(strs[i]);
+                    }  else if(i==1){
+                        $("#getCity").val(strs[i]);
+                    } else if(i==2){
+                        $("#getDistrict").val(strs[i]);
+                    }
+                    console.log(strs[i]+"<br/>"); //分割后的字符输出
+                }
             }
         });
         $(".address-item").click(function () {
@@ -531,6 +545,17 @@
 
 
     });
+</script>
+
+<script language="javascript">
+    str="2,2,3,5,6,6"; //这是一字符串
+    var strs= new Array(); //定义一数组
+
+    strs=str.split(","); //字符分割
+    for (i=0;i<strs.length ;i++ )
+    {
+        document.write(strs[i]+"<br/>"); //分割后的字符输出
+    }
 </script>
 </body>
 </html>

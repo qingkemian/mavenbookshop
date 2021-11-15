@@ -17,6 +17,9 @@ public class Address {
     private String phone;
     private boolean flag;
 
+    // 额外字段
+    private String address;
+
     public Integer getAddressId() {
         return addressId;
     }
@@ -87,5 +90,13 @@ public class Address {
 
     public void setFlag(boolean flag) {
         this.flag = flag;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 }

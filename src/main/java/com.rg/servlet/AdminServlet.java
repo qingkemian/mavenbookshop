@@ -158,6 +158,7 @@ public class AdminServlet extends BaseServlet {
     protected void addAdmin(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         String name = req.getParameter("name");
         String password = req.getParameter("password");
+        System.out.println("name:"+name);
         Admin admin = new Admin();
         admin.setName(name);
         admin.setPassword(password);
