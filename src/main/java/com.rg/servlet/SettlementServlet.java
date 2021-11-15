@@ -133,7 +133,7 @@ public class SettlementServlet extends BaseServlet {
         address.setCity(city);
         address.setDistrict(district);
         address.setDetailed(detailed);
-        // flag用于标记用户是否删除该地址
+        // flag用于标记是否显示该地址（即用户是否删除 true表示显示，用户未删除）
         address.setFlag(true);
 
         boolean flag = addressService.addAddress(address);

@@ -64,7 +64,7 @@
             <dl id="j_MyCenterMenus" class="menu">
                 <dt class="menu-title">交易管理</dt>
                 <dd class="menu-item "><a
-                        href="${pageContext.request.contextPath}/personalServlet?action=myOrder&v_uid=${sessionScope.vivo_user.v_uid}">我的订单</a>
+                        href="personalServlet?action=queryPersonalOrder">我的订单</a>
                 </dd>
                 <dd class="menu-item"><a href="#">我的回收单</a></dd>
                 <dd class="menu-item"><a href="#">退款/退货</a></dd>
@@ -74,8 +74,8 @@
                 <dd class="menu-item"><a href="#">评价晒单</a></dd>
                 <dt class="menu-title">我的账户</dt>
                 <dd class="menu-item"><a
-                        href="${pageContext.request.contextPath}/registerServlet?action=getUserInfo&v_uid=${sessionScope.vivo_user.v_uid}">个人资料</a></dd>
-                <dd class="menu-item on"><a href="${pageContext.request.contextPath}/settlementServlet?action=MyOrderTakeInformationTake&v_uid=${sessionScope.vivo_user.v_uid}">收货地址</a></dd>
+                        href="#">个人资料</a></dd>
+                <dd class="menu-item on"><a href="personalServlet?action=initAddress">收货地址</a></dd>
                 <dd class="menu-item"><a href="#">我的礼包广场</a></dd>
                 <dd class="menu-item"><a href="#">我的换新鼓励金</a></dd>
                 <dd class="menu-item"><a href="#">我的优惠券</a></dd>
@@ -101,19 +101,21 @@
                                     $("#j_totalNum").text("${status.index+1}");
                                 });
                             </script>
-                            <li class="address-item J_address-item " name="address" value="${a.v_tid}">
+                            <li class="address-item J_address-item " name="address" value="${a.addressId}">
                                 <label class="inner" id="J_addressDefaulted">
-                                    <div class="item-top"><span>${a.v_consignee}</span>
+                                    <div class="item-top"><span>${a.name}</span>
 
-                                        <span value="${a.v_phone}" class="mobilePhone" >
-                                        <c:out value="${fn:substring(a.v_phone,0,3)}****"></c:out>
-                                    <c:out value="${fn:substring(a.v_phone, 7,11)}"></c:out>
+                                        <span value="${a.phone}" class="mobilePhone" >
+                                        <c:out value="${fn:substring(a.phone,0,3)}****"></c:out>
+                                    <c:out value="${fn:substring(a.phone, 7,11)}"></c:out>
                                     </span>
                                     </div>
                                     <div class="cl">
                                         <p>
-                                            <span value="${a.v_address}">${a.v_address}</span>
-                                            <span value="${a.v_receivingArea}">${a.v_receivingArea}</span>
+                                            <span value="${a.province}">${a.province}</span>
+                                            <span value="${a.city}">${a.city}</span>
+                                            <span value="${a.district}">${a.district}</span>
+                                            <span value="${a.detailed}">${a.detailed}</span>
                                         </p>
                                     </div>
                                 </label>
@@ -141,31 +143,34 @@
 
             <%-- 添加收货地址 --%>
             <form id="shipping-address-new-edit" method="post"
-                  action="${pageContext.request.contextPath}/settlementServlet?action=addTakeInformationTake&v_uid=${sessionScope.vivo_user.v_uid}">
+                  action="personalServlet?action=addAddress">
                 <table class="address-info-new">
                     <tbody>
 
                     <tr>
                         <th><strong>*</strong>收货人：</th>
-                        <td><input type="text" name="v_consignee" id="receiverName"></td>
+                        <td><input type="text" name="name" id="receiverName"></td>
                     </tr>
                     <tr>
                         <th><strong>*</strong>手机号码：</th>
-                        <td class="phone"><input type="tel" name="v_phone" id="mobilePhone"></td>
+                        <td class="phone"><input type="tel" name="phone" id="mobilePhone"></td>
                     </tr>
                     <tr class="reginContriner-row">
                         <th><strong>*</strong>收货地区：</th>
                         <td id="j_ReginContriner">
                             <div class="err-box">
                                 <a href="javascript:void(0)" class="pick-area pick-area6" name=""></a>
-                                <input type="hidden" name="v_address">
+                                <input type="hidden" name="address" id="getAddress">
+                                <input type="hidden" name="province" id="getProvince">
+                                <input type="hidden" name="city" id="getCity">
+                                <input type="hidden" name="district" id="getDistrict">
                             </div>
                         </td>
 
                     </tr>
                     <tr class="address-row">
                         <th><strong>*</strong>详细地址：</th>
-                        <td><input type="text" name="v_receivingArea" id="detailAddress" autocomplete="off"></td>
+                        <td><input type="text" name="detailed" id="detailAddress" autocomplete="off"></td>
                     </tr>
 
                     <tr class="defaultAddr-row">
@@ -307,8 +312,22 @@
                 //console.log($(".pick-area-dom").val())
                 var thisdom = $("." + $(".pick-area-dom").val());
                 thisdom.next().val($(".pick-area-hidden").val());
+                var splitStr = $(".pick-area-hidden").val();
+                strs=splitStr.split(" "); //字符分割
+                for (i=0;i<strs.length ;i++ )
+                {
+                    if (i==0){
+                        $("#getProvince").val(strs[i]);
+                    }  else if(i==1){
+                        $("#getCity").val(strs[i]);
+                    } else if(i==2){
+                        $("#getDistrict").val(strs[i]);
+                    }
+                    console.log(strs[i]+"<br/>"); //分割后的字符输出
+                }
             }
         });
+
         $(".address-item").click(function () {
             $(this).addClass("on");
             $(this).siblings().removeClass("on");

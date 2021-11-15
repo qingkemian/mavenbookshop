@@ -12,7 +12,7 @@
 <head>
     <base href="..">
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>个人中心</title>
     <script src="../js/jquery-1.10.1.min.js"></script>
     <script src="../js/ceiling.js"></script>
     <script src="../js/pc-menu-nav.js"></script>
@@ -61,7 +61,7 @@
             <dl id="j_MyCenterMenus" class="menu">
                 <dt class="menu-title">交易管理</dt>
                 <dd class="menu-item on"><a
-                        href="..personalServlet?action=myOrder&v_uid=${sessionScope.vivo_user.v_uid}">我的订单</a>
+                        href="personalServlet?action=queryPersonalOrder">我的订单</a>
                 </dd>
                 <dd class="menu-item"><a href="#">我的回收单</a></dd>
                 <dd class="menu-item"><a href="#">退款/退货</a></dd>
@@ -71,8 +71,8 @@
                 <dd class="menu-item"><a href="#">评价晒单</a></dd>
                 <dt class="menu-title">我的账户</dt>
                 <dd class="menu-item"><a
-                        href="../personalMyinformation.jsp">个人资料</a></dd>
-                <dd class="menu-item"><a href="..settlementServlet?action=MyOrderTakeInformationTake&v_uid=${sessionScope.vivo_user.v_uid}">收货地址</a></dd>
+                        href="#">个人资料</a></dd>
+                <dd class="menu-item"><a href="personalServlet?action=initAddress">收货地址</a></dd>
                 <dd class="menu-item"><a href="#">我的礼包广场</a></dd>
                 <dd class="menu-item"><a href="#">我的换新鼓励金</a></dd>
                 <dd class="menu-item"><a href="#">我的优惠券</a></dd>
@@ -86,7 +86,7 @@
                 <dd class="module-item">
                     <ul class="statistic-tags cl">
                         <li class="on">
-                            <a href="personalServlet?action=myOrder">我的订单</a>
+                            <a href="personalServlet?action=queryPersonalOrder">我的订单</a>
                         </li>
                         <li>
                             <a href="personalServlet?action=obligations">待付款</a>

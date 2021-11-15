@@ -81,6 +81,7 @@
                     <%--&character-set-server=utf8&useUnicode=true&characterEncoding=UTF-8--%>
                     <table class="address-info-new">
                         <tbody>
+                        <%--用于提交数据 不显示--%>
                         <c:forEach items="${userShoppingCar}" var="carGoods" varStatus="status">
                             <input type="hidden" name="cartId" id="" value="${carGoods.carId}">
                         </c:forEach>
