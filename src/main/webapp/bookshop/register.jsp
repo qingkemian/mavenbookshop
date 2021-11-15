@@ -201,8 +201,8 @@
                 if($(".getCode").text()==="重新获取验证码"||$(".getCode").text()==="获取验证码"){
                     $.ajax({
                         type:"POST",
-                        // url :"userServlet?action=getCode&random"+Math.random(),
-                        url :"userServlet?action=getCodeForTest", // 用于测试！！！
+                        url :"userServlet?action=getCode&random"+Math.random(),
+                        // url :"userServlet?action=getCodeForTest", // 用于测试！！！
                         data:{
                             email:$("#email").val(),
                         },

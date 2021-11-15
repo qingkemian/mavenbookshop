@@ -105,7 +105,7 @@
     <favorites_list name="mavenbookshop" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.16867469">
       <split-first>
         <leaf>
           <file pinned="false" current-in-tab="false">
@@ -161,8 +161,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/webapp/bookshop/take.jsp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-3139">
-                  <caret line="76" column="46" selection-start-line="76" selection-start-column="46" selection-end-line="76" selection-end-column="46" />
+                <state relative-caret-position="329">
+                  <caret line="145" column="59" lean-forward="true" selection-start-line="145" selection-start-column="59" selection-end-line="145" selection-end-column="59" />
                 </state>
               </provider>
             </entry>
@@ -416,7 +416,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1636984064496" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1636984373992" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -722,7 +722,7 @@
       <workItem from="1636935978933" duration="12514000" />
       <workItem from="1636950533838" duration="17337000" />
       <workItem from="1636970636118" duration="7135000" />
-      <workItem from="1636981579264" duration="2364000" />
+      <workItem from="1636981579264" duration="2777000" />
     </task>
     <servers />
   </component>
@@ -759,11 +759,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="188641000" />
+    <option name="totallyTimeSpent" value="189054000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="UI Designer" order="0" />
       <window_info id="Favorites" order="1" sideWeight="0.50158226" side_tool="true" weight="0.15085287" />
@@ -771,10 +770,10 @@
       <window_info id="设计器" order="3" />
       <window_info id="Web" order="4" sideWeight="0.5019763" side_tool="true" weight="0.1673774" />
       <window_info id="Image Layers" order="5" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.49802372" visible="true" weight="0.20362474" />
+      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.49802372" visible="true" weight="0.20362474" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Messages" order="0" sideWeight="0.49888888" weight="0.3109691" />
-      <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.49946696" weight="0.27263045" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" sideWeight="0.49946696" visible="true" weight="0.27263045" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50053304" side_tool="true" weight="0.27263045" />
       <window_info anchor="bottom" id="Java Enterprise" order="3" weight="0.3290735" />
       <window_info anchor="bottom" id="Database Changes" order="4" show_stripe_button="false" />
@@ -783,7 +782,7 @@
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.32374868" />
       <window_info anchor="bottom" id="Application Servers" order="9" weight="0.3226837" />
-      <window_info anchor="bottom" id="Run" order="10" sideWeight="0.4989339" visible="true" weight="0.35250267" />
+      <window_info anchor="bottom" id="Run" order="10" sideWeight="0.4989339" weight="0.35250267" />
       <window_info anchor="bottom" id="Debug" order="11" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
@@ -1231,8 +1230,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/bookshop/take.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3139">
-          <caret line="76" column="46" selection-start-line="76" selection-start-column="46" selection-end-line="76" selection-end-column="46" />
+        <state relative-caret-position="329">
+          <caret line="145" column="59" lean-forward="true" selection-start-line="145" selection-start-column="59" selection-end-line="145" selection-end-column="59" />
         </state>
       </provider>
     </entry>
