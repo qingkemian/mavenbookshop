@@ -3,6 +3,7 @@ package com.rg.filter;
 import com.rg.entity.User;
 
 import javax.servlet.*;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
@@ -11,6 +12,7 @@ import java.io.IOException;
  * @Author:ZelongChen
  * @Date:2021/11/11 9:40
  */
+//@WebServlet("/bookshop/*")
 public class ManagerFilter implements Filter {
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
@@ -27,7 +29,7 @@ public class ManagerFilter implements Filter {
 
         //用户没有登录
         if(user == null){
-            httpServletRequest.getRequestDispatcher("/pages/user/login.jsp").forward(servletRequest,servletResponse);
+            httpServletRequest.getRequestDispatcher("/bookshop/login.jsp").forward(servletRequest,servletResponse);
         }else{
             //登录已完成
             filterChain.doFilter(servletRequest,servletResponse);

@@ -27,7 +27,7 @@ import java.util.Properties;
 import java.util.logging.Logger;
 
 /**
- * @Describe：
+ * @Describe：用户模块
  * @Author:ZelongChen
  * @Date:2021/11/12 10:01
  */

@@ -22,7 +22,7 @@ import java.util.List;
 import java.util.logging.Logger;
 
 /**
- * @Describe：
+ * @Describe：订单确认模块
  * @Author:ZelongChen
  * @Date:2021/11/14 9:47
  */
@@ -170,6 +170,13 @@ public class SettlementServlet extends BaseServlet {
         }
     }
 
+    /**
+     * 确认支付 进入最终提示界面 订单入库
+     * @param req
+     * @param resp
+     * @throws ServletException
+     * @throws IOException
+     */
     protected void checkOut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         // 需要theOrder.getAddressId(), theOrder.getPrice(), theOrder.getUid(), theOrder.getCartId()
         TheOrder theOrder = new TheOrder();

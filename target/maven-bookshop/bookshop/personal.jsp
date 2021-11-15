@@ -85,19 +85,19 @@
                 <dd class="module-item">
                     <ul class="statistic-tags cl">
                         <li class="on">
-                            <a href="personalServlet?action=myOrder&v_uid=${sessionScope.vivo_user.v_uid}">我的订单</a>
+                            <a href="personalServlet?action=myOrder">我的订单</a>
                         </li>
                         <li>
-                            <a href="personalServlet?action=obligations&v_uid=${sessionScope.vivo_user.v_uid}">待付款</a>
+                            <a href="personalServlet?action=obligations">待付款</a>
                         </li>
                         <li>
-                            <a href="personalServlet?action=stayGoods&v_uid=${sessionScope.vivo_user.v_uid}">待收货</a>
+                            <a href="personalServlet?action=stayGoods">待收货</a>
                         </li>
                         <li>
-                            <a href="personalServlet?action=Done&v_uid=${sessionScope.vivo_user.v_uid}">已完成</a>
+                            <a href="personalServlet?action=Done&v_uid">已完成</a>
                         </li>
                         <li>
-                            <a href="personalServlet?action=closed&v_uid=${sessionScope.vivo_user.v_uid}">已关闭</a>
+                            <a href="personalServlet?action=closed&v_uid">已关闭</a>
                         </li>
                     </ul>
 
@@ -127,103 +127,102 @@
                                     <col class="col3">
                                     <col class="col4">
                                 </colgroup>
-
+                                <%--每张订单的头--%>
                                 <tbody> <%-- 动态生成 --%>
-                                <tr>
-                                    <th colspan="6" class="order-title">
-                                        <ul>
-                                            <li class="order-number">订单号：
-                                                <a href="#">${myorder.v_myOrderNo}</a>
-                                            </li>
-                                            <li class="order-time">成交时间:
-                                                    ${myorder.v_time}
-                                            </li>
-                                            <li class="order-del btn-href" orderno="${myorder.v_myOrderNo}">
-                                                <span class="text">删除订单</span>
-                                            </li>
-                                        </ul>
-                                    </th>
-                                </tr>
-
+                                    <tr>
+                                        <th colspan="6" class="order-title">
+                                            <ul>
+                                                <li class="order-number">订单号：
+                                                    <a href="#">${myorder.v_myOrderNo}</a>
+                                                </li>
+                                                <li class="order-time">成交时间:
+                                                        ${myorder.v_time}
+                                                </li>
+                                                <li class="order-del btn-href" orderno="${myorder.v_myOrderNo}">
+                                                    <span class="text">删除订单</span>
+                                                </li>
+                                            </ul>
+                                        </th>
+                                    </tr>
                                 </tbody>
-
+                                <%--每张订单的内容--%>
                                 <tbody>
 
-                                <tr class="order-line">
+                                    <tr class="order-line">
 
-                                    <td colspan="4">
-                                        <table class="order-sub-table">
-                                            <colgroup>
-                                                <col width="155">
-                                                <col>
-                                                <col class="col1">
-                                                <col class="col2">
-                                            </colgroup>
-                                            <c:forEach items="${myorderGoods}" var="my" varStatus="stutas">
-                                                <c:if test="${my.v_myOrderNo eq  myorder.v_myOrderNo}">
-                                                    <tbody class="prod-item ">
-                                                    <tr class="prod-line">
-                                                        <td class="prod-pic">
-                                                            <a class="figure" href="#" target="_blank">
-                                                                <img src="../${my.v_image}"
-                                                                     alt="">
-                                                            </a>
-                                                        </td>
-                                                        <td colspan="3">
-                                                            <table class="prods-info-table">
-                                                                <colgroup>
-                                                                    <col width="80">
-                                                                    <col>
-                                                                    <col width="66">
-                                                                    <col width="108">
-                                                                </colgroup>
-                                                                <tbody>
-                                                                <tr class="prod-info">
-                                                                    <td class="prod-name" colspan="2">
-                                                                        <a href="..ShoppingServlet?action=productDetails&gid=${my.v_goodid}"
-                                                                           target="_blank"
-                                                                           title=" ${my.v_user} ${my.v_edName} ${my.v_colorName}   "> ${my.v_user} ${my.v_edName} ${my.v_colorName}   </a>
-                                                                        <br>颜色：${my.v_colorName}
-                                                                    </td>
-                                                                    <td> ${my.v_count} </td>
-                                                                    <td>
-                                                                            ${my.v_price}
-                                                                    </td>
-                                                                </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                    </tbody>
-                                                </c:if>
-                                            </c:forEach>
+                                        <td colspan="4">
+                                            <table class="order-sub-table">
+                                                <colgroup>
+                                                    <col width="155">
+                                                    <col>
+                                                    <col class="col1">
+                                                    <col class="col2">
+                                                </colgroup>
+                                                <c:forEach items="${myorderGoods}" var="my" varStatus="stutas">
+                                                    <c:if test="${my.v_myOrderNo eq  myorder.v_myOrderNo}">
+                                                        <tbody class="prod-item ">
+                                                        <tr class="prod-line">
+                                                            <td class="prod-pic">
+                                                                <a class="figure" href="#" target="_blank">
+                                                                    <img src="../${my.v_image}"
+                                                                         alt="">
+                                                                </a>
+                                                            </td>
+                                                            <td colspan="3">
+                                                                <table class="prods-info-table">
+                                                                    <colgroup>
+                                                                        <col width="80">
+                                                                        <col>
+                                                                        <col width="66">
+                                                                        <col width="108">
+                                                                    </colgroup>
+                                                                    <tbody>
+                                                                    <tr class="prod-info">
+                                                                        <td class="prod-name" colspan="2">
+                                                                            <a href="..ShoppingServlet?action=productDetails&gid=${my.v_goodid}"
+                                                                               target="_blank"
+                                                                               title=" ${my.v_user} ${my.v_edName} ${my.v_colorName}   "> ${my.v_user} ${my.v_edName} ${my.v_colorName}   </a>
+                                                                            <br>颜色：${my.v_colorName}
+                                                                        </td>
+                                                                        <td> ${my.v_count} </td>
+                                                                        <td>
+                                                                                ${my.v_price}
+                                                                        </td>
+                                                                    </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </c:if>
+                                                </c:forEach>
 
-                                        </table>
-                                    </td>
-                                    <td class="status">
-                                            <%-- 1 待付款 2待收货 3已完成 4已关闭 --%>
-                                        <c:if test="${myorder.v_status eq 1}">待付款</c:if>
-                                        <c:if test="${myorder.v_status eq 2}">待收货</c:if>
-                                        <c:if test="${myorder.v_status eq 3}">已完成</c:if>
-                                        <c:if test="${myorder.v_status eq 4}">已关闭</c:if>
-                                    </td>
-                                    <td class="operation">
-                                        <ul>
-                                            <li><a href="#">查看订单</a></li>
-                                        </ul>
-                                    </td>
-                                </tr>
+                                            </table>
+                                        </td>
+                                        <td class="status">
+                                                <%-- 1 待付款 2待收货 3已完成 4已关闭 --%>
+                                            <c:if test="${myorder.v_status eq 1}">待付款</c:if>
+                                            <c:if test="${myorder.v_status eq 2}">待收货</c:if>
+                                            <c:if test="${myorder.v_status eq 3}">已完成</c:if>
+                                            <c:if test="${myorder.v_status eq 4}">已关闭</c:if>
+                                        </td>
+                                        <td class="operation">
+                                            <ul>
+                                                <li><a href="#">查看订单</a></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
 
-                                <tr class="operation-line">
-                                    <td colspan="6">
-                                        <div class="amount">
-                                            应付总额：
-                                            <span class="money brand-red">
-                                        <dfn>¥</dfn>${myorder.v_totlePrice}
-                                    </span>
-                                        </div>
-                                    </td>
-                                </tr>
+                                    <tr class="operation-line">
+                                        <td colspan="6">
+                                            <div class="amount">
+                                                应付总额：
+                                                <span class="money brand-red">
+                                            <dfn>¥</dfn>${myorder.v_totlePrice}
+                                        </span>
+                                            </div>
+                                        </td>
+                                    </tr>
                                 </tbody>
 
 

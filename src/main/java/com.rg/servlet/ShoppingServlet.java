@@ -22,7 +22,7 @@ import java.util.Map;
 import java.util.logging.Logger;
 
 /**
- * @Describe：
+ * @Describe：购物车模块
  * @Author:ZelongChen
  * @Date:2021/11/13 14:27
  */

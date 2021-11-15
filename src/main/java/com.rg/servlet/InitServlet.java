@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * @Describe：
+ * @Describe：初始化模块 在index.jsp中调用
  * @Author:ZelongChen
  * @Date:2021/11/11 23:33
  */

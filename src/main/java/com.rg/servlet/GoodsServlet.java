@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.logging.Logger;
 
 /**
- * @Describe：
+ * @Describe：商品模块
  * @Author:ZelongChen
  * @Date:2021/11/13 9:26
  */
