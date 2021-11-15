@@ -77,11 +77,11 @@ public class GoodsDaoImpl extends BaseDao implements GoodsDao {
         String sql1 = "INSERT INTO goods (goodName,producer,price,discount,classifyId) VALUES (?,?,?,?,?)";
         int flag1 = update(sql1,goodName,producer,price,discount,classifyId);
         String sql2 = "select last_insert_id();";
-        Integer goodNo = queryForOne(Integer.class,sql2);
+        Integer goodNo = queryLastInsert(sql2);
         String sql3 = "INSERT INTO gooddetail (describe) VALUES (?)";
         int flag2 = update(sql3, describe);
         String sql4 = "select last_insert_id();";
-        Integer detailId = queryForOne(Integer.class,sql3);
+        Integer detailId = queryLastInsert(sql4);
         String sql5 = "UPDATE goods SET `detailId` = ? WHERE `goodNo` = ?";
         int flag3 = update(sql5,detailId,goodNo);
         String sql6 = "INSERT INTO img (imgSrc,goodNo) VALUES (?,?)";

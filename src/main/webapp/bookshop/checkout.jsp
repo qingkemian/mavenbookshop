@@ -23,10 +23,8 @@
         <div data-v-4267f8ed="" class="content-wrap"><h2 data-v-4267f8ed="" class="title">BOOKSHOP收银台</h2>
             <div data-v-3d141c7c="" data-v-4267f8ed="" class="info-wrap">
                 <div data-v-3d141c7c="" class="content"><p data-v-3d141c7c="" class="fee"><span data-v-3d141c7c="">订单提交成功，请尽快完成付款！订单金额：</span>
-                    <span data-v-3d141c7c="" class="fee-num">￥${totalPrice}</span></p> <!----> <p data-v-3d141c7c=""
-                                                                                                                        class="count-down"><span
-                >请您在提交订单后</span> <span data-v-3d141c7c="" class="count-time">29分钟</span> <span
-                        data-v-3d141c7c="">内完成支付，否则订单会自动取消</span></p>
+                    <span data-v-3d141c7c="" class="fee-num">￥${totalPrice}</span></p> <!----> <p data-v-3d141c7c="" class="count-down">
+                    <span>请您在提交订单后</span> <span data-v-3d141c7c="" class="count-time">29分钟</span> <span data-v-3d141c7c="">内完成支付，否则订单会自动取消</span></p>
                     <div data-v-3d141c7c="" class="hr"></div>
                     <div data-v-3d141c7c="" class="detail-title " ><span data-v-3d141c7c="">订单详情</span> <i
                             data-v-3d141c7c=""></i></div>

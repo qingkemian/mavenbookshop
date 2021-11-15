@@ -170,7 +170,7 @@ public class SettlementServlet extends BaseServlet {
         }
     }
 
-    protected void checkOut(HttpServletRequest req, HttpServletResponse resp){
+    protected void checkOut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         // 需要theOrder.getAddressId(), theOrder.getPrice(), theOrder.getUid(), theOrder.getCartId()
         TheOrder theOrder = new TheOrder();
 
@@ -225,7 +225,7 @@ public class SettlementServlet extends BaseServlet {
         if (flag) {
             req.setAttribute("attAddress", attAddress);
             req.setAttribute("totalPrice",totalPrice );
-            req.getRequestDispatcher("bookshop/checkout.jsp");
+            req.getRequestDispatcher("bookshop/checkout.jsp").forward(req, resp);
         }
 
     }

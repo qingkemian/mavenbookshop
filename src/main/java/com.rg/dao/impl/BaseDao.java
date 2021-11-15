@@ -117,7 +117,7 @@ public abstract class BaseDao {
     }
 
     /**
-     * 查询最后插入
+     * 查询最后插入的id
      * @param sql
      * @param args
      * @return
