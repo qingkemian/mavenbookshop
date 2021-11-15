@@ -21,7 +21,7 @@ public class AddressDaoImpl extends BaseDao implements AddressDao {
 
     @Override
     public List<Address> queryAddressListByUserId(Integer uid) {
-        String sql = "SELECT * FROM address WHERE uid = ?";
+        String sql = "SELECT * FROM address WHERE uid = ? AND flag = 1";
         return queryForList(Address.class, sql,uid);
     }
 
@@ -33,9 +33,9 @@ public class AddressDaoImpl extends BaseDao implements AddressDao {
     }
 
     @Override
-    public int updateAddress(Integer uid, boolean flag) {
-        String sql = "UPDATE address SET `flag` = ? WHERE `uid` = ?";
-        return update(sql,flag,uid);
+    public int delAddress(Integer addressId) {
+        String sql = "UPDATE address SET `flag` = 0 WHERE `addressId` = ?";
+        return update(sql,addressId);
     }
 
 

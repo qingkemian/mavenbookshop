@@ -14,7 +14,7 @@
 <head>
     <base href="${pageContext.request.contextPath}/">
     <title>BOOKSHOP收银台</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/VivoProject/css/VIVOCheckout.css">
+    <link rel="stylesheet" href="../css/VIVOCheckout.css">
 </head>
 <body>
 <%@include file="bookshop-top.jsp" %>
@@ -66,7 +66,7 @@
 <%@include file="bookshop-foot.jsp"%>
 </body>
 </html>
-<script src="${pageContext.request.contextPath}/VivoProject/js/jquery-1.9.1.min.js"></script>
+<script src="../js/jquery-1.9.1.min.js"></script>
 <script>
     $(function () {
         $(".spread-wrap").stop().slideUp(0);

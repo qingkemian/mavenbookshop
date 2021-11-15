@@ -15,6 +15,6 @@ public interface AddressService {
 
     boolean addAddress(Address address);
 
-    boolean updateAddress(Address address);
+    boolean delAddress(Address address);
 
 }

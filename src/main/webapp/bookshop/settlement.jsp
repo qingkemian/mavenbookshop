@@ -26,6 +26,7 @@
         <div class="main-title-module">
             <h1 class="main-title-txt">核对订单信息</h1>
         </div>
+        <%--显示地址--%>
         <dl class="confirm-module">
             <dd class="address-info" id="J_adressList">
                 <ul class="adress-list">
@@ -67,6 +68,7 @@
 
             </dd>
         </dl>
+        <%--添加地址--%>
         <div class="panelWrap">
             <div class="mask"></div>
             <div class="panel dialog-container"><a class="icon-close cancelSaveAddress" href="javascript:;"><i
@@ -125,6 +127,7 @@
                 </form>
             </div>
         </div>
+        <%--编辑地址--%>
         <div class="panelWrap panelWrapTwo">
             <div class="mask"></div>
             <div class="panel dialog-container"><a class="icon-close cancelSaveAddress" href="javascript:;"><i
@@ -179,6 +182,7 @@
                 </form>
             </div>
         </div>
+
         <dl class="confirm-module">
             <dt class="module-title">支付方式
                 <small id="j_payTypeText">已选择：
@@ -211,6 +215,7 @@
         </dl>
 
 
+        <%--确认商品区域！！！--%>
         <div class="confirm-module confirm-cart-module">
             <table class="main-title-module">
                 <tbody>
@@ -285,12 +290,6 @@
 
         </div>
 
-
-        <style>
-            [v-cloak] {
-                display: none;
-            }
-        </style>
         <div id="order-settle">
 
             <div class="confirm-module confirm-total-amount cl ">
@@ -298,27 +297,30 @@
                     <table>
                         <tbody>
                         <tr class="order-sum">
-                            <td><label>已选<em class="total-Count">1</em>件商品，合计（不含运费）：</label></td>
-                            <td><dfn>¥</dfn><span class="Totalprice">1398.00</span></td>
+                            <td><label>已选<em class="total-Count">
+                                ${finalNum}
+                            </em>件商品，合计（不含运费）：</label></td>
+                            <td><dfn>¥</dfn><span class="Totalprice">${finalPrice}</span></td>
+                        </tr>
+                        <tr class="order-sum">
+                            <td><label>已经优惠：</label></td>
+                            <td><span class="red">-<dfn>¥</dfn><span class="J_totalDiscount">${finaldiscountPrice}</span></span></td>
                         </tr>
                         <tr class="order-sum">
                             <td><label>运费：</label></td>
                             <td><span><dfn>¥</dfn><span>0.00</span></span></td>
                         </tr>
-                        <tr class="order-sum">
-                            <td><label>优惠：</label></td>
-                            <td><span class="red">-<dfn>¥</dfn><span class="J_totalDiscount">300.00</span></span></td>
-                        </tr> <!----> <!---->
 
                         </tbody>
                     </table>
                 </div>
                 <div class="real-price-box"><label>应付总额：</label><span
-                        class="real-price red"><dfn>¥</dfn><span class="priceTotal">1098.00</span></span></div> <!---->
+                        class="real-price red"><dfn>¥</dfn><span class="priceTotal">${finalPrice}</span></span></div> <!---->
                 <ul class="delivery-address">
                     <li class="item receiver-name"><label>收件人：</label><span id="receivePerson">请选择收货信息</span>
                     </li>
                     <li class="item"><label>配送地址：</label><span id="receiveAddress">请选择收货信息</span></li>
+                    <input type="hidden" value="0" id="sendAddress">
                 </ul>
                 <div class="confirm-btn-box">
                     <div class="confirm-item"><!---->
@@ -328,57 +330,17 @@
             </div>
         </div>
 
-
     </div>
+
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
 
 
 </div>
 <%@include file="bookshop-foot.jsp" %>
-<script>
-    $(function () {
-        // 计算全选总价格
-
-        function totalChecked() {
-            var prices = 0;
-            var numCount = 0;
-            var di = 0;
-            $("#tbody").find("tr").each(function (i, ele) {
-
-                // 获取数量
-                var num = parseInt($(ele).find(".column-number").text());
-                // 获取商品价格
-                var $price = parseInt($(ele).find(".price-col").text());
-                console.log($price);
-                // 优惠计算
-                var discounts = num * 100;
-                // 进行计算小计
-                var priceTotal = ($price * num) - discounts;
-                // 计算总金额
-                // 保存上一次的金额进行累加
-                prices += priceTotal;
-                // 保存上一次数量
-                numCount += num;
-                di += discounts;
-                // 设置优惠
-                $(ele).find(".J_viewDiscount").text(discounts);
-                // 优惠
-                $(".J_totalDiscount").text(di);
-                // 进行设置小计
-                $(ele).find(".J_viewVcoin").text(priceTotal);
-                // 设置总金额
-                $(".Totalprice").text(prices);
-                $(".priceTotal").text(prices);
-                // 设置商品数量 J_totalSkuNum
-                $(".total-Count").text(numCount);
-
-            });
-
-        }
-
-
-        totalChecked();
-    });
-</script>
 <script>
     $(function () {
         $("#use-new-address").click(function () {
@@ -420,19 +382,21 @@
         });
         var v_tid;
         $(".adress-list li").on("click", function () {
-//  获取地址的id
+            //  获取地址的id
             v_tid = $(this).attr("value");
-            console.log(v_tid);
-// 获取收货人
+            $("#sendAddress").val(v_tid);
+            console.log("v_tid:"+v_tid);
+            console.log("address:"+$("#sendAddress").val())
+            // 获取收货人
             var v_consignee = $(this).find("#J_addressDefaulted>.item-top>span").text();
-// 获取电话号码
+            // 获取电话号码
             var phone = $(this).find("#J_addressDefaulted>.item-top>.mobilePhone").val();
-// 获取收货地址
+            // 获取收货地址
             var address = $(this).find("#J_addressDefaulted>.cl span").text();
 
-// 设置收货人和电话号码
+            // 设置收货人和电话号码
             $("#receivePerson").text(v_consignee);
-// 设置收货地址
+            // 设置收货地址
             $("#receiveAddress").text(address);
         });
 
@@ -446,14 +410,22 @@
             var v_colorNo_ = $(".v_editionNo_v_colorNo[v_colorNo]").attr("v_colorNo");
             window.location.href = "&v_totlePrice="+priceTotal+"&v_tid="+v_tid+"&v_gid"+prodline+"&v_count="+totalCount+"&v_price="+J_viewVcoin+"&v_editionNo="+v_editionNo_+"&v_colorNo="+v_colorNo_;
             */
+            // $("#v_totlePrice").val($(".priceTotal").text());
+            // console.log($(".v_tid"));
+            // $(".v_tid").val(v_tid);
+
+            // $("#form_vivoOrder").submit();
 
 
-            $("#v_totlePrice").val($(".priceTotal").text());
-            console.log($(".v_tid"));
-            $(".v_tid").val(v_tid);
+            var addressId = $("#sendAddress").val();
+
+            if (addressId != 0){
+                window.location.href = "settlementServlet?action=checkOut&addressId="+addressId;
+            } else {
+                alert("请选择收货地址");
+            }
 
 
-            $("#form_vivoOrder").submit();
         });
     });
 </script>
@@ -545,17 +517,6 @@
 
 
     });
-</script>
-
-<script language="javascript">
-    str="2,2,3,5,6,6"; //这是一字符串
-    var strs= new Array(); //定义一数组
-
-    strs=str.split(","); //字符分割
-    for (i=0;i<strs.length ;i++ )
-    {
-        document.write(strs[i]+"<br/>"); //分割后的字符输出
-    }
 </script>
 </body>
 </html>

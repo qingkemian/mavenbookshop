@@ -33,11 +33,10 @@ public interface AddressDao {
     int addAddress(Integer uid, String name, String province, String city, String district, String detailed, String phone , boolean flag);
 
     /**
-     * 判断地址是不是默认地址
-     * @param uid
-     * @param flag
+     * 标记法删除地址
+     * @param addressId
      * @return
      */
-    int updateAddress(Integer uid, boolean flag);
+    int delAddress(Integer addressId);
 
 }

@@ -31,8 +31,8 @@ public class AddressServiceImpl implements AddressService {
     }
 
     @Override
-    public boolean updateAddress(Address address) {
-        int flag = addressDao.updateAddress(address.getUid(), address.isFlag());
+    public boolean delAddress(Address address) {
+        int flag = addressDao.delAddress(address.getAddressId());
         if (flag > 0){
             return true;
         }

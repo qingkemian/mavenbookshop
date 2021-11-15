@@ -55,6 +55,9 @@ public class SettlementServlet extends BaseServlet {
         ShoppingCar dbShoppingCar = new ShoppingCar();
         List<ShoppingCar> shoppingCarList = new ArrayList<ShoppingCar>();
         List<Address> addressList = new ArrayList<Address>();
+        Integer getNum = 0;
+        BigDecimal totalPrice = new BigDecimal(0);
+        BigDecimal discountPrice = new BigDecimal(0);
         if (checkId != null) {
             System.out.println("-----");
             for (String s : checkId) {
@@ -62,7 +65,14 @@ public class SettlementServlet extends BaseServlet {
                 shoppingCar.setCarId(Integer.parseInt(s));
                 dbShoppingCar = shoppingCartService.querryShoppingCartByCartId(shoppingCar);
                 shoppingCarList.add(dbShoppingCar);
+                if (dbShoppingCar != null){
+                    getNum = getNum + dbShoppingCar.getGoodNum();
+                    totalPrice = totalPrice.add( ( dbShoppingCar.getPrice().multiply(  new BigDecimal( dbShoppingCar.getGoodNum().toString() ) ) ).multiply(dbShoppingCar.getDiscount()) ) ;
+                    discountPrice = discountPrice.add( ( dbShoppingCar.getPrice().multiply(  new BigDecimal( dbShoppingCar.getGoodNum().toString() ) ) ).multiply(new BigDecimal(1).subtract(dbShoppingCar.getDiscount())) );
+                }
             }
+
+            System.out.println("getNum:"+getNum);
 
             // 获取地址
             Address address = new Address();
@@ -74,15 +84,27 @@ public class SettlementServlet extends BaseServlet {
 
             req.getSession().setAttribute("checkId",checkId);
 
+            System.out.println("done");
+            req.setAttribute("finalNum", getNum.toString());
+            req.setAttribute("finalPrice", totalPrice.toString());
+            req.setAttribute("finaldiscountPrice", discountPrice.toString());
             req.setAttribute("allTake", addressList);
             req.setAttribute("userShoppingCar", shoppingCarList);
             req.getRequestDispatcher("bookshop/settlement.jsp").forward(req, resp);
+            System.out.println("done");
         } else {
             System.out.println("回到购物车");
             req.getRequestDispatcher("shoppingServlet?shoppingCart").forward(req, resp);
         }
     }
 
+    /**
+     * 添加收货地址
+     * @param req
+     * @param resp
+     * @throws ServletException
+     * @throws IOException
+     */
     protected void addAddress(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         User user = (User) req.getSession().getAttribute("user");
 
@@ -109,7 +131,8 @@ public class SettlementServlet extends BaseServlet {
         address.setCity(city);
         address.setDistrict(district);
         address.setDetailed(detailed);
-        address.setFlag(false);
+        // flag用于标记用户是否删除该地址
+        address.setFlag(true);
 
         boolean flag = addressService.addAddress(address);
         if (flag) {
@@ -144,5 +167,11 @@ public class SettlementServlet extends BaseServlet {
             }
 
         }
+    }
+
+    protected void checkOut(HttpServletRequest req, HttpServletResponse resp){
+        String addressId = req.getParameter("addressId");
+        System.out.println(addressId);
+        req.getRequestDispatcher("bookshop/checkout.jsp");
     }
 }
