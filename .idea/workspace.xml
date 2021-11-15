@@ -7,25 +7,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a4e3c31-a55d-4004-bcfa-ba5f0ad3f4e8" name="默认" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com.rg/dao/PersonalDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com.rg/dao/impl/PersoalDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com.rg/entity/Personal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com.rg/service/PersonalService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com.rg/service/impl/PersonalServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com.rg/servlet/PersonalServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com.rg/dao/PersonalDaoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.rg/entity/MyNum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.rg/entity/Personal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.rg/entity/Personal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.rg/filter/EncodingFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.rg/filter/EncodingFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com.rg/filter/ManagerFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.rg/filter/ManagerFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.rg/filter/TransactionFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.rg/filter/TransactionFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.rg/servlet/PersonalServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.rg/servlet/PersonalServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com.rg/servlet/SettlementServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.rg/servlet/SettlementServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/bookshop/Shopping.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/bookshop/Shopping.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/bookshop/bookshop-top.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/bookshop/bookshop-top.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/bookshop/personal.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/bookshop/personal.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/bookshop/personalMyinformation.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/rg/entity/MyNum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/rg/filter/ManagerFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rg/filter/ManagerFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-bookshop/WEB-INF/classes/com/rg/entity/MyNum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-bookshop/WEB-INF/classes/com/rg/filter/ManagerFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-bookshop/WEB-INF/classes/com/rg/filter/ManagerFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rg/servlet/PersonalServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rg/servlet/PersonalServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rg/servlet/SettlementServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rg/servlet/SettlementServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-bookshop/WEB-INF/classes/com/rg/servlet/PersonalServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-bookshop/WEB-INF/classes/com/rg/servlet/PersonalServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-bookshop/WEB-INF/classes/com/rg/servlet/SettlementServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-bookshop/WEB-INF/classes/com/rg/servlet/SettlementServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-bookshop/bookshop/Shopping.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-bookshop/bookshop/Shopping.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-bookshop/bookshop/personal.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-bookshop/bookshop/personal.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-bookshop/bookshop/personalMyinformation.jsp" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -39,7 +36,7 @@
     <session id="-1172013196">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="15" />
+          <entry key="project.closed" value="16" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.39" value="1" />
           <entry key="project.open.time.4" value="1" />
@@ -63,10 +60,10 @@
           <entry key="class" value="2" />
           <entry key="css" value="8" />
           <entry key="ico" value="1" />
-          <entry key="java" value="529" />
+          <entry key="java" value="555" />
           <entry key="jpg" value="1" />
           <entry key="js" value="5" />
-          <entry key="jsp" value="220" />
+          <entry key="jsp" value="227" />
           <entry key="png" value="4" />
           <entry key="properties" value="1" />
           <entry key="sql" value="11" />
@@ -78,8 +75,8 @@
           <entry key="CLASS" value="2" />
           <entry key="CSS" value="8" />
           <entry key="Image" value="6" />
-          <entry key="JAVA" value="529" />
-          <entry key="JSP" value="220" />
+          <entry key="JAVA" value="555" />
+          <entry key="JSP" value="227" />
           <entry key="JavaScript" value="5" />
           <entry key="Properties" value="1" />
           <entry key="SQL" value="11" />
@@ -89,8 +86,8 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="8" />
-          <entry key="java" value="23717" />
-          <entry key="jsp" value="6411" />
+          <entry key="java" value="24071" />
+          <entry key="jsp" value="6437" />
           <entry key="properties" value="2" />
           <entry key="sql" value="46" />
           <entry key="txt" value="19" />
@@ -99,8 +96,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="23717" />
-          <entry key="JSP" value="6411" />
+          <entry key="JAVA" value="24071" />
+          <entry key="JSP" value="6437" />
           <entry key="PLAIN_TEXT" value="27" />
           <entry key="Properties" value="2" />
           <entry key="SQL" value="46" />
@@ -115,37 +112,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/servlet/SettlementServlet.java">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/bookshop/bookshop-top.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-54">
-              <caret line="173" column="25" selection-start-line="173" selection-start-column="25" selection-end-line="173" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/dao/PersonalDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/service/PersonalService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="53" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="395">
+              <caret line="120" column="90" selection-start-line="120" selection-start-column="90" selection-end-line="120" selection-end-column="90" />
             </state>
           </provider>
         </entry>
@@ -153,60 +123,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/servlet/PersonalServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/service/impl/PersonalServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="59" selection-start-line="21" selection-start-column="59" selection-end-line="21" selection-end-column="59" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#360#361#0" expanded="true" />
-                <element signature="e#387#388#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/dao/impl/PersoalDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="37" column="133" selection-start-line="37" selection-start-column="133" selection-end-line="37" selection-end-column="133" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#430#446#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com.rg/dao/PersonalDaoTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
-              <caret line="43" column="42" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#278#292#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/entity/Personal.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="803">
-              <caret line="80" selection-start-line="80" selection-end-line="80" />
+            <state relative-caret-position="232">
+              <caret line="24" column="37" lean-forward="true" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -269,20 +187,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com.rg/service/GoodsService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com.rg/dao/GoodsDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.rg/entity/Goods.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.rg/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.rg/service/impl/GoodsServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/bookshop/Shopping.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com.rg/servlet/GoodsServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.rg/constants/Constants.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.rg/dao/impl/ShoppingCartImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.rg/dao/impl/UserDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.rg/entity/ShoppingCar.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/bookshop/productDetails.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/bookshop/bookshop-top.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com.rg/servlet/UserServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.rg/service/ShoppingCartService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.rg/service/impl/ShoppingCartServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/admin/admin-list.jsp" />
@@ -290,11 +202,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com.rg/dao/impl/ShoppingCartDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/bookshop/cartAddSuccess.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com.rg/dao/ShoppingCarDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com.rg/servlet/ShoppingServlet.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/bookshop/shoppingcart.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com.rg/entity/Address.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.rg/servlet/BaseServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com.rg/filter/EncodingFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.rg/servlet/AdminServlet.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/bookshop/settlement.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com.rg/service/impl/OrderServiceImpl.java" />
@@ -309,17 +219,25 @@
         <option value="$PROJECT_DIR$/src/main/java/com.rg/dao/impl/OrderDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.rg/dao/impl/GoodsDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/bookshop/checkout.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/bookshop/personal.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com.rg/filter/ManagerFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com.rg/entity/Personal.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.rg/dao/PersonalDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.rg/dao/impl/BaseDao.java" />
         <option value="$PROJECT_DIR$/src/test/java/com.rg/dao/PersonalDaoTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.rg/dao/impl/PersoalDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.rg/service/PersonalService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.rg/service/impl/PersonalServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com.rg/servlet/PersonalServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.rg/servlet/ShoppingServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.rg/servlet/UserServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.rg/servlet/InitServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.rg/servlet/GoodsServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.rg/filter/TransactionFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.rg/filter/ManagerFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.rg/filter/EncodingFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.rg/servlet/SettlementServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/bookshop/Shopping.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com.rg/entity/Personal.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/bookshop/personal.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com.rg/servlet/PersonalServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/bookshop/bookshop-top.jsp" />
       </list>
     </option>
   </component>
@@ -356,7 +274,8 @@
     <servers />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="width" value="958" />
+    <option name="x" value="960" />
+    <option name="width" value="960" />
     <option name="height" value="1080" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -421,17 +340,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com.rg" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mavenbookshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mavenbookshop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com.rg" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mavenbookshop" type="b2602c69:ProjectViewProjectNode" />
@@ -446,6 +355,21 @@
               <item name="mavenbookshop" type="b2602c69:ProjectViewProjectNode" />
               <item name="mavenbookshop" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mavenbookshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mavenbookshop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="bookshop" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mavenbookshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mavenbookshop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -454,23 +378,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mavenbookshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mavenbookshop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com.rg" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mavenbookshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mavenbookshop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com.rg" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -482,7 +389,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1636974697696" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1636977735842" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -527,7 +434,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.PersonalDaoTest.test2">
+  <component name="RunManager" selected="Tomcat Server.bookshop">
     <configuration name="GoodsDaoImplTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="maven-bookshop" />
       <extension name="coverage">
@@ -787,7 +694,7 @@
       <workItem from="1636886751752" duration="13224000" />
       <workItem from="1636935978933" duration="12514000" />
       <workItem from="1636950533838" duration="17337000" />
-      <workItem from="1636970636118" duration="4053000" />
+      <workItem from="1636970636118" duration="7135000" />
     </task>
     <servers />
   </component>
@@ -824,7 +731,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="183195000" />
+    <option name="totallyTimeSpent" value="186277000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -836,7 +743,7 @@
       <window_info id="设计器" order="3" />
       <window_info id="Web" order="4" sideWeight="0.5019763" side_tool="true" weight="0.1673774" />
       <window_info id="Image Layers" order="5" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.49802372" visible="true" weight="0.16364606" />
+      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.49802372" visible="true" weight="0.20149253" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Messages" order="0" sideWeight="0.49888888" weight="0.3109691" />
       <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.49946696" weight="0.27263045" />
@@ -848,7 +755,7 @@
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.32374868" />
       <window_info anchor="bottom" id="Application Servers" order="9" weight="0.3226837" />
-      <window_info anchor="bottom" id="Run" order="10" sideWeight="0.4989339" visible="true" weight="0.35250267" />
+      <window_info anchor="bottom" id="Run" order="10" sideWeight="0.4989339" weight="0.35250267" />
       <window_info anchor="bottom" id="Debug" order="11" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
@@ -917,110 +824,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/bookshop/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1168">
-          <caret line="50" column="48" selection-start-line="50" selection-start-column="48" selection-end-line="50" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/servlet/UserServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="198" column="76" lean-forward="true" selection-start-line="198" selection-start-column="76" selection-end-line="198" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/bookshop/productDetails.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6596">
-          <caret line="388" column="48" lean-forward="true" selection-start-line="388" selection-start-column="48" selection-end-line="388" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/servlet/BaseServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="49" column="44" selection-start-line="49" selection-start-column="44" selection-end-line="49" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/servlet/AdminServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="160" column="35" selection-start-line="160" selection-start-column="35" selection-end-line="160" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/filter/EncodingFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/admin-add.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="85" column="2" selection-start-line="85" selection-start-column="2" selection-end-line="85" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/service/AdminService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/dao/impl/UserDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/bookshop/Shopping.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="957" column="61" selection-start-line="957" selection-start-column="61" selection-end-line="957" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/bookshop/shoppingcart.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
-          <caret line="276" column="26" selection-start-line="276" selection-start-column="26" selection-end-line="276" selection-end-column="26" />
-          <folding>
-            <element signature="n#c:if#1;n#jsp:root#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/bookshop/take.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-663" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/bookshop/settlement.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="385" column="27" lean-forward="true" selection-start-line="385" selection-start-column="27" selection-end-line="385" selection-end-column="27" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#dl#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#script#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#script#3;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/bookshop/cartAddSuccess.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -1210,20 +1013,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/bookshop/personal.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="127" column="50" selection-start-line="127" selection-start-column="50" selection-end-line="127" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/filter/ManagerFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-26">
-          <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/my2.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -1235,16 +1024,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/entity/Personal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="803">
-          <caret line="80" selection-start-line="80" selection-end-line="80" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1269,39 +1048,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/dao/impl/PersoalDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="37" column="133" selection-start-line="37" selection-start-column="133" selection-end-line="37" selection-end-column="133" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#430#446#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/service/impl/PersonalServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="59" selection-start-line="21" selection-start-column="59" selection-end-line="21" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#360#361#0" expanded="true" />
-            <element signature="e#387#388#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/servlet/PersonalServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/dao/PersonalDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -1322,10 +1068,101 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/service/impl/PersonalServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="59" selection-start-line="21" selection-start-column="59" selection-end-line="21" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#360#361#0" expanded="true" />
+            <element signature="e#387#388#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/servlet/AdminServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/servlet/BaseServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/filter/EncodingFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/filter/TransactionFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/filter/ManagerFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/servlet/UserServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/bookshop/shoppingcart.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4165">
+          <caret line="276" column="26" selection-start-line="276" selection-start-column="26" selection-end-line="276" selection-end-column="26" />
+          <folding>
+            <element signature="n#c:if#1;n#jsp:root#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/bookshop/Shopping.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/bookshop/settlement.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6545">
+          <caret line="385" column="27" lean-forward="true" selection-start-line="385" selection-start-column="27" selection-end-line="385" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/bookshop/productDetails.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102">
+          <caret line="18" column="2" lean-forward="true" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/servlet/ShoppingServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1054">
-          <caret line="101" column="38" lean-forward="true" selection-start-line="101" selection-start-column="38" selection-end-line="101" selection-end-column="38" />
+        <state relative-caret-position="263">
+          <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#cartAddSuccess#0;class#ShoppingServlet#0" />
@@ -1333,13 +1170,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/servlet/SettlementServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/dao/impl/PersoalDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-54">
-          <caret line="173" column="25" selection-start-line="173" selection-start-column="25" selection-end-line="173" selection-end-column="25" />
+        <state relative-caret-position="422">
+          <caret line="37" column="133" selection-start-line="37" selection-start-column="133" selection-end-line="37" selection-end-column="133" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/servlet/SettlementServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="623">
+          <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/bookshop/personal.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="119" column="56" selection-start-line="119" selection-start-column="56" selection-end-line="119" selection-end-column="56" />
+          <folding>
+            <element signature="n#c:if#1;n#jsp:root#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/servlet/InitServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/servlet/GoodsServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-255">
+          <caret line="24" column="14" lean-forward="true" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/entity/Personal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.rg/servlet/PersonalServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="24" column="37" lean-forward="true" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/bookshop/bookshop-top.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="120" column="90" selection-start-line="120" selection-start-column="90" selection-end-line="120" selection-end-column="90" />
         </state>
       </provider>
     </entry>

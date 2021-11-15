@@ -13,7 +13,7 @@ public class Personal {
     private Integer orderNo;
     private Timestamp time;
     private Integer goodNum;
-    private BigDecimal total;
+    private BigDecimal total; // 这一详情的价格
     private String goodName;
     private String producer;
     private BigDecimal price;

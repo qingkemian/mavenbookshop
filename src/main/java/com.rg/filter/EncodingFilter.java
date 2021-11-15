@@ -5,7 +5,7 @@ import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
 
 /**
- * @Describe：
+ * @Describe：防止乱码过滤器
  * @Author:ZelongChen
  * @Date:2021/11/15 10:22
  */

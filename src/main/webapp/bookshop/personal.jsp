@@ -6,8 +6,9 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <base href="..">
     <meta charset="UTF-8">
@@ -109,44 +110,46 @@
                         <div class="col col4">操作</div>
                     </div>
 
-                    <c:if test="${empty myorderGoods}">
+                    <c:if test="${empty personalLists}">
                         <div class="no-record no-order" style="font-size: 17px;text-align: center;color: red;">
                             <div class="icon"></div>
                             <span>您还没有订单</span>
                         </div>
                     </c:if>
 
-                    <c:if test="${!empty myorderGoods}">
-                        <c:forEach items="${myorder}" var="myorder" varStatus="stutas">
-                            <table class="order-table">
-                                <colgroup>
-                                    <col width="155">
-                                    <col>
-                                    <col class="col1">
-                                    <col class="col2">
-                                    <col class="col3">
-                                    <col class="col4">
-                                </colgroup>
-                                <%--每张订单的头--%>
-                                <tbody> <%-- 动态生成 --%>
+                    <c:if test="${!empty personalLists}">
+                        <c:forEach items="${personalLists}" var="personalList" varStatus="stutas">
+
+                            <c:forEach items="${personalList}" var="personal" varStatus="stutas">
+                                <table class="order-table">
+                                    <colgroup>
+                                        <col width="155">
+                                        <col>
+                                        <col class="col1">
+                                        <col class="col2">
+                                        <col class="col3">
+                                        <col class="col4">
+                                    </colgroup>
+                                        <%--每张订单的头--%>
+                                    <tbody> <%-- 动态生成 --%>
                                     <tr>
                                         <th colspan="6" class="order-title">
                                             <ul>
                                                 <li class="order-number">订单号：
-                                                    <a href="#">${myorder.v_myOrderNo}</a>
+                                                    <a href="#">${personal.orderNo}</a>
                                                 </li>
                                                 <li class="order-time">成交时间:
-                                                        ${myorder.v_time}
+                                                        ${personal.time}
                                                 </li>
-                                                <li class="order-del btn-href" orderno="${myorder.v_myOrderNo}">
+                                                <li class="order-del btn-href" orderno="${personal.orderNo}">
                                                     <span class="text">删除订单</span>
                                                 </li>
                                             </ul>
                                         </th>
                                     </tr>
-                                </tbody>
-                                <%--每张订单的内容--%>
-                                <tbody>
+                                    </tbody>
+                                        <%--每张订单的内容--%>
+                                    <tbody>
 
                                     <tr class="order-line">
 
@@ -158,53 +161,47 @@
                                                     <col class="col1">
                                                     <col class="col2">
                                                 </colgroup>
-                                                <c:forEach items="${myorderGoods}" var="my" varStatus="stutas">
-                                                    <c:if test="${my.v_myOrderNo eq  myorder.v_myOrderNo}">
-                                                        <tbody class="prod-item ">
-                                                        <tr class="prod-line">
-                                                            <td class="prod-pic">
-                                                                <a class="figure" href="#" target="_blank">
-                                                                    <img src="../${my.v_image}"
-                                                                         alt="">
-                                                                </a>
-                                                            </td>
-                                                            <td colspan="3">
-                                                                <table class="prods-info-table">
-                                                                    <colgroup>
-                                                                        <col width="80">
-                                                                        <col>
-                                                                        <col width="66">
-                                                                        <col width="108">
-                                                                    </colgroup>
-                                                                    <tbody>
-                                                                    <tr class="prod-info">
-                                                                        <td class="prod-name" colspan="2">
-                                                                            <a href="..ShoppingServlet?action=productDetails&gid=${my.v_goodid}"
-                                                                               target="_blank"
-                                                                               title=" ${my.v_user} ${my.v_edName} ${my.v_colorName}   "> ${my.v_user} ${my.v_edName} ${my.v_colorName}   </a>
-                                                                            <br>颜色：${my.v_colorName}
-                                                                        </td>
-                                                                        <td> ${my.v_count} </td>
-                                                                        <td>
-                                                                                ${my.v_price}
-                                                                        </td>
-                                                                    </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        </tbody>
-                                                    </c:if>
-                                                </c:forEach>
+
+                                                <tbody class="prod-item ">
+                                                <tr class="prod-line">
+                                                    <td class="prod-pic">
+                                                        <a class="figure" href="#" target="_blank">
+                                                            <img src="../${personal.imgSrc}"
+                                                                 alt="">
+                                                        </a>
+                                                    </td>
+                                                    <td colspan="3">
+                                                        <table class="prods-info-table">
+                                                            <colgroup>
+                                                                <col width="80">
+                                                                <col>
+                                                                <col width="66">
+                                                                <col width="108">
+                                                            </colgroup>
+                                                            <tbody>
+                                                            <tr class="prod-info">
+                                                                <td class="prod-name" colspan="2">
+                                                                    <a href="goodsServlet?action=productDetails&goodNo=${my.v_goodid}"
+                                                                       target="_blank"
+                                                                       title="${personal.goodName}"> ${personal.goodName} </a>
+                                                                    <br>作者：${personal.producer}
+                                                                </td>
+                                                                <td> ${personal.goodNum} </td>
+                                                                <td>
+                                                                        ${personal.price}
+                                                                </td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+
 
                                             </table>
                                         </td>
                                         <td class="status">
-                                                <%-- 1 待付款 2待收货 3已完成 4已关闭 --%>
-                                            <c:if test="${myorder.v_status eq 1}">待付款</c:if>
-                                            <c:if test="${myorder.v_status eq 2}">待收货</c:if>
-                                            <c:if test="${myorder.v_status eq 3}">已完成</c:if>
-                                            <c:if test="${myorder.v_status eq 4}">已关闭</c:if>
+                                                ${personal.state}
                                         </td>
                                         <td class="operation">
                                             <ul>
@@ -218,15 +215,16 @@
                                             <div class="amount">
                                                 应付总额：
                                                 <span class="money brand-red">
-                                            <dfn>¥</dfn>${myorder.v_totlePrice}
-                                        </span>
+                            <dfn>¥</dfn>${personal.total}
+                        </span>
                                             </div>
                                         </td>
                                     </tr>
-                                </tbody>
+                                    </tbody>
+                                </table>
 
+                            </c:forEach>
 
-                            </table>
                         </c:forEach>
                         <%-- 判断是否有订单数据 --%>
                     </c:if>

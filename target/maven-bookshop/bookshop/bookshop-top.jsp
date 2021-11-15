@@ -118,7 +118,7 @@
                                         <a href="javascript:void(0);">尊敬的${user.uname}</a>
                                     </li>
                                     <li>
-                                        <a href="shoppingCartServlet?action=getUserShoppingCar&uname=${user.uname}" >我的订单</a>
+                                        <a href="personalServlet?action=queryPersonalOrder" >我的订单</a>
                                     </li>
                                     <li>
                                         <a href="#">我的商城</a>

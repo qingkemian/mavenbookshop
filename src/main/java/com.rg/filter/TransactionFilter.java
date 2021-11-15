@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.util.logging.Logger;
 
 /**
- * @Describe：
+ * @Describe：数据库事务过滤器
  * @Author:ZelongChen
  * @Date:2021/11/11 9:41
  */

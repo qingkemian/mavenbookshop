@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
 /**
- * @Describe：
+ * @Describe：用户未登录拦截转发，暂不做
  * @Author:ZelongChen
  * @Date:2021/11/11 9:40
  */

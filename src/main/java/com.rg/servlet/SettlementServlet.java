@@ -83,6 +83,7 @@ public class SettlementServlet extends BaseServlet {
 
             System.out.println(shoppingCarList);
 
+            // 将checkId添加到session中
             req.getSession().setAttribute("checkId",checkId);
 
             System.out.println("done");
@@ -161,6 +162,10 @@ public class SettlementServlet extends BaseServlet {
 
                 req.setAttribute("allTake", addressList);
                 req.setAttribute("userShoppingCar", shoppingCarList);
+
+                // 移除checkId
+                req.getSession().removeAttribute("checkId");
+
                 req.getRequestDispatcher("bookshop/settlement.jsp").forward(req, resp);
             } else {
                 System.out.println("回到购物车");
