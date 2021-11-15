@@ -116,4 +116,24 @@ public abstract class BaseDao {
         }
     }
 
+    /**
+     * 查询最后插入
+     * @param sql
+     * @param args
+     * @return
+     */
+    public Integer queryLastInsert(String sql, Object ... args ){
+        //获取连接
+        Connection conn = JdbcUtils.getConnection();
+        log.info("get conn");
+
+        try {
+            String orderId = queryRunner.query(conn,sql,new ScalarHandler()).toString();
+            return Integer.valueOf(orderId);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RuntimeException();
+        }
+    }
+
 }

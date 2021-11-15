@@ -20,6 +20,12 @@ public class AddressDaoImpl extends BaseDao implements AddressDao {
     private static Logger log = Logger.getLogger(classname);
 
     @Override
+    public Address queryAddressByAddressId(Integer addressId) {
+        String sql = "SELECT * FROM address WHERE addressId = ?";
+        return queryForOne(Address.class, sql,addressId);
+    }
+
+    @Override
     public List<Address> queryAddressListByUserId(Integer uid) {
         String sql = "SELECT * FROM address WHERE uid = ? AND flag = 1";
         return queryForList(Address.class, sql,uid);

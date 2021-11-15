@@ -2,6 +2,7 @@ package com.rg.entity;
 
 import java.math.BigDecimal;
 import java.sql.Timestamp;
+import java.util.List;
 
 /**
  * @Describe：订单实体类
@@ -16,6 +17,8 @@ public class TheOrder {
     private Integer addressId;
     private BigDecimal price;
     private Integer uid;
+
+    private String[] cartId;
 
     public Integer getOrderNo() {
         return orderNo;
@@ -63,5 +66,13 @@ public class TheOrder {
 
     public void setUid(Integer uid) {
         this.uid = uid;
+    }
+
+    public String[] getCartId() {
+        return cartId;
+    }
+
+    public void setCartId(String[] cartId) {
+        this.cartId = cartId;
     }
 }

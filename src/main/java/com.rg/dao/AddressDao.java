@@ -12,6 +12,13 @@ import java.util.List;
 public interface AddressDao {
 
     /**
+     * 通过地址id查询地址详情
+     * @param addressId
+     * @return
+     */
+    Address queryAddressByAddressId(Integer addressId);
+
+    /**
      * 通过uid查询收货地址
      * @param uid
      * @return

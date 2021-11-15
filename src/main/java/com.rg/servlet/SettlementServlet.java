@@ -1,14 +1,14 @@
 package com.rg.servlet;
 
-import com.rg.entity.Address;
-import com.rg.entity.Admin;
-import com.rg.entity.ShoppingCar;
-import com.rg.entity.User;
+import com.rg.entity.*;
 import com.rg.service.AddressService;
+import com.rg.service.OrderService;
 import com.rg.service.ShoppingCartService;
 import com.rg.service.impl.AddressServiceImpl;
+import com.rg.service.impl.OrderServiceImpl;
 import com.rg.service.impl.ShoppingCartServiceImpl;
 import com.rg.utils.WebUtils;
+import com.sun.org.apache.xpath.internal.operations.Or;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -34,6 +34,7 @@ public class SettlementServlet extends BaseServlet {
 
     ShoppingCartService shoppingCartService = new ShoppingCartServiceImpl();
     AddressService addressService = new AddressServiceImpl();
+    OrderService orderService = new OrderServiceImpl();
 
     /**
      * 初始化订单确认
@@ -170,8 +171,62 @@ public class SettlementServlet extends BaseServlet {
     }
 
     protected void checkOut(HttpServletRequest req, HttpServletResponse resp){
+        // 需要theOrder.getAddressId(), theOrder.getPrice(), theOrder.getUid(), theOrder.getCartId()
+        TheOrder theOrder = new TheOrder();
+
+        User user = (User) req.getSession().getAttribute("user");
+        Integer uid = 0;
+        if (user!=null){
+            uid = user.getUid();
+        }
+
+        String[]  checkIds= (String[]) req.getSession().getAttribute("checkId");
+
         String addressId = req.getParameter("addressId");
         System.out.println(addressId);
-        req.getRequestDispatcher("bookshop/checkout.jsp");
+
+        BigDecimal totalPrice = new BigDecimal(0);
+        if (checkIds != null) {
+            ShoppingCar shoppingCar = new ShoppingCar();
+            ShoppingCar dbShoppingCar = new ShoppingCar();
+            List<ShoppingCar> shoppingCarList = new ArrayList<ShoppingCar>();
+            System.out.println("-----");
+
+            for (String s : checkIds) {
+                System.out.println(s);
+                shoppingCar.setCarId(Integer.parseInt(s));
+                dbShoppingCar = shoppingCartService.querryShoppingCartByCartId(shoppingCar);
+                shoppingCarList.add(dbShoppingCar);
+                if (dbShoppingCar != null) {
+                    totalPrice = totalPrice.add((dbShoppingCar.getPrice().multiply(new BigDecimal(dbShoppingCar.getGoodNum().toString()))).multiply(dbShoppingCar.getDiscount()));
+                }
+            }
+
+        } else {
+
+        }
+
+        theOrder.setAddressId(Integer.parseInt(addressId));
+
+        theOrder.setUid(uid);
+
+        theOrder.setCartId(checkIds);
+        // 订单总价
+        theOrder.setPrice(totalPrice);
+
+        boolean flag = orderService.addOrder(theOrder);
+
+
+        Address address = new Address();
+        address.setAddressId(Integer.parseInt(addressId));
+
+        Address attAddress = addressService.queryAddressByAddressId(address);
+
+        if (flag) {
+            req.setAttribute("attAddress", attAddress);
+            req.setAttribute("totalPrice",totalPrice );
+            req.getRequestDispatcher("bookshop/checkout.jsp");
+        }
+
     }
 }
